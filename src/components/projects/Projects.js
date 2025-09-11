@@ -2,11 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
 import { Fade } from "react-reveal";
-import nyc from "../../images/nyc.png";
-import ci from "../../images/onboarding.png";
-import hd from "../../images/hd.png";
-import pp from "../../images/portfolio.png";
+import jk from "../../images/jk-.jpeg";
+import leaninng from "../../images/leaninng-1.jpg";
+import mrfish from "../../images/mr-fish.jpg";
 import { FaCode } from "react-icons/fa";
+import amm from "../../images/Amm-pro.jpg";
 import { Link } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 
@@ -38,12 +38,14 @@ export default function Projects() {
                     <h5 id={"first"} style={{ color: "#fbd9ad" }}>
                       LendingUSA
                     </h5>
-                    <img src={nyc} alt={nyc} />
+                    <h6 id={"first"} style={{ color: "#fbd9ad" }}>
+                      WordPress ACF & PHP
+                    </h6>
+                    <img src={leaninng} alt={leaninng} />
                     <div className="project--showcaseBtn">
                       <a
                         href={
-                          "https://github.com/MD-MAFUJUL-HASAN/Web_Programming/tree/main/New-Year-Countdown"
-                        }
+                          "https://lendingusa.com/"}
                         target="_blank"
                         rel="noreferrer"
                         className={"iconBtn"}
@@ -66,12 +68,10 @@ export default function Projects() {
                         fontWeight: 600,
                       }}
                     >
-                      The New Year Countdown Project is more than just a
-                      celebration; it's a testament to the human spirit and our
-                      shared aspirations for a brighter future. So, mark your
-                      calendars and get ready to be part of this global
-                      extravaganza as we count down to a new year filled with
-                      endless possibilities.
+                      LendingUSA is a fintech platform that provides point-of-sale
+                      financing for merchants and personal loans for borrowers, helping over 10,000
+                      businesses and 150,000 customers with fast, flexible funding solutions.
+
                     </p>
                   </h6>
                   <div
@@ -82,7 +82,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    HTML, CSS, JavaScript
+                    WordPress & PHP ACF, MySQL & SQL, JavaScript, HTML, CSS
                   </div>
                 </div>
               </Fade>
@@ -101,11 +101,14 @@ export default function Projects() {
                     <h5 id={"first"} style={{ color: "#fbd9ad" }}>
                       Jk Capinvest
                     </h5>
-                    <img src={hd} alt={hd} />
+                    <h6 id={"first"} style={{ color: "#fbd9ad" }}>
+                      WordPress Elementor
+                    </h6>
+                    <img src={jk} alt={jk} />
                     <div className="project--showcaseBtn">
                       <a
                         href={
-                          "https://github.com/MD-MAFUJUL-HASAN/Machine_Learning/tree/main/Heart%20Disease%20Prediction"
+                          "https://jkcapinvest.com/"
                         }
                         target="_blank"
                         rel="noreferrer"
@@ -144,7 +147,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    Pandas, Matplotlib, Scikit-Learn
+                    Advanced Wordpress & Elementor Build Plugins
                   </div>
                 </div>
               </Fade>
@@ -161,13 +164,16 @@ export default function Projects() {
                 >
                   <div className="projectContent">
                     <h5 id={"first"} style={{ color: "#fbd9ad" }}>
-                      Online Payroll Management System
+                      Mr Fish Uk
                     </h5>
-                    <img src={ci} alt={ci} />
+                    <h6 id={"first"} style={{ color: "#fbd9ad" }}>
+                      WordPress Elementor
+                    </h6>
+                    <img src={mrfish} alt={mrfish} />
                     <div className="project--showcaseBtn">
                       <a
                         href={
-                          "https://github.com/MD-MAFUJUL-HASAN/Online-Payroll-Management-System"
+                          "https://www.mrfish.uk.com/"
                         }
                         target="_blank"
                         rel="noreferrer"
@@ -191,11 +197,9 @@ export default function Projects() {
                         fontWeight: 600,
                       }}
                     >
-                      A Payroll management System with feature like generate
-                      payslip & reports. It manages salaries, leaves, branches,
-                      employees, designations, shifts, holidays and employee
-                      attendance. It has chat application so internal employees
-                      can use that feature.
+                      Mr Fish — A beloved traditional fish & chips eatery located at 51 Salusbury Rd,
+                      London NW6 6NJ, serving up a mix of classic and modern British fare for over 30 years.
+
                     </p>
                   </h6>
                   <div
@@ -206,7 +210,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    CSS, JavaScript, PHP, SCSS
+                    CSS, JavaScript, PHP, SCSS, WordPress, Elementor
                   </div>
                 </div>
               </Fade>
@@ -223,14 +227,16 @@ export default function Projects() {
                 >
                   <div className="projectContent">
                     <h5 id={"first"} style={{ color: "#fbd9ad" }}>
-                      Personal Portfolio
+                      Amm Pro
                     </h5>
-                    <img src={pp} alt={pp} />
+                    <h6 id={"first"} style={{ color: "#fbd9ad" }}>
+                      WordPress Bakery Page Builder
+                    </h6>
+                    <img src={amm} alt={amm} />
                     <div className="project--showcaseBtn">
                       <a
                         href={
-                          "https://github.com/MD-MAFUJUL-HASAN/Personal-Portfolio"
-                        }
+                          "https://amm-pro.com/"}
                         target="_blank"
                         rel="noreferrer"
                         className={"iconBtn"}
@@ -253,9 +259,9 @@ export default function Projects() {
                         fontWeight: 600,
                       }}
                     >
-                      Welcome to my personal portfolio. Explore my work, skills,
-                      and achievements in a concise and visually appealing
-                      format. Get a glimpse of my expertise and creativity.
+                      AMM-PRO (AM Management & Productions) is a London-founded event production company,
+                      established in 2003 by Ali Matar. With over 20 years of expertise, AMM-PRO delivers custom-tailored
+                      show production and event management—spanning from intimate gatherings to large-scale international.
                     </p>
                   </h6>
                   <div
@@ -266,7 +272,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    HTML, CSS, SCSS, React, JavaScript
+                    wordpress Elementor paid Plugin
                   </div>
                 </div>
               </Fade>
