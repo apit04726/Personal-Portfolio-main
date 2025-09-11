@@ -99,7 +99,7 @@ export default function Projects() {
                 >
                   <div className="projectContent">
                     <h5 id={"first"} style={{ color: "#fbd9ad" }}>
-                    welcome sanjal
+                      Jk Capinvest
                     </h5>
                     <img src={hd} alt={hd} />
                     <div className="project--showcaseBtn">
