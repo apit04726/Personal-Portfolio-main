@@ -2,7 +2,7 @@ import React from "react";
 import {
   AiOutlineInstagram,
   AiFillFacebook,
-  AiFillGithub,
+  AiOutlineWhatsApp,
   AiFillLinkedin,
 } from "react-icons/ai";
 import { Container, Row } from "react-bootstrap";
@@ -19,7 +19,19 @@ export default function SocialMedia() {
         <Row className="g-5">
           <Col md={3}>
             <a
-              href="https://www.instagram.com/_md_mafujul_hasan_/"
+              href="https://"
+              target="_blank"
+              rel="noreferrer"
+              className="icon-colour  home-social-icons"
+            >
+              <Zoom cascade>
+               <AiOutlineWhatsApp />
+              </Zoom>
+            </a>
+          </Col>
+          <Col md={3}>
+            <a
+              href="https://www.instagram.com/"
               target="_blank"
               rel="noreferrer"
               className="icon-colour  home-social-icons"
@@ -31,7 +43,7 @@ export default function SocialMedia() {
           </Col>
           <Col md={3}>
             <a
-              href="https://www.facebook.com/mh.tonmoy.13"
+              href="https://www.facebook.com/"
               target="_blank"
               rel="noreferrer"
               className="icon-colour  home-social-icons"
@@ -43,19 +55,7 @@ export default function SocialMedia() {
           </Col>
           <Col md={3}>
             <a
-              href="https://github.com/MD-MAFUJUL-HASAN"
-              target="_blank"
-              rel="noreferrer"
-              className="icon-colour  home-social-icons"
-            >
-              <Zoom cascade>
-                <AiFillGithub />
-              </Zoom>
-            </a>
-          </Col>
-          <Col md={3}>
-            <a
-              href="https://www.linkedin.com/in/md-mafujul-hasan/"
+              href="https://www.linkedin.com/in/"
               target="_blank"
               rel="noreferrer"
               className="icon-colour  home-social-icons"

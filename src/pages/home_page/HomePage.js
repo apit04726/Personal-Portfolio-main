@@ -5,8 +5,8 @@ import Typing from "./Typing";
 import Tilt from "react-parallax-tilt";
 import AboutmeContainer from "../../components/aboutme/aboutmeContainer";
 import Fade from "react-reveal/Fade";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { FaLinkedinIn, FaFacebookF, FaGoogle } from "react-icons/fa";
+import { AiFillInstagram, AiOutlineWhatsApp } from "react-icons/ai";
+import { FaLinkedinIn, FaFacebookF,FaEnvelope } from "react-icons/fa";
 import Contactus from "../../components/contactus/Contactus";
 import Projects from "../../components/projects/Projects";
 
@@ -40,17 +40,17 @@ export default function Home() {
                 <ul className="homeaboutsociallinks">
                   <li className="socialicons">
                     <a
-                      href="https://github.com/MD-MAFUJUL-HASAN"
+                      href="jdjjsd"
                       target="_blank"
                       rel="noreferrer"
                       className="iconcolour  homesocialicons"
                     >
-                      <AiFillGithub />
+                      <AiOutlineWhatsApp />
                     </a>
                   </li>
                   <li className="socialicons">
                     <a
-                      href="https://www.linkedin.com/in/md-mafujul-hasan/"
+                      href="https://www.linkedin.com"
                       target="_blank"
                       rel="noreferrer"
                       className="iconcolour  homesocialicons"
@@ -60,7 +60,7 @@ export default function Home() {
                   </li>
                   <li className="socialicons">
                     <a
-                      href="https://www.instagram.com/_md_mafujul_hasan_/"
+                      href="https://www.instagram.com"
                       target="_blank"
                       rel="noreferrer"
                       className="iconcolour homesocialicons"
@@ -70,7 +70,7 @@ export default function Home() {
                   </li>
                   <li className="socialicons">
                     <a
-                      href="https://www.facebook.com/mh.tonmoy.13"
+                      href="https://www.facebook.com"
                       target="_blank"
                       rel="noreferrer"
                       className="iconcolour homesocialicons"
@@ -80,12 +80,12 @@ export default function Home() {
                   </li>
                   <li className="socialicons">
                     <a
-                      href="mailto:mdtonmoy13.mt@gmail.com/"
+                      href="mailto:vishalbaria7096@gmail.com"
                       target="_blank"
                       rel="noreferrer"
                       className="iconcolour homesocialicons"
                     >
-                      <FaGoogle />
+                      <FaEnvelope />
                     </a>
                   </li>
                 </ul>

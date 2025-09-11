@@ -27,7 +27,7 @@ export default function TechnicalSkill() {
               <h1
                 style={{ fontSize: "100px", color: "#fe3e57", fontWeight: 700 }}
               >
-                75%
+                90%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
                 <div class="progress">
@@ -48,7 +48,7 @@ export default function TechnicalSkill() {
                     fontWeight: 700,
                   }}
                 >
-                  C
+                  WordPress
                 </h2>
               </div>
             </Col>
@@ -56,7 +56,7 @@ export default function TechnicalSkill() {
               <h1
                 style={{ fontSize: "100px", color: "#54faae", fontWeight: 700 }}
               >
-                75%
+                80%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
                 <div class="progress">
@@ -77,7 +77,7 @@ export default function TechnicalSkill() {
                     fontWeight: 700,
                   }}
                 >
-                  C++
+                Laravel
                 </h2>
               </div>
             </Col>
@@ -85,7 +85,7 @@ export default function TechnicalSkill() {
               <h1
                 style={{ fontSize: "100px", color: "#39c4ff", fontWeight: 700 }}
               >
-                80%
+                50%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
                 <div class="progress">
@@ -106,7 +106,7 @@ export default function TechnicalSkill() {
                     fontWeight: 700,
                   }}
                 >
-                  Python
+                  Shopify
                 </h2>
               </div>
             </Col>
@@ -259,7 +259,7 @@ export default function TechnicalSkill() {
               <h1
                 style={{ fontSize: "100px", color: "#54faae", fontWeight: 700 }}
               >
-                75%
+                90%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
                 <div class="progress">
@@ -280,7 +280,7 @@ export default function TechnicalSkill() {
                     fontWeight: 700,
                   }}
                 >
-                  JAVA
+                  HTML5 CSS3 Gitlab Github
                 </h2>
               </div>
             </Col>

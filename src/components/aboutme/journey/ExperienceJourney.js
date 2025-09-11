@@ -40,18 +40,19 @@ function ExperienceJourney() {
           icon={<PersonIcon />}
         >
           <h5 className="vertical-timeline-element-title">
-            Study World
+            Web Developer in Digitize Info System Pvt Ltd
           </h5>
           <h6 className="vertical-timeline-element-subtitle mt-2">
-            Branch Manager & Student Counsellor
           </h6>
-          <p>• Provide Education Counselling to students and guardians for study abroad.</p>
-          <p>• Providing information about Universities/Colleges, Course/Fees, Admissions, Visa procedures etc.</p>
-          <p>• Effective follow-ups with the prospective students/guardians.</p>
-          <p>• Provide daily, Weekly, monthly, and yearly reporting about all operational activities.</p>
-          <p>• Processing student visa applications based on entry requirements and admissions procedures and 
-            enhance their chances of success in interviews by developing their skills.</p>
-          <p>• Preparing applications for admission into different foreign universities.</p>
+          <div style={{ textAlign: "justify" }}>
+            <p>• Developed custom WordPress themes and plugins, focusing on dynamic content and advanced customization</p>
+            <p>• Optimized website performance, ensuring fast load times and improved SEO.</p>
+            <p>• Built responsive, dynamic UIs using React.js, enhancing user experience and application performance.</p>
+            <p>• Integrated RESTful APIs and improved front-end application efficiency.</p>
+            <p>• Customized Shopify themes and implemented bespoke functionality using Liquid and JavaScript.</p>
+            <p>• Developed robust backend solutions using Core PHP, focusing on CRUD operations and form handling.</p>
+          </div>
+
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -62,23 +63,26 @@ function ExperienceJourney() {
           icon={<PersonIcon />}
         >
           <h5 className="vertical-timeline-element-title">
-            Excel Telecom (Pvt.) Limited - (National Distributor of SAMSUNG in Bangladesh)
+            Full Stack Developer in Digitize Info System Pvt Ltd
           </h5>
           <h6 className="vertical-timeline-element-subtitle mt-2">
-            Management of Information System
           </h6>
-          <p>• Proficient in developing, deploying and managing computerized systems that gather, retain, evaluate and exhibit 
-            data to facilitate the achievement of organizational aims and objectives.</p>
-          <p>• Proficient in collecting and organizing data from diverse sources, utilizing statistical techniques and software 
-            tools for data analysis and creating comprehensive reports and presentations that showcase significant insights and trends.</p>
-          <p>• Consistently completed assigned tasks in a timely and efficient manner as directed by management, while maintaining 
-            effective communication between the company and employees.</p>
-          <p>• Proficient in monitoring daily business operation costs, verifying and evaluating accounting transactions updates, 
-            and providing corresponding reports to top management.</p>
-          <p>• Skilled in collecting and compiling monthly reports, conducting inventory analysis for month-end, quarterly, 
-            and year-end closing, and submitting reports in accordance with management requirements.</p>
-          <p>• Proficient in developing and maintaining various reporting dashboard, technical support to end-users, 
-            diagnosing hardware and software issues, and collaborating with IT teams to promptly resolve system-related problems.</p>
+
+          <div style={{ textAlign: "justify" }}>
+            <p>• Developed end-to-end web applications using Laravel for backend and React.js for frontend.</p>
+            <p>• Created custom Shopify themes and apps using Liquid, JavaScript, and React.js.</p>
+            <p>• Built RESTful APIs and integrated third-party services for seamless functionality.</p>
+            <p>• Implemented responsive designs and optimized performance for cross-platform compatibility.</p>
+            <p>• Managed database systems including MySQL, MongoDB, and Firebase.</p>
+            <p>• Engineered custom WordPress themes and plugins to deliver dynamic, scalable websites tailored to client needs.</p>
+            <p>• Optimized website performance, reducing load times and improving SEO rankings across multiple projects.</p>
+            <p>• Collaborated with cross-functional teams, ensuring smooth project delivery from design to deployment.</p>
+            <p>• Applied version control best practices with Git and GitHub/GitLab to maintain clean, collaborative codebases.</p>
+            <p>• Implemented secure authentication and authorization systems using JWT, OAuth, and Laravel Passport.</p>
+            <p>• Designed reusable UI components and state management solutions in React.js for scalable applications.</p>
+            <p>• Deployed and maintained applications on cloud platforms such as AWS, Netlify, and Vercel.</p>
+          </div>
+
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
