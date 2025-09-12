@@ -29,7 +29,7 @@ export default function Home() {
 
               <h1 className="heading-name">
                 I'M
-                <strong className="main-name"> Mr Vishal Baria</strong>
+                <strong className="main-name"> Mr vishal</strong>
               </h1>
 
               <div className="typing-homeclass">

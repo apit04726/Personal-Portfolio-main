@@ -43,7 +43,7 @@ export default function MyNav() {
                 color: "#fbd9ad",
               }}
             >
-              vishal Baria
+              vishal
             </h5>
           </div>
         </Navbar.Brand>
