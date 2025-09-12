@@ -8,13 +8,9 @@ import Zoom from "react-reveal/Zoom";
 import React, { useState, useEffect } from "react";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const resumeLink =
-  // "https://raw.githubusercontent.com/MD-MAFUJUL-HASAN/Personal-Portfolio/main/src/assets/final-resume.pdf";
-
-  "https://github.com/apit04726/Personal-Portfolio-main/tree/main/src/assets/final-resume.pdf"
-
 function Resume() {
   const [width, setWidth] = useState(1200);
+    const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -35,21 +31,27 @@ function Resume() {
               </Zoom>
             </div>
             <div className="d-flex justify-content-center mt-4">
-              <Button variant="primary" href={pdf} target="_blank">
-                <AiOutlineDownload />
-                &nbsp;Download Resume
-              </Button>
+              <a href={pdf} download="final-resume.pdf">
+                <Button variant="primary">
+                  <AiOutlineDownload />
+                  &nbsp;Download Resume
+                </Button>
+              </a>
             </div>
-            <div className="resume d-flex justify-content-center">
-              <Document file={resumeLink}>
-                <Page pageNumber={1} scale={width > 786 ? 1.6 : 0.4} />
-              </Document>
-            </div>
+              <div className="resume d-flex justify-content-center">
+                <Document file={pdf} onLoadSuccess={({ numPages }) => setNumPages(numPages)}>
+                  {[...Array(numPages || 1)].map((_, idx) => (
+                    <Page key={idx + 1} pageNumber={idx + 1} scale={width > 786 ? 1.6 : 0.4} />
+                  ))}
+                </Document>
+              </div>
             <div className="d-flex justify-content-center">
-              <Button variant="primary" href={pdf} target="_blank">
-                <AiOutlineDownload />
-                &nbsp;Download Resume
-              </Button>
+              <a href={pdf} download="final-resume.pdf">
+                <Button variant="primary">
+                  <AiOutlineDownload />
+                  &nbsp;Download Resume
+                </Button>
+              </a>
             </div>
           </div>
         </Container>
