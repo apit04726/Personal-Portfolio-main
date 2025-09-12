@@ -24,7 +24,6 @@ export default function Home() {
               >
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
                 </span>
               </h1>
 
