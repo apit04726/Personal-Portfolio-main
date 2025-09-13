@@ -32,6 +32,7 @@ export default function Projects() {
                   style={{
                     backgroundColor: "rgb(142 70 186 / 31%)",
                     border: "1px solid",
+                    marginBottom: "25px",
                   }}
                 >
                   <div className="projectContent">
@@ -94,7 +95,7 @@ export default function Projects() {
                   className="singleProject"
                   style={{
                     backgroundColor: "rgb(142 70 186 / 31%)",
-                    border: "1px solid",
+                    border: "1px solid",marginBottom: "25px",
                   }}
                 >
                   <div className="projectContent">
@@ -159,7 +160,7 @@ export default function Projects() {
                   className="singleProject"
                   style={{
                     backgroundColor: "rgb(142 70 186 / 31%)",
-                    border: "1px solid",
+                    border: "1px solid",marginBottom: "25px",
                   }}
                 >
                   <div className="projectContent">
@@ -222,7 +223,7 @@ export default function Projects() {
                   className="singleProject"
                   style={{
                     backgroundColor: "rgb(142 70 186 / 31%)",
-                    border: "1px solid",
+                    border: "1px solid",marginBottom: "25px",
                   }}
                 >
                   <div className="projectContent">
