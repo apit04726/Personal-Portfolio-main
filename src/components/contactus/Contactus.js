@@ -4,6 +4,7 @@ import Zoom from "react-reveal/Zoom";
 import axios from "axios";
 import { useState } from "react";
 import { AiOutlineSend } from "react-icons/ai";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FiPhone, FiAtSign } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 
@@ -103,14 +104,34 @@ export default function Contactus() {
                       </div>
 
                       <div className="submit-btn">
-                        <button
-                          type="submit"
-                          className="submitBtn"
-                          onClick={handleSubmit}
-                        >
-                          Submit
-                          <AiOutlineSend className="send-icon" />
-                        </button>
+                        <div style={{ display: "flex", gap: "10px" }}>
+                          <button
+                            type="submit"
+                            className="submitBtn"
+                            onClick={handleSubmit}
+                            style={{ display: "flex", alignItems: "center", gap: "5px" }}
+                          >
+                            Submit
+                            <AiOutlineSend className="send-icon" />
+                          </button>
+                          <a
+                            href="https://wa.me/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <button
+                              type="button"
+                              className="submitBtn"
+                              style={{ display: "flex", alignItems: "center", justifyContent: "space-between", 
+                                gap: "10px", backgroundColor: "#fbd9ad", color: "#6c3483", border: "none", 
+                                width: "170px", fontSize: "1.3rem", fontWeight: "500" }}
+                            >
+                              <span style={{ flex: 1, textAlign: "left", fontSize: "16px", marginLeft:"12px" }}>Direct to Chat</span>
+                              <AiOutlineWhatsApp style={{ color: "#6c3483", fontSize: "30px" }} />
+                            </button>
+                          </a>
+                        </div>
                       </div>
                     </form>
                   </div>
