@@ -2,15 +2,18 @@ import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import pdf from "../../assets/final-resume.pdf";
-import { Document, Page, pdfjs } from "react-pdf";
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import { pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import Zoom from "react-reveal/Zoom";
-import React, { useState, useEffect } from "react";
+
+const Document = lazy(() => import("react-pdf").then(mod => ({ default: mod.Document })));
+const Page = lazy(() => import("react-pdf").then(mod => ({ default: mod.Page })));
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function Resume() {
   const [width, setWidth] = useState(1200);
-    const [numPages, setNumPages] = useState(null);
+  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     setWidth(window.innerWidth);
@@ -39,11 +42,13 @@ function Resume() {
               </a>
             </div>
               <div className="resume d-flex justify-content-center">
-                <Document file={pdf} onLoadSuccess={({ numPages }) => setNumPages(numPages)}>
-                  {[...Array(numPages || 1)].map((_, idx) => (
-                    <Page key={idx + 1} pageNumber={idx + 1} scale={width > 786 ? 1.6 : 0.4} />
-                  ))}
-                </Document>
+                <Suspense fallback={<div>Loading resume...</div>}>
+                  <Document file={pdf} onLoadSuccess={({ numPages }) => { setNumPages(numPages); }}>
+                    {[...Array(numPages || 1)].map((_, idx) => (
+                      <Page key={idx + 1} pageNumber={idx + 1} scale={width > 786 ? 1.6 : 0.4} />
+                    ))}
+                  </Document>
+                </Suspense>
               </div>
             <div className="d-flex justify-content-center">
               <a href={pdf} download="final-resume.pdf">
