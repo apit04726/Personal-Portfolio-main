@@ -34,7 +34,7 @@ function Resume() {
               </Zoom>
             </div>
             <div className="d-flex justify-content-center mt-4">
-              <a href={pdf} download="final-resume.pdf" style={{marginTop:"50px"}}>
+              <a href={pdf} download="final-resume.pdf">
                 <Button variant="primary">
                   <AiOutlineDownload />
                   &nbsp;Download Resume
