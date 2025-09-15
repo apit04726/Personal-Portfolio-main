@@ -15,7 +15,6 @@ const Page = lazy(() =>
 );
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-
 function Resume() {
   const [width, setWidth] = useState(window.innerWidth);
   const [numPages, setNumPages] = useState(null);
