@@ -18,8 +18,8 @@ function Resume() {
 
   return (
     <div>
-      <section style={{ marginTop: isMobile ? "34%" : "10%" }}>
-        <Container>
+      <section style={{ marginTop: isMobile ? "20%" : "10%", padding: isMobile ? "0 10px" : "0" }}>
+        <Container fluid={isMobile}>
           <div>
             {/* Heading */}
             <div
@@ -28,14 +28,14 @@ function Resume() {
               style={{ backgroundColor: "#fbd9ad" }}
             >
               <Zoom left cascade>
-                <h1 style={{ color: "rgb(134 61 176)" }}>RESUME</h1>
+                <h1 style={{ color: "rgb(134 61 176)", fontSize: isMobile ? "1.8rem" : "2.5rem" }}>RESUME</h1>
               </Zoom>
             </div>
 
             {/* Download Button Top */}
             <div className="d-flex justify-content-center mt-4">
-              <a href={pdf} download="final-resume.pdf">
-                <Button variant="primary">
+              <a href={pdf} download="final-resume.pdf" style={{ textDecoration: "none" }}>
+                <Button variant="primary" size={isMobile ? "sm" : "lg"}>
                   <AiOutlineDownload />
                   &nbsp;Download Resume
                 </Button>
@@ -47,17 +47,21 @@ function Resume() {
               <iframe
                 src={pdf}
                 title="Resume PDF"
-                width={isMobile ? "100%" : "800px"}
+                width="100%"
                 height={isMobile ? "500px" : "1000px"}
-                style={{ border: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}
+                style={{ 
+                  border: "none", 
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                  maxWidth: "800px"
+                }}
                 allow="autoplay"
               />
             </div>
 
             {/* Download Button Bottom */}
             <div className="d-flex justify-content-center mt-4">
-              <a href={pdf} download="final-resume.pdf">
-                <Button variant="primary">
+              <a href={pdf} download="final-resume.pdf" style={{ textDecoration: "none" }}>
+                <Button variant="primary" size={isMobile ? "sm" : "lg"}>
                   <AiOutlineDownload />
                   &nbsp;Download Resume
                 </Button>
