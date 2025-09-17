@@ -1,31 +1,17 @@
+import React, { useState, useEffect } from "react";
+import Zoom from "react-reveal/Zoom";
 import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import pdf from "../../assets/final-resume.pdf";
-import React, { useState, useEffect, lazy, Suspense } from "react";
-import { pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-import Zoom from "react-reveal/Zoom";
 
-const Document = lazy(() =>
-  import("react-pdf").then((mod) => ({ default: mod.Document }))
-);
-const Page = lazy(() =>
-  import("react-pdf").then((mod) => ({ default: mod.Page }))
-);
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 function Resume() {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [numPages, setNumPages] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth);
       setIsMobile(window.innerWidth <= 768);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -56,22 +42,16 @@ function Resume() {
               </a>
             </div>
 
-            {/* Resume Viewer */}
+            {/* Resume Viewer - embed PDF directly for instant view */}
             <div className="resume d-flex justify-content-center mt-4">
-              <Suspense fallback={<div>Loading resume...</div>}>
-                <Document
-                  file={pdf}
-                  onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-                >
-                  {[...Array(numPages || 1)].map((_, idx) => (
-                    <Page
-                      key={idx + 1}
-                      pageNumber={idx + 1}
-                      scale={width > 786 ? 1.6 : 0.4}
-                    />
-                  ))}
-                </Document>
-              </Suspense>
+              <iframe
+                src={pdf}
+                title="Resume PDF"
+                width={isMobile ? "100%" : "800px"}
+                height={isMobile ? "500px" : "1000px"}
+                style={{ border: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}
+                allow="autoplay"
+              />
             </div>
 
             {/* Download Button Bottom */}

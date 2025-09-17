@@ -77,8 +77,8 @@ const portfolioProjects = [
     client: 'SEO Agency',
     date: '15 March, 2025',
     url: 'https://amm-pro.com/',
-    details: 'AMM-PRO (AM Management & Productions) is a London-founded event production company, established in 2003 by Ali Matar. With over 20 years of expertise, AMM-PRO delivers custom-tailored show production and event management—spanning from intimate gatherings to large-scale international productions. Their portfolio includes prestigious venues like the Royal Albert Hall and London Coliseum, and showcases such as "Broken Wings" and "RUMI – THE MUSICAL.'
-  },
+    details: 'AMM-PRO (AM Management & Productions) is a London-founded event production company, established in 2003 by Ali Matar. With over 20 years of expertise, AMM-PRO delivers custom-tailored show production and event management—spanning from ' 
+   },
   {
     image: kasturi,
     title: 'Kasturi Sphere 360 Media Partner',
@@ -127,7 +127,7 @@ const portfolioProjects = [
     client: 'Real Estate and Woocommerce Client and Digital Marketing',
     date: '25 Marce, 2025',
     url: 'https://leadozz.com/',
-    details: 'Leadozz is a seasoned B2B lead generation agency offering customized, tech-savvy campaigns aimed at delivering measurable ROI. With over a decade in the field, they position themselves as growth partners for businesses seeking high-quality leads, underpinned by data-driven methods and a client-centric approach.'
+    details: 'Leadozz is a seasoned B2B lead generation agency offering customized, tech-savvy campaigns aimed at delivering measurable ROI. With over a decade in the field, they position themselves as growth partners for businesses seeking high-quality leads, underpinned by data-driven.'
   },
   {
     image: dalida,
@@ -157,8 +157,8 @@ const portfolioProjects = [
     client: 'E-Shop',
     date: '10 June, 2024',
     url: 'https://www.airbnb.co.in/',
-    details: 'Airbnb is a global online marketplace for short- and long-term lodging, experiences, and services. It was founded in 2008 in San Francisco and is now a publicly traded company on Nasdaq. It connects millions of hosts offering unique accommodations (from cottages to city apartments) and local experiences (like tours or workshops) — all backed by safety tools like verified IDs secure messaging, and 24/7 support through AirCover.'
-  },
+    details: 'Airbnb is a global online marketplace for short- and long-term lodging, experiences, and services. It was founded in 2008 in San Francisco and is now a publicly traded company on Nasdaq. It connects millions of hosts offering unique accommodations (from cottages to city apartments) and local'
+    },
   {
     image: propty,
     title: 'Propty Co',
@@ -177,7 +177,7 @@ const portfolioProjects = [
     client: 'E-Shop Propty Hunters',
     date: '28 Marce, 2025',
     url: 'https://www.rv.estore.in/',
-    details: 'There is mention of something called "The RV Store" on Instagram, which hints at categories like Beauty & Personal Care, Health & Wellness, and Pet Care Products, though details are sparse, and it may not be directly linked to the URL you provided. A listing for RV Online Store shows a simple contact form, store hours (8 am – 9 pm), and a legal name of "RV Online Store," but doesn\'t offer much more in terms of product information or an overview.'
+    details: 'There is mention of something called "The RV Store" on Instagram, which hints at categories like Beauty & Personal Care, Health & Wellness, and Pet Care Products, though details are sparse, and it may not be directly linked to the URL you provided. A listing for RV Online Store shows a simple contact form'
   },
   {
     image: goodee,
@@ -187,7 +187,7 @@ const portfolioProjects = [
     client: 'E-Shop Woocommerce',
     date: '28 April, 2025',
     url: 'https://www.goodeeworld.com/',
-    details: 'Goodee—also known as Goodee World—is a curated online marketplace rooted in the ethos of "good design, good people, and good purpose." It showcases thoughtfully selected home goods and decor items that are not only aesthetically appealing but also socially and environmentally conscientious. Every product is vetted by Goodee\'s in-house sustainability team for its design integrity and meaningful impact.'
+    details: 'Goodee—also known as Goodee World—is a curated online marketplace rooted in the ethos of "good design, good people, and good purpose." It showcases thoughtfully selected home goods and decor items that are not only aesthetically appealing but also socially and environmentally conscientious' 
   },
   {
     image: kith,
@@ -197,7 +197,7 @@ const portfolioProjects = [
     client: 'Online Retailer',
     date: '05 August, 2024',
     url: 'https://kith.com/',
-    details: 'Global footprint: Operates around 17 standalone boutiques worldwide and several shop-in-shops in premier department stores like Selfridges and Hirshleifers. Kith Treats: A signature in-store experience—a nostalgic cereal and ice-cream bar born out of Fieg\'s childhood love for cereal. It began in 2015 and features rotating menu creations by talents like Victor Cruz, Action Bronson, Virgil Abloh, Daniel Arsham, and Futura.'
+    details: 'Global footprint: Operates around 17 standalone boutiques worldwide and several shop-in-shops in premier department stores like Selfridges and Hirshleifers. Kith Treats: A signature in-store experience—a nostalgic cereal and ice-cream bar born out of Fieg\'s childhood love for cereal' 
   },
   {
     image: allbirds,
@@ -217,7 +217,7 @@ const portfolioProjects = [
     client: 'Online Retailer',
     date: '14 Marce, 2025',
     url: 'https://cowboy.com/',
-    details: 'Cowboy is a designer and manufacturer of connected electric bikes (e-bikes) a smart and seamless mobility experience. The bikes are designed in Belgium and assembled in France Founded in 2017 in Brussels by Adrien Roose, Karim Slaoui, and Tanguy Goretti, Cowboy list The Guardian Cowboy Cowboy now serves customers across 2,500+ cities'
+    details: 'Cowboy is a designer and manufacturer of connected electric bikes (e-bikes) a smart and seamless mobility experience. The bikes are designed in Belgium and assembled in France Founded in 2017 in Brussels by Adrien Roose, Karim Slaoui, and Tanguy Goretti'
   },
   {
     image: loveHealthy,
@@ -227,7 +227,7 @@ const portfolioProjects = [
     client: 'Brand Studio',
     date: '20 September, 2024',
     url: 'https://dev.digitize-info.com/php_projects/love-healthy/',
-    details: 'Love Healthy Project A custom Content Management System (CMS) and branding website developed using PHP and MySQL. The platform is designed to provide dynamic content management, user-friendly administration, and strong branding features, enabling efficient website updates and a seamless digital presence.'
+    details: 'Love Healthy Project A custom Content Management System (CMS) and branding website developed using PHP and MySQL. The platform is designed to provide dynamic content management, user-friendly administration, and strong branding features'
   },
   {
     image: nikooPhase5,
@@ -237,7 +237,7 @@ const portfolioProjects = [
     client: 'Real Estate - Bangalore',
     date: '20 Marce, 2025',
     url: 'https://nikoohome5.in/',
-    details: 'Backend: PHP on an nginx server Frontend: A hybrid architecture that uses React for dynamic features like instant search and filters, providing a fast, app-like user experience. Infrastructure A CDN and caching for optimized performance and fast global content delivery. Core Function: A standard LEMP stack (Linux, nginx, MySQL, PHP) tailored for a scalable online store.'
+    details: 'Backend: PHP on an nginx server Frontend: A hybrid architecture that uses React for dynamic features like instant search and filters, providing a fast, app-like user experience. Infrastructure A CDN and caching for optimized performance and fast global content delivery'
   },
   {
     image: perfectHomz,
@@ -247,7 +247,7 @@ const portfolioProjects = [
     client: 'Real Estate - Bangalore',
     date: '10 Marce, 2025',
     url: 'https://perfecthomz.com/',
-    details: 'Core Platform: The site is a WordPress application, using the Astra theme as its foundation. The backend is powered by PHP, with data stored in a MySQL/MariaDB database. E-commerce Engine: It utilizes WooCommerce to manage its product catalog, shopping cart, and checkout processes, identifying it as a standard WordPress-based e-commerce site. Frontend & Interactivity. '
+    details: 'Core Platform: The site is a WordPress application, using the Astra theme as its foundation. The backend is powered by PHP, with data stored in a MySQL/MariaDB database. E-commerce Engine: It utilizes WooCommerce to manage its product catalog.'
   },
   {
     image: miraLotha,
@@ -257,7 +257,7 @@ const portfolioProjects = [
     client: 'Real Estate - Bangalore',
     date: '10 Marce, 2025',
     url: 'https://www.mirabelleproject.com/lodha-group/lodha-mirabelle-bangalore/',
-    details: 'This marketing website is engineered on a custom technology stack, utilizing Core PHP for its server-side logic without reliance on a mainstream framework. The frontend is crafted with standard HTML5, CSS3, and Vanilla JavaScript—supplemented with jQuery—to deliver a premium brand experience cha providing tailored control for real estate branding needs. Hosted on an Apache web server, the site s defining technical.'
+    details: 'This marketing website is engineered on a custom technology stack, utilizing Core PHP for its server-side logic without reliance on a mainstream framework. The frontend is crafted with standard HTML5, CSS3, and Vanilla JavaScript—supplemented.'
   },
   {
     image: mirebal,
@@ -267,7 +267,7 @@ const portfolioProjects = [
     client: 'Real Estate - Bangalore',
     date: '05 Marce, 2025',
     url: 'https://mirabelle-manyata-bangalore.com/',
-    details: 'This marketing website is engineered on a custom technology stack, utilizing Core PHP for its server-side logic without reliance on a mainstream framework. The frontend is crafted with standard HTML5, CSS3, and Vanilla JavaScript—supplemented with jQuery—to deliver a premium brand experience characterized by dynamic animations and a video-heavy presentation.'
+    details: 'This marketing website is engineered on a custom technology stack, utilizing Core PHP for its server-side logic without reliance on a mainstream framework. The frontend is crafted with standard HTML5, CSS3, and Vanilla JavaScript—supplemented with jQuery—to deliver.'
   },
   {
     image: tata1,
@@ -277,7 +277,7 @@ const portfolioProjects = [
     client: 'Real Estate - Bangalore',
     date: '05 Marce, 2025',
     url: 'https://tatacarnaticabangalore.in/',
-    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic. This indicates a custom-developed backend architecture, deliberately constructed without the overhead of a standard framework like Laravel or Symfony. The content is managed through a proprietary CMS, a bespoke system also built with core PHP and MySQL'
+    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic. This indicates a custom-developed backend architecture, deliberately constructed without the overhead of a standard framework like Laravel or Symfony.'
   },
   {
     image: tata3,
@@ -287,7 +287,7 @@ const portfolioProjects = [
     client: 'Real Estate - Bangalore',
     date: '05 Marce, 2025',
     url: 'https://www.thecarnatica.net.in/',
-    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic. This indicates a custom-developed backend architecture, deliberately constructed without the overhead of a standard framework like Laravel or Symfony. The content is managed through a proprietary CMS, a bespoke system also built with core PHP and MySQL'
+    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic. This indicates a custom-developed backend architecture, deliberately constructed without the overhead of a standard framework like Laravel or Symfony.'
   },
   {
     image: birla3,
@@ -297,7 +297,7 @@ const portfolioProjects = [
     client: 'Real Estate - Bangalore',
     date: '28 Marce, 2025',
     url: 'https://birlahomes.in/trimaya/',
-    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic. This indicates a custom-developed backend architecture, deliberately constructed without the overhead of a standard framework like Laravel or Symfony. The content is managed through a proprietary CMS, a bespoke system also built with core PHP and MySQL'
+    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic. This indicates a custom-developed backend architecture, deliberately constructed without the overhead of a standard framework like Laravel or Symfony.'
   },
   {
     image: birla1,
@@ -307,7 +307,7 @@ const portfolioProjects = [
     client: 'Real Estate - Bangalore',
     date: '29 Marce, 2025',
     url: 'https://birlatrimaya-devanahalli.com/',
-    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic. This indicates a custom-developed backend architecture, deliberately constructed without the overhead of a standard framework like Laravel or Symfony. The content is managed through a proprietary CMS, a bespoke system also built with core PHP and MySQL'
+    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic. This indicates a custom-developed backend architecture, deliberately constructed without the overhead of a standard framework like Laravel or Symfony.'
   },
   {
     image: dwarkesh,
