@@ -1,9 +1,14 @@
+
 import React, { useState, useEffect } from "react";
 import Zoom from "react-reveal/Zoom";
 import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import pdf from "../../assets/final-resume.pdf";
+
+import { Document, Page, pdfjs } from "react-pdf";
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function Resume() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -68,7 +73,7 @@ function Resume() {
               </a>
             </div>
 
-            {/* Resume Viewer - embed PDF directly for instant view */}
+            {/* Resume Viewer - use react-pdf for cross-device support */}
             <div className="d-flex justify-content-center mt-4">
               <div style={{
                 width: "100%",
@@ -77,23 +82,21 @@ function Resume() {
                 boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
                 borderRadius: "10px",
                 overflow: "hidden",
-                margin: "0 auto"
+                margin: "0 auto",
+                padding: 8
               }}>
-                  <iframe
-                    src={pdf}
-                    title="Resume PDF"
-                    width="100%"
-                    style={{ 
-                      border: "none",
-                      display: "block",
-                      minHeight: "70vh",
-                      maxWidth: "900px",
-                      margin: "0 auto",
-                      background: "#fff",
-                      borderRadius: "8px"
-                    }}
-                    allow="autoplay"
+                <Document
+                  file={pdf}
+                  loading={<div style={{ textAlign: 'center', padding: 40 }}>Loading PDF...</div>}
+                  error={<div style={{ textAlign: 'center', color: 'red', padding: 40 }}>Failed to load PDF.</div>}
+                >
+                  <Page
+                    pageNumber={1}
+                    width={typeof window !== 'undefined' && window.innerWidth < 600 ? window.innerWidth - 32 : 800}
+                    renderTextLayer={false}
+                    renderAnnotationLayer={false}
                   />
+                </Document>
               </div>
             </div>
 
