@@ -1,17 +1,17 @@
-
 import React, { useState, useEffect } from "react";
 import Zoom from "react-reveal/Zoom";
 import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import pdf from "../../assets/final-resume.pdf";
-
 import { Document, Page, pdfjs } from "react-pdf";
+import "react-pdf/src/Page/AnnotationLayer.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 function Resume() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [numPages, setNumPages] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -20,6 +20,8 @@ function Resume() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const pdfWidth = isMobile ? window.innerWidth - 32 : 800;
 
   return (
     <div style={{ 
@@ -73,29 +75,36 @@ function Resume() {
               </a>
             </div>
 
-            {/* Resume Viewer - use react-pdf for cross-device support */}
+            {/* Resume Viewer */}
             <div className="d-flex justify-content-center mt-4">
               <div style={{
                 width: "100%",
-                maxWidth: "800px",
+                maxWidth: 800,
                 backgroundColor: "white",
                 boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-                borderRadius: "10px",
-                overflow: "hidden",
+                borderRadius: 14,
+                overflowY: "auto",
+                overflowX: "hidden",
+                maxHeight: isMobile ? "80vh" : "90vh",
                 margin: "0 auto",
-                padding: 8
+                padding: 8,
+                boxSizing: "border-box"
               }}>
                 <Document
                   file={pdf}
+                  onLoadSuccess={({ numPages }) => setNumPages(numPages)}
                   loading={<div style={{ textAlign: 'center', padding: 40 }}>Loading PDF...</div>}
                   error={<div style={{ textAlign: 'center', color: 'red', padding: 40 }}>Failed to load PDF.</div>}
                 >
-                  <Page
-                    pageNumber={1}
-                    width={typeof window !== 'undefined' && window.innerWidth < 600 ? window.innerWidth - 32 : 800}
-                    renderTextLayer={false}
-                    renderAnnotationLayer={false}
-                  />
+                  {numPages && Array.from(new Array(numPages), (el, index) => (
+                    <Page
+                      key={`page_${index + 1}`}
+                      pageNumber={index + 1}
+                      width={pdfWidth}
+                      renderTextLayer={false}
+                      renderAnnotationLayer={true}
+                    />
+                  ))}
                 </Document>
               </div>
             </div>
