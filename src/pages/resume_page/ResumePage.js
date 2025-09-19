@@ -79,17 +79,21 @@ function Resume() {
                 overflow: "hidden",
                 margin: "0 auto"
               }}>
-                <iframe
-                  src={pdf}
-                  title="Resume PDF"
-                  width="100%"
-                  height={isMobile ? "500px" : "1000px"}
-                  style={{ 
-                    border: "none",
-                    display: "block"
-                  }}
-                  allow="autoplay"
-                />
+                  <iframe
+                    src={pdf}
+                    title="Resume PDF"
+                    width="100%"
+                    style={{ 
+                      border: "none",
+                      display: "block",
+                      minHeight: "70vh",
+                      maxWidth: "900px",
+                      margin: "0 auto",
+                      background: "#fff",
+                      borderRadius: "8px"
+                    }}
+                    allow="autoplay"
+                  />
               </div>
             </div>
 
