@@ -340,7 +340,6 @@ const portfolioProjects = [
     details: 'The Event Management System is a web and mobile-based application developed to simplify the process of planning, organizing, and executing events such as conferences, weddings, exhibitions'
   }
 ];
-
 export default function ProjectPage() {
   return (
     <section className="home-section">
