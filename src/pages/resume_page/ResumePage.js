@@ -104,7 +104,7 @@ function Resume() {
             <div className="d-flex justify-content-center mt-4">
               <div className="resume-pdf-viewer" style={{
                 width: "100%",
-                maxWidth: 800,
+                maxWidth: 817,
                 backgroundColor: "white",
                 boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
                 borderRadius: 14,
