@@ -23,6 +23,31 @@ function Resume() {
 
   const pdfWidth = isMobile ? window.innerWidth - 32 : 800;
 
+  useEffect(() => {
+    // Add custom scrollbar styling for the PDF viewer only
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .resume-pdf-viewer::-webkit-scrollbar {
+        width: 6px;
+      }
+      .resume-pdf-viewer::-webkit-scrollbar-thumb {
+        background: #c7a4de;
+        border-radius: 6px;
+      }
+      .resume-pdf-viewer::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .resume-pdf-viewer {
+        scrollbar-width: thin;
+        scrollbar-color: #c7a4de transparent;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
   return (
     <div style={{ 
       fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
@@ -77,7 +102,7 @@ function Resume() {
 
             {/* Resume Viewer */}
             <div className="d-flex justify-content-center mt-4">
-              <div style={{
+              <div className="resume-pdf-viewer" style={{
                 width: "100%",
                 maxWidth: 800,
                 backgroundColor: "white",
