@@ -7,23 +7,26 @@ import pdf from "../../assets/final-resume.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/src/Page/AnnotationLayer.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 function Resume() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [width, setWidth] = useState(window.innerWidth);
   const [numPages, setNumPages] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
     const handleResize = () => {
+      setWidth(window.innerWidth);
       setIsMobile(window.innerWidth <= 768);
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const pdfWidth = isMobile ? window.innerWidth - 32 : 800;
-
-  useEffect(() => {
+  // Set PDF width based on screen size
+  const pdfWidth = isMobile ? Math.min(width - 32, 350) : 800;
+    useEffect(() => {
     // Add custom scrollbar styling for the PDF viewer only
     const style = document.createElement('style');
     style.innerHTML = `
@@ -48,39 +51,24 @@ function Resume() {
     };
   }, []);
 
-  
+
   return (
-    <div style={{ 
-      fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      minHeight: "100vh",
-      padding: isMobile ? "70px 0 30px 0" : "80px 0 40px 0"
-    }}>
-      <section style={{ padding: isMobile ? "0 10px" : "0 20px" }}>
-        <Container fluid>
+    <div>
+      <section style={{ marginTop: isMobile ? "34%" : "10%" }}>
+        <Container>
           <div>
             {/* Heading */}
             <div
               className="d-flex justify-content-center"
-              style={{ 
-                backgroundColor: "#fbd9ad", 
-                padding: "15px 0",
-                marginBottom: "25px",
-                width: "100%"
-              }}
+              width="100%"
+              style={{ backgroundColor: "#fbd9ad" }}
             >
               <Zoom left cascade>
-                <h1 style={{ 
-                  color: "rgb(134, 61, 176)", 
-                  fontSize: isMobile ? "1.8rem" : "2.5rem",
-                  fontWeight: "bold",
-                  margin: 0
-                }}>
-                  RESUME
-                </h1>
+                <h1 style={{ color: "rgb(134 61 176)" }}>RESUME</h1>
               </Zoom>
             </div>
 
-            {/* Download Button Top */}
+          {/* Download Button Top */}
             <div className="d-flex justify-content-center mt-4">
               <a href={pdf} download="Vishal_Baria_Resume.pdf" style={{ textDecoration: "none" }}>
                 <Button 
