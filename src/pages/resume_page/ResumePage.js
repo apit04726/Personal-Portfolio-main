@@ -22,17 +22,17 @@ function Resume() {
       minHeight: "100vh",
       padding: isMobile ? "70px 0 30px 0" : "80px 0 40px 0"
     }}>
-      <section style={{ padding: isMobile ? "0 10px" : "0" }}>
-        <Container fluid={isMobile}>
+      <section style={{ padding: isMobile ? "0 10px" : "0 20px" }}>
+        <Container fluid>
           <div>
             {/* Heading */}
             <div
               className="d-flex justify-content-center"
-              width="100%"
               style={{ 
                 backgroundColor: "#fbd9ad", 
                 padding: "15px 0",
-                marginBottom: "25px"
+                marginBottom: "25px",
+                width: "100%"
               }}
             >
               <Zoom left cascade>
@@ -57,7 +57,7 @@ function Resume() {
                     backgroundColor: "rgb(134, 61, 176)",
                     border: "none",
                     borderRadius: "5px",
-                    padding: "10px 20px",
+                    padding: isMobile ? "8px 16px" : "10px 20px",
                     fontWeight: "bold",
                     boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
                   }}
@@ -76,7 +76,8 @@ function Resume() {
                 backgroundColor: "white",
                 boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
                 borderRadius: "10px",
-                overflow: "hidden"
+                overflow: "hidden",
+                margin: "0 auto"
               }}>
                 <iframe
                   src={pdf}
@@ -84,7 +85,8 @@ function Resume() {
                   width="100%"
                   height={isMobile ? "500px" : "1000px"}
                   style={{ 
-                    border: "none", 
+                    border: "none",
+                    display: "block"
                   }}
                   allow="autoplay"
                 />
@@ -101,7 +103,7 @@ function Resume() {
                     backgroundColor: "rgb(134, 61, 176)",
                     border: "none",
                     borderRadius: "5px",
-                    padding: "10px 20px",
+                    padding: isMobile ? "8px 16px" : "10px 20px",
                     fontWeight: "bold",
                     boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
                   }}
