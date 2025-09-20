@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import Preloader from "./Preloader";
 import MyNav from "./components/navbar/MyNav";
+import Loader from "./Loader";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import About from "./components/aboutme/about/About";
@@ -42,7 +43,7 @@ function App() {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <MyNav />
-        <Suspense fallback={<div>Loading...</div>}>
+  <Suspense fallback={<Loader />}> 
           <Routes>
             <Route path="/" element={<Home />}> 
               <Route path="/" element={<About />}></Route>
