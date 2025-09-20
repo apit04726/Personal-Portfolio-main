@@ -478,7 +478,6 @@ html {
 /* --------- */
 /* Footer */
 /* --------- */
-
 .footer {
   background-color: rgb(10, 4, 22);
   position: fixed;
@@ -490,16 +489,13 @@ html {
   z-index: 1000;
 }
 
-.footer.footer-static {
-  position: static !important;
-}
-
 body {
-  padding-bottom: 0x; /* Adjust to footer height */
+  padding-bottom: 80px; /* Adjust to footer height */
 }
 
 @media (max-width: 767px) {
   .footer {
+    position: static;
     width: 100% !important;
   }
   body {
