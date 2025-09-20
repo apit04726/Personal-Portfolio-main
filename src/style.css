@@ -489,8 +489,6 @@ html {
   margin-top: auto;
 }
 
-
-
 @media (max-width: 767px) {
   .App {
     min-height: 100vh;
