@@ -495,11 +495,11 @@ body {
 
 @media (max-width: 767px) {
   .footer {
-    position: static;
+    position: fixed;
     width: 100% !important;
   }
   body {
-    padding-bottom: 0 !important;
+    padding-bottom: 8 !important;
   }
 }
 .footer-copywright {
