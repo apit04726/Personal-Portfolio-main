@@ -32,11 +32,11 @@ function Resume() {
     const style = document.createElement("style");
     style.innerHTML = `
       .resume-pdf-viewer::-webkit-scrollbar {
-        width: 6px;
+        width: 4px;
       }
       .resume-pdf-viewer::-webkit-scrollbar-thumb {
         background: #c7a4de;
-        border-radius: 6px;
+        border-radius: 4px;
       }
       .resume-pdf-viewer::-webkit-scrollbar-track {
         background: transparent;
@@ -82,7 +82,7 @@ function Resume() {
                     backgroundColor: "rgb(134, 61, 176)",
                     border: "none",
                     borderRadius: "5px",
-                    padding: isMobile ? "8px 16px" : "10px 20px",
+                    padding: isMobile ? "5px 10px" : "5px 10px",
                     fontWeight: "bold",
                     boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
                   }}
@@ -93,51 +93,67 @@ function Resume() {
               </a>
             </div>
 
-            {/* Resume Viewer */}
+            {/* Resume Viewer with Red Border */}
             <div className="d-flex justify-content-center mt-4">
               <div
-                className="resume-pdf-viewer"
                 style={{
-                  width: "100%",
-                  maxWidth: 817,
-                  backgroundColor: "white",
-                  boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-                  borderRadius: 14,
-                  overflowY: "auto",
-                  overflowX: "hidden",
-                  maxHeight: isMobile ? "80vh" : "90vh",
-                  margin: "0 auto",
-                  padding: 8,
+                  background: "#4860cbff", // Red border color
+                  borderRadius: 18,
+                  padding: isMobile ? 4 : 8,
                   boxSizing: "border-box",
+                  width: isMobile ? "100vw" : 840,
+                  maxWidth: "100vw",
+                  overflow: "auto",
+                  display: "flex",
+                  justifyContent: "center",
                 }}
               >
-                <Document
-                  file={pdf}
-                  onLoadSuccess={({ numPages }) => setNumPages(numPages)}
-                  loading={
-                    <div style={{ textAlign: "center", padding: 40 }}>
-                      Loading PDF...
-                    </div>
-                  }
-                  error={
-                    <div
-                      style={{ textAlign: "center", color: "red", padding: 40 }}
-                    >
-                      Failed to load PDF.
-                    </div>
-                  }
+                <div
+                  className="resume-pdf-viewer"
+                  style={{
+                    width: "100%",
+                    maxWidth: 817,
+                    backgroundColor: "#fff",
+                    boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+                    borderRadius: 14,
+                    overflowY: "auto",
+                    overflowX: "hidden",
+                    maxHeight: isMobile ? "80vh" : "90vh",
+                    margin: "0 auto",
+                    padding: isMobile ? 4 : 8,
+                    boxSizing: "border-box",
+                  }}
                 >
-                  {numPages &&
-                    Array.from(new Array(numPages), (el, index) => (
-                      <Page
-                        key={`page_${index + 1}`}
-                        pageNumber={index + 1}
-                        width={pdfWidth}
-                        renderTextLayer={false}
-                        renderAnnotationLayer={true}
-                      />
-                    ))}
-                </Document>
+                  <Document
+                    file={pdf}
+                    onLoadSuccess={({ numPages }) => setNumPages(numPages)}
+                    loading={
+                      <div style={{ textAlign: "center", padding: 40 }}>
+                        Loading PDF...
+                      </div>
+                    }
+                    error={
+                      <div
+                        style={{ textAlign: "center", color: "red", padding: 40 }}
+                      >
+                        Failed to load PDF.
+                      </div>
+                    }
+                  >
+                    {numPages &&
+                      Array.from(new Array(numPages), (el, index) => (
+                        <Page
+                          key={`page_${index + 1}`}
+                          pageNumber={index + 1}
+                          width={pdfWidth}
+                          renderTextLayer={false}
+                          renderAnnotationLayer={true}
+                          renderMode="canvas"
+
+                        />
+                      ))}
+                  </Document>
+                </div>
               </div>
             </div>
 
@@ -155,7 +171,7 @@ function Resume() {
                     backgroundColor: "rgb(134, 61, 176)",
                     border: "none",
                     borderRadius: "5px",
-                    padding: isMobile ? "8px 16px" : "10px 20px",
+                    padding: isMobile ? "5px 10px" : "5px 10px",
                     fontWeight: "bold",
                     boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
                   }}
