@@ -480,7 +480,7 @@ html {
 /* --------- */
 .footer {
   background-color: rgb(10, 4, 22);
-  position: fixed;
+  position: static;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -490,7 +490,6 @@ html {
 }
 
 body {
-  padding-bottom: 80px; /* Adjust to footer height */
 }
 
 @media (max-width: 767px) {
