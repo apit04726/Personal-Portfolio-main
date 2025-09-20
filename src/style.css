@@ -480,10 +480,13 @@ html {
 /* --------- */
 .footer {
   background-color: rgb(10, 4, 22);
-  bottom: 0 !important;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
-  z-index: 6;
+  padding-bottom: 8px !important;
+  z-index: 1000;
 }
 .footer-copywright {
   text-align: center !important;
