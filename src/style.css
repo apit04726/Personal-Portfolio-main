@@ -483,16 +483,23 @@ html {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   padding-top: 10px !important;
   padding-bottom: 8px !important;
   z-index: 1000;
 }
 
+body {
+  padding-bottom: 80px; /* Adjust to footer height */
+}
+
 @media (max-width: 767px) {
   .footer {
     position: static;
-    width: 100vw !important;
+    width: 100% !important;
+  }
+  body {
+    padding-bottom: 0 !important;
   }
 }
 .footer-copywright {
