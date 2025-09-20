@@ -70,7 +70,7 @@ function App() {
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Suspense>
-        <Footer />
+  <Footer load={load} />
       </div>
     </Router>
   );
