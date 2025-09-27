@@ -36,6 +36,7 @@ import dwarkesh from "../../images/dwarkesh-jai-jpeg.jpeg";
 import shivPetroleum from "../../images/shive-pp.jpeg";
 import eventHub from "../../images/eventppp.jpeg";
 import lendingusa from "../../images/leaninng-1.jpg";
+import seyt from "../../images/se-yt.png";
 
 // Portfolio projects data
 const portfolioProjects = [
@@ -48,6 +49,16 @@ const portfolioProjects = [
     date: '01 March, 2015',
     url: 'https://lendingusa.com/',
     details: 'LendingUSA is a fintech platform that provides point-of-sale financing for merchants and personal loans for borrowers, helping over 10,000 businesses and 150,000 customers with fast, flexible funding solutions.'
+  },
+  {
+    image: seyt,
+    title: 'The Story by Elleone',
+    description: 'Custom one page site',
+    category: 'WordPress and html5 - css3',
+    client: 'Youtube channel',
+    date: '01 March, 2025',
+    url: 'https://storyelleone.vercel.app/',
+    details: 'Discover proven strategies to increase subscribers, boost engagement, and maximize your YouTube channels potential.'
   },
   {
     image: jkCapinvest,
@@ -171,12 +182,12 @@ const portfolioProjects = [
   },
   {
     image: rvEstore,
-    title: 'RV Estore',
+    title: 'VShopEase',
     description: 'Application for e-commerce Payment Gateway',
     category: 'React.js Payment Gateway',
     client: 'E-Shop Propty Hunters',
     date: '28 Marce, 2025',
-    url: 'https://www.rv.estore.in/',
+    url: 'https://vshopease.vercel.app/',
     details: 'There is mention of something called "The RV Store" on Instagram, which hints at categories like Beauty & Personal Care, Health & Wellness, and Pet Care Products, though details are sparse, and it may not be directly linked to the URL you provided. A listing for RV Online Store shows a simple contact form'
   },
   {
