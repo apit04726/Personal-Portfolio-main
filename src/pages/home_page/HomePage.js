@@ -6,10 +6,9 @@ import Tilt from "react-parallax-tilt";
 import AboutmeContainer from "../../components/aboutme/aboutmeContainer";
 import Fade from "react-reveal/Fade";
 import { AiFillInstagram, AiOutlineWhatsApp } from "react-icons/ai";
-import { FaLinkedinIn, FaFacebookF,FaEnvelope } from "react-icons/fa";
+import { FaLinkedinIn,FaEnvelope } from "react-icons/fa";
 import Contactus from "../../components/contactus/Contactus";
 import Projects from "../../components/projects/Projects";
-
 export default function Home() {
   return (
     <section className="home-section">
