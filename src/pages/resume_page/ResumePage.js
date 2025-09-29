@@ -45,6 +45,24 @@ function Resume() {
         scrollbar-width: thin;
         scrollbar-color: #c7a4de transparent;
       }
+      
+      /* Fix for react-pdf canvas bottom gap and fixed height */
+      .react-pdf__Page__canvas {
+        margin-bottom: 0 !important;
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+      }
+      .react-pdf__Page {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+      }
+      .react-pdf__Page__textContent {
+        display: none !important;
+      }
     `;
     document.head.appendChild(style);
     return () => {
@@ -97,7 +115,7 @@ function Resume() {
             <div className="d-flex justify-content-center mt-4">
               <div
                 style={{
-                  background: "#4860cbff", // Red border color
+                  background: "#4860cbff",
                   borderRadius: 18,
                   padding: isMobile ? 4 : 8,
                   boxSizing: "border-box",
@@ -147,9 +165,9 @@ function Resume() {
                           pageNumber={index + 1}
                           width={pdfWidth}
                           renderTextLayer={false}
-                          renderAnnotationLayer={true}
+                          renderAnnotationLayer={false}
                           renderMode="canvas"
-
+                          style={{ marginBottom: 0, paddingBottom: 0 }}
                         />
                       ))}
                   </Document>
