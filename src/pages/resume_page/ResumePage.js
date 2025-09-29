@@ -165,7 +165,7 @@ function Resume() {
                           pageNumber={index + 1}
                           width={pdfWidth}
                           renderTextLayer={false}
-                          renderAnnotationLayer={false}
+                          renderAnnotationLayer={true}
                           renderMode="canvas"
                           style={{ marginBottom: 0, paddingBottom: 0 }}
                         />
