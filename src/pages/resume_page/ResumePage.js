@@ -129,7 +129,24 @@ function Resume() {
                     onLoadSuccess={({ numPages }) => setNumPages(numPages)}
                     loading={
                       <div style={{ textAlign: "center", padding: 40 }}>
-                        Loading PDF...
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+                          <div className="loader-spinner" style={{
+                            width: 48,
+                            height: 48,
+                            border: '6px solid #e0c3fc',
+                            borderTop: '6px solid #8641b8',
+                            borderRadius: '50%',
+                            animation: 'spin 1s linear infinite',
+                            marginBottom: 12
+                          }} />
+                          <span style={{ color: '#8641b8', fontWeight: 600, fontSize: 18 }}>Loading PDF...</span>
+                          <style>{`
+                            @keyframes spin {
+                              0% { transform: rotate(0deg); }
+                              100% { transform: rotate(360deg); }
+                            }
+                          `}</style>
+                        </div>
                       </div>
                     }
                     error={
