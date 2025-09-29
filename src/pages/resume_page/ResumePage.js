@@ -45,24 +45,6 @@ function Resume() {
         scrollbar-width: thin;
         scrollbar-color: #c7a4de transparent;
       }
-      
-      /* Fix for react-pdf canvas bottom gap and fixed height */
-      .react-pdf__Page__canvas {
-        margin-bottom: 0 !important;
-        display: block !important;
-        width: 100% !important;
-        height: auto !important;
-        max-width: 100% !important;
-      }
-      .react-pdf__Page {
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
-        display: flex !important;
-        justify-content: center !important;
-      }
-      .react-pdf__Page__textContent {
-        display: none !important;
-      }
     `;
     document.head.appendChild(style);
     return () => {
