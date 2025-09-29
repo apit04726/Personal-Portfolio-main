@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { AiOutlineWhatsApp, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
-
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();

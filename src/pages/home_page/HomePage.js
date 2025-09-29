@@ -26,12 +26,10 @@ export default function Home() {
                 <span className="wave" role="img" aria-labelledby="wave">
                 </span>
               </h1>
-
               <h1 className="heading-name">
                 I'M
                 <strong className="main-name"> Mr vishal</strong>
               </h1>
-
               <div className="typing-homeclass">
                 <Typing />
               </div>

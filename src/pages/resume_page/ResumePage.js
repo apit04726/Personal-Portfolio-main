@@ -173,7 +173,6 @@ function Resume() {
                 </div>
               </div>
             </div>
-
             {/* Download Button Bottom */}
             <div className="d-flex justify-content-center mt-4 mb-4">
               <a

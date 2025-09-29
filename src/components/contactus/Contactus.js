@@ -7,14 +7,12 @@ import { AiOutlineSend } from "react-icons/ai";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FiPhone, FiAtSign } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-
 export default function Contactus() {
   const [formData, setFormData] = useState(new FormData());
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -36,10 +34,8 @@ export default function Contactus() {
 
       alert("Backend Server was not Running while submitting the form.");
     }
-
     setFormData({});
   };
-
   return (
     <div>
       <Container fluid className="certificate-section" id="about">
