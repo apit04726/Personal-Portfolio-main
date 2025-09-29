@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { FaLinkedinIn, FaFacebookF, FaGoogle } from "react-icons/fa";
+import { AiOutlineWhatsApp, AiFillInstagram } from "react-icons/ai";
+import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 
 function Footer() {
   let date = new Date();
@@ -19,12 +19,12 @@ function Footer() {
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href="https://github.com/"
+                href="https://wa.me/917096728816"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <AiFillGithub />
+                <AiOutlineWhatsApp />
               </a>
             </li>
             <li className="social-icons">
@@ -49,22 +49,12 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.facebook.com/"
+                href="mailto:vishalbaria7096@gmail.com"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaFacebookF />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="mailto:"
-                style={{ color: "white" }}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGoogle />
+                <FaEnvelope />
               </a>
             </li>
           </ul>
@@ -73,5 +63,4 @@ function Footer() {
     </Container>
   );
 }
-
 export default Footer;

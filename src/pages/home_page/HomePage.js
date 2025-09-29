@@ -39,7 +39,7 @@ export default function Home() {
                 <ul className="homeaboutsociallinks">
                   <li className="socialicons">
                     <a
-                      href="jdjjsd"
+                      href="https://wa.me/917096728816"
                       target="_blank"
                       rel="noreferrer"
                       className="iconcolour  homesocialicons"
@@ -67,7 +67,7 @@ export default function Home() {
                       <AiFillInstagram />
                     </a>
                   </li>
-                  <li className="socialicons">
+                  {/* <li className="socialicons">
                     <a
                       href="https://www.facebook.com"
                       target="_blank"
@@ -76,7 +76,7 @@ export default function Home() {
                     >
                       <FaFacebookF />
                     </a>
-                  </li>
+                  </li> */}
                   <li className="socialicons">
                     <a
                       href="mailto:vishalbaria7096@gmail.com"

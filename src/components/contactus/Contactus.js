@@ -115,7 +115,7 @@ export default function Contactus() {
                             <AiOutlineSend className="send-icon" />
                           </button>
                           <a
-                            href="https://wa.me/"
+                            href="https://wa.me/917096728816"
                             target="_blank"
                             rel="noopener noreferrer"
                             style={{ textDecoration: "none" }}
@@ -123,11 +123,13 @@ export default function Contactus() {
                             <button
                               type="button"
                               className="submitBtn"
-                              style={{ display: "flex", alignItems: "center", justifyContent: "space-between", 
-                                gap: "10px", backgroundColor: "#fbd9ad", color: "#6c3483", border: "none", 
-                                width: "170px", fontSize: "1.3rem", fontWeight: "500" }}
+                              style={{
+                                display: "flex", alignItems: "center", justifyContent: "space-between",
+                                gap: "10px", backgroundColor: "#fbd9ad", color: "#6c3483", border: "none",
+                                width: "170px", fontSize: "1.3rem", fontWeight: "500"
+                              }}
                             >
-                              <span style={{ flex: 1, textAlign: "left", fontSize: "16px", marginLeft:"12px" }}>Direct to Chat</span>
+                              <span style={{ flex: 1, textAlign: "left", fontSize: "16px", marginLeft: "12px" }}>Direct to Chat</span>
                               <AiOutlineWhatsApp style={{ color: "#6c3483", fontSize: "30px" }} />
                             </button>
                           </a>
