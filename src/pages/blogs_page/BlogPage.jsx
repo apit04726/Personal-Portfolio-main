@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Particle from "../../Particle";
 import Zoom from "react-reveal/Zoom";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaCalendar, FaUser, FaClock, FaHeart, FaComment, FaShare, FaBookmark, } from "react-icons/fa";
 import { HiArrowRight } from "react-icons/hi";
+import Loader from "../../Loader";
+
+
 
 // Blog images
 import blog1 from "../../images/blog-1.png";
@@ -85,10 +88,10 @@ const blogPosts = [
     excerpt: "Exploring practical blockchain applications in supply chain, digital identity, and decentralized applications.",
     content: "Blockchain technology has evolved far beyond cryptocurrency, with practical applications emerging across various industries. In 2024, we're seeing significant adoption in supply chain management, digital identity verification, and decentralized finance (DeFi). Smart contracts on platforms like Ethereum, Solana, and Polkadot are becoming more sophisticated, enabling complex business logic and automated workflows. The development ecosystem has matured with better tools, frameworks, and testing environments. We explore real-world implementations in healthcare records, voting systems, and intellectual property management. The integration of zero-knowledge proofs and layer-2 solutions has addressed scalability concerns, making blockchain practical for high-throughput applications. Developers entering this space need to understand not just smart contract development, but also the broader ecosystem including oracles, decentralized storage, and cross-chain interoperability.",
     author: "Blockchain Builder",
-    date: "10 November, 2024",
+    date: "10 November, 2025",
     readTime: "11 min read",
     category: "Blockchain",
-    tags: ["Blockchain", "Smart Contracts", "Web3", "2024"],
+    tags: ["Blockchain", "Smart Contracts", "Web3", "2025"],
     likes: 89,
     comments: 36,
     featured: false,
@@ -137,6 +140,7 @@ const BlogCard = ({ post, onReadMore }) => {
           <img
             src={post.image}
             alt={post.title}
+            loading="lazy"
             onError={(e) => {
               e.target.src = `https://picsum.photos/400/250?random=${post.id}`;
             }}
@@ -211,6 +215,14 @@ export default function BlogPage() {
   const [selectedPost, setSelectedPost] = useState(null);
   const [filter] = useState('all');
   const [searchTerm] = useState('');
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Match loader duration to other pages if needed
+    return () => clearTimeout(timer);
+  }, []);
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesFilter = filter === 'all' ||
@@ -232,6 +244,10 @@ export default function BlogPage() {
   const closeModal = () => {
     setSelectedPost(null);
   };
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <section className="home-section">
@@ -274,7 +290,7 @@ export default function BlogPage() {
             <button className="close-modal" onClick={closeModal}>×</button>
 
             <div className="modal-image">
-              <img src={selectedPost.image} alt={selectedPost.title} />
+              <img src={selectedPost.image} alt={selectedPost.title} loading="lazy" />
               <div className="image-overlay">
                 {/* <span className="category-tag">{selectedPost.category}</span> */}
               </div>
