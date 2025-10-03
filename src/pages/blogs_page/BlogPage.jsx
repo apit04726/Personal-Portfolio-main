@@ -85,7 +85,7 @@ const blogPosts = [
     id: 5,
     image: blog5,
     title: "Blockchain Development in 2024: Beyond Cryptocurrency",
-    excerpt: "Exploring practical blockchain applications in supply chain, digital identity, and decentralized applications.",
+    excerpt: "Exploring practical blockchain applications in supply chain, digital identity, and decentralized applications and decentralized and decentralized . ",
     content: "Blockchain technology has evolved far beyond cryptocurrency, with practical applications emerging across various industries. In 2024, we're seeing significant adoption in supply chain management, digital identity verification, and decentralized finance (DeFi). Smart contracts on platforms like Ethereum, Solana, and Polkadot are becoming more sophisticated, enabling complex business logic and automated workflows. The development ecosystem has matured with better tools, frameworks, and testing environments. We explore real-world implementations in healthcare records, voting systems, and intellectual property management. The integration of zero-knowledge proofs and layer-2 solutions has addressed scalability concerns, making blockchain practical for high-throughput applications. Developers entering this space need to understand not just smart contract development, but also the broader ecosystem including oracles, decentralized storage, and cross-chain interoperability.",
     author: "Blockchain Builder",
     date: "10 November, 2025",
