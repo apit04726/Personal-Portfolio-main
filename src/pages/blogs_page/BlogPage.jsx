@@ -6,108 +6,107 @@ import { FaCalendar, FaUser, FaClock, FaHeart, FaComment, FaShare, FaBookmark, }
 import { HiArrowRight } from "react-icons/hi";
 
 // Blog images
-import kasturi from "../../images/kasturi_jpg.jpeg";
-import nikkoo from "../../images/nikko-home22.jpeg";
-import nikko from "../../images/nikko-garden.jpeg";
-import jkCapinvest from "../../images/jk-.jpeg";
-import mrFish from "../../images/mr-fish.jpg";
-import ammPro from "../../images/Amm-pro.jpg";
+import blog1 from "../../images/blog-1.png";
+import blog2 from "../../images/blog-2.png";
+import blog3 from "../../images/blog-3.jpeg";
+import blog4 from "../../images/blog-4.png";
+import blog5 from "../../images/blog-5.jpg";
+import blog6 from "../../images/blog-6.jpg";
 
 const blogPosts = [
   {
     id: 1,
-    image: kasturi,
-    title: "Mastering React Hooks: A Comprehensive Guide",
-    excerpt: "Deep dive into React Hooks and how they revolutionize functional components with practical examples and best practices.",
-    content: "React Hooks have completely transformed how we write React components. In this comprehensive guide, we'll explore useState, useEffect, useContext, and custom hooks. Learn how to manage state, handle side effects, and share logic across your application with real-world examples and performance optimization techniques. React Hooks have completely transformed how we write React components. In this comprehensive guide, we'll explore useState, useEffect, useContext, and custom hooks. Learn how to manage state, handle side effects, and share logic across your application with real-world examples and performance optimization techniques. React Hooks have completely transformed how we write React components. In this comprehensive guide, we'll explore useState, useEffect, useContext, and custom hooks. Learn how to manage state, handle side effects, and share logic across your application with real-world examples and performance optimization techniques.    React Hooks have completely transformed how we write React components. In this comprehensive guide, we'll explore useState, useEffect, useContext, and custom hooks. Learn how to manage state, handle side effects, and share logic across your application with real-world examples and performance optimization techniques.    React Hooks have completely transformed how we write React components. In this comprehensive guide, we'll explore useState, useEffect, useContext, and custom hooks. Learn how to manage state, handle side effects, and share logic across your application with real-world examples and performance optimization techniques.     React Hooks have completely transformed how we write React components. In this comprehensive guide, we'll explore useState, useEffect, useContext, and custom hooks. Learn how to manage state, handle side effects, and share logic across your application with real-world examples and performance optimization techniques.",
-
-    author: "John Developer",
-    date: "15 March, 2024",
+    image: blog1,
+    title: "AI-Powered Code Generation: Revolutionizing Development in 2025",
+    excerpt: "Explore how AI tools like GitHub Copilot and ChatGPT are transforming the way developers write code and solve complex problems.",
+    content: "AI-powered code generation has become a game-changer in software development. Tools like GitHub Copilot, Amazon CodeWhisperer, and ChatGPT are revolutionizing how developers write code. These AI assistants can generate entire functions, suggest optimizations, and even debug code in real-time. In 2024, we're seeing AI move beyond simple code completion to understanding complex business logic and architectural patterns. The integration of large language models with development environments has significantly boosted productivity, reducing development time by up to 55%. However, this technology also brings challenges around code quality, security, and the need for human oversight. Developers must learn to effectively collaborate with AI tools while maintaining code standards and best practices. The future promises even more sophisticated AI coding assistants that can understand project context, suggest architectural improvements, and automate testing workflows.    AI-powered code generation has become a game-changer in software development. Tools like GitHub Copilot, Amazon CodeWhisperer, and ChatGPT are revolutionizing how developers write code. These AI assistants can generate entire functions, suggest optimizations, and even debug code in real-time. In 2024, we're seeing AI move beyond simple code completion to understanding complex business logic and architectural patterns. The integration of large language models with development environments has significantly boosted productivity, reducing development time by up to 55%. However, this technology also brings challenges around code quality, security, and the need for human oversight. Developers must learn to effectively collaborate with AI tools while maintaining code standards and best practices. The future promises even more sophisticated AI coding assistants that can understand project context, suggest architectural improvements, and automate testing workflows.",
+    author: "Sarah TechLead",
+    date: "20 November, 2025",
     readTime: "8 min read",
-    category: "React",
-    tags: ["React", "JavaScript", "Hooks"],
-    likes: 42,
-    comments: 12,
+    category: "AI Development",
+    tags: ["AI", "Code Generation", "GitHub Copilot", "2025"],
+    likes: 128,
+    comments: 45,
     featured: true,
     trending: true
   },
   {
     id: 2,
-    image: nikkoo,
-    title: "CSS Grid vs Flexbox: When to Use What",
-    excerpt: "Understanding the differences between CSS Grid and Flexbox with practical layout examples and use cases.",
-    content: "CSS Grid and Flexbox are both powerful layout systems, but they serve different purposes. Grid is perfect for two-dimensional layouts, while Flexbox excels at one-dimensional layouts. We'll explore real-world examples, browser support, and when to choose one over the other for optimal results.",
-    author: "Sarah Designer",
-    date: "12 March, 2024",
-    readTime: "6 min read",
-    category: "CSS",
-    tags: ["CSS", "Layout", "Web Design"],
-    likes: 38,
-    comments: 8,
+    image: blog2,
+    title: "WebAssembly 2.0: The Future of High-Performance Web Apps",
+    excerpt: "Discover how WebAssembly 2.0 enables near-native performance in browsers and expands programming language support.",
+    content: "WebAssembly 2.0 represents a significant leap forward in web application performance. With new features like thread support, SIMD operations, and exception handling, WASM 2.0 enables applications to run at near-native speeds directly in browsers. This technology is particularly transformative for applications requiring heavy computation, such as video editing, 3D rendering, and scientific simulations. Major frameworks like React and Angular are now exploring WASM integration for performance-critical components. The expanded language support means developers can write web applications in languages like Rust, C++, and Go while maintaining excellent performance. Real-world implementations show performance improvements of 3-5x compared to traditional JavaScript for compute-intensive tasks. As browser support solidifies, we're seeing adoption in areas like gaming, CAD software, and machine learning inference in the browser.",
+    author: "Mike WebArchitect",
+    date: "18 November, 2025",
+    readTime: "10 min read",
+    category: "Web Development",
+    tags: ["WebAssembly", "Performance", "Rust", "2025"],
+    likes: 95,
+    comments: 32,
     featured: true,
     trending: false
   },
   {
     id: 3,
-    image: nikko,
-    title: "JavaScript Performance Optimization Techniques",
-    excerpt: "Advanced techniques to optimize your JavaScript code for better performance and user experience.",
-    content: "Performance is crucial for modern web applications. Learn about debouncing, throttling, memoization, code splitting, and other advanced techniques to make your JavaScript applications faster and more efficient. We'll cover both theoretical concepts and practical implementations.",
-    author: "Mike Engineer",
-    date: "10 March, 2024",
-    readTime: "10 min read",
-    category: "JavaScript",
-    tags: ["JavaScript", "Performance", "Optimization"],
-    likes: 56,
-    comments: 15,
+    image: blog3,
+    title: "Quantum Computing for Developers: Getting Started with Q#",
+    excerpt: "Introduction quantum programming with Microsoft's Q# language and practical applications for modern developers.",
+    content: "Developers can now start building quantum applications using Microsoft's Q# language. This guide introduces the fundamentals of quantum programming, including qubits, superposition, and quantum gates. With the Azure Quantum Development Kit, developers can simulate quantum algorithms and run them on actual quantum hardware. Practical applications include optimization problems, drug discovery simulations, and cryptography. The learning curve is steep, but the potential rewards are enormous. Major tech companies are investing heavily in quantum computing infrastructure, making this an essential skill for forward-thinking developers. We explore real quantum algorithms like Grover's search and Shor's factorization, and demonstrate how to implement them in Q#. The quantum ecosystem is rapidly evolving, with new libraries, simulators, and cloud services making quantum development more accessible than ever. Quantum computing is not just physics—it’s about programming complex problems differently (optimization, cryptography, AI). Q# provides high-level abstractions for quantum gates, operations, and algorithms without needing deep quantum physics knowledge.",
+    author: "Dr. Quantum Dev",
+    date: "15 November, 2025",
+    readTime: "12 min read",
+    category: "Quantum Computing",
+    tags: ["Quantum", "Q#", "Microsoft", "2025"],
+    likes: 78,
+    comments: 28,
     featured: false,
     trending: true
   },
   {
     id: 4,
-    image: jkCapinvest,
-    title: "Building Scalable React Applications",
-    excerpt: "Architectural patterns and best practices for building large-scale React applications that stand the test of time.",
-    content: "Scaling React applications requires careful planning and architecture. Learn about component composition, state management strategies, folder structure, testing approaches, and deployment strategies for enterprise-level applications. We'll discuss Redux, Context API, and modern state management solutions.",
-    author: "John Developer",
-    date: "8 March, 2024",
-    readTime: "12 min read",
-    category: "React",
-    tags: ["React", "Architecture", "Scalability"],
-    likes: 34,
-    comments: 7,
+    image: blog4,
+    title: "Edge Computing with Web Containers: The Next Frontier",
+    excerpt: "How web containers and edge computing are enabling new possibilities for distributed applications and real-time processing.",
+    content: "Edge computing combined with web containers is creating new possibilities for distributed applications. Technologies like WebContainer API allow developers to run full development environments directly in the browser, while edge platforms like Cloudflare Workers and Deno Deploy enable code execution at the network edge. This combination reduces latency, improves scalability, and enhances user privacy. Real-world use cases include real-time collaboration tools, IoT data processing, and global content delivery networks. The architecture patterns for edge computing are evolving, with new considerations for state management, data synchronization, and security. We explore how to design applications that leverage both client-side and edge computing capabilities, creating hybrid architectures that optimize performance and cost. The future points toward even more sophisticated edge computing capabilities, with AI inference, database operations, and complex business logic moving closer to end users.",
+    author: "Alex EdgeExpert",
+    date: "12 November, 2025",
+    readTime: "9 min read",
+    category: "Edge Computing",
+    tags: ["Edge Computing", "Web Containers", "Cloudflare", "2025"],
+    likes: 64,
+    comments: 19,
     featured: false,
     trending: false
   },
   {
     id: 5,
-    image: mrFish,
-    title: "Modern Web Security Best Practices",
-    excerpt: "Essential security practices every web developer should implement in 2024.",
-    content: "Web security is more important than ever. This guide covers HTTPS, CORS, Content Security Policy, authentication best practices, and common vulnerabilities like XSS and CSRF. Learn how to protect your applications and users with practical security implementations.",
-    author: "Alex Security",
-    date: "5 March, 2024",
-    readTime: "9 min read",
-    category: "Security",
-    tags: ["Security", "Web", "Best Practices"],
-    likes: 29,
-    comments: 5,
+    image: blog5,
+    title: "Blockchain Development in 2024: Beyond Cryptocurrency",
+    excerpt: "Exploring practical blockchain applications in supply chain, digital identity, and decentralized applications.",
+    content: "Blockchain technology has evolved far beyond cryptocurrency, with practical applications emerging across various industries. In 2024, we're seeing significant adoption in supply chain management, digital identity verification, and decentralized finance (DeFi). Smart contracts on platforms like Ethereum, Solana, and Polkadot are becoming more sophisticated, enabling complex business logic and automated workflows. The development ecosystem has matured with better tools, frameworks, and testing environments. We explore real-world implementations in healthcare records, voting systems, and intellectual property management. The integration of zero-knowledge proofs and layer-2 solutions has addressed scalability concerns, making blockchain practical for high-throughput applications. Developers entering this space need to understand not just smart contract development, but also the broader ecosystem including oracles, decentralized storage, and cross-chain interoperability.",
+    author: "Blockchain Builder",
+    date: "10 November, 2024",
+    readTime: "11 min read",
+    category: "Blockchain",
+    tags: ["Blockchain", "Smart Contracts", "Web3", "2024"],
+    likes: 89,
+    comments: 36,
     featured: false,
     trending: true
   },
   {
     id: 6,
-    image: ammPro,
-    title: "TypeScript for React Developers",
-    excerpt: "Transition from JavaScript to TypeScript in React projects with confidence and best practices.",
-    content: "TypeScript brings type safety and better developer experience to React applications. Learn how to type components, hooks, props, and state effectively. We'll cover advanced patterns, third-party library integration, and migration strategies from existing JavaScript codebases.",
-    author: "Emma TypeScript",
-    date: "3 March, 2024",
-    readTime: "11 min read",
-    category: "TypeScript",
-    tags: ["TypeScript", "React", "JavaScript"],
-    likes: 47,
-    comments: 11,
+    image: blog6,
+    title: "Serverless Microservices: Architecture Patterns for Scale",
+    excerpt: "Modern serverless architectures and microservices patterns for building highly scalable and cost-effective applications.",
+    content: "Serverless computing combined with microservices architecture has become the gold standard for scalable cloud applications. In 2024, we're seeing advanced patterns like event-driven architectures, step functions, and distributed tracing become mainstream. Platforms like AWS Lambda, Azure Functions, and Google Cloud Run have matured significantly, offering better performance, longer timeouts, and more sophisticated tooling. The key to successful serverless microservices lies in proper service boundaries, event design, and observability. We explore patterns for handling state, managing dependencies, and implementing sagas for distributed transactions. Real-world case studies show how companies are achieving 99.99% availability while reducing infrastructure costs by 60-80%. The evolution of serverless includes new capabilities like containers-as-a-service, edge functions, and specialized serverless databases, creating a comprehensive ecosystem for modern application development.",
+    author: "Cloud Architect",
+    date: "8 November, 2024",
+    readTime: "14 min read",
+    category: "Cloud Computing",
+    tags: ["Serverless", "Microservices", "AWS", "2024"],
+    likes: 102,
+    comments: 41,
     featured: true,
     trending: false
   }
@@ -115,17 +114,14 @@ const blogPosts = [
 
 const BlogCard = ({ post, onReadMore }) => {
   const [isLiked, setIsLiked] = useState(false);
-  const [isBookmarked, setIsBookmarked] = useState(false);
+  // Removed unused isBookmarked and setIsBookmarked state
 
   const handleLike = (e) => {
     e.stopPropagation();
     setIsLiked(!isLiked);
   };
 
-  const handleBookmark = (e) => {
-    e.stopPropagation();
-    setIsBookmarked(!isBookmarked);
-  };
+  // Removed unused handleBookmark function
 
   return (
     <Col xl={4} lg={4} md={6} sm={12} xs={12} className="mb-4">
@@ -213,8 +209,8 @@ const BlogCard = ({ post, onReadMore }) => {
 
 export default function BlogPage() {
   const [selectedPost, setSelectedPost] = useState(null);
-  const [filter, setFilter] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [filter] = useState('all');
+  const [searchTerm] = useState('');
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesFilter = filter === 'all' ||
