@@ -6,8 +6,6 @@ import { FaCalendar, FaUser, FaClock, FaHeart, FaComment, FaShare, FaBookmark, }
 import { HiArrowRight } from "react-icons/hi";
 import Loader from "../../Loader";
 
-
-
 // Blog images
 import blog1 from "../../images/blog-1.png";
 import blog2 from "../../images/blog-2.png";
@@ -102,12 +100,12 @@ const blogPosts = [
     image: blog6,
     title: "Serverless Microservices: Architecture Patterns for Scale",
     excerpt: "Modern serverless architectures and microservices patterns for building highly scalable and cost-effective applications.",
-    content: "Serverless computing combined with microservices architecture has become the gold standard for scalable cloud applications. In 2024, we're seeing advanced patterns like event-driven architectures, step functions, and distributed tracing become mainstream. Platforms like AWS Lambda, Azure Functions, and Google Cloud Run have matured significantly, offering better performance, longer timeouts, and more sophisticated tooling. The key to successful serverless microservices lies in proper service boundaries, event design, and observability. We explore patterns for handling state, managing dependencies, and implementing sagas for distributed transactions. Real-world case studies show how companies are achieving 99.99% availability while reducing infrastructure costs by 60-80%. The evolution of serverless includes new capabilities like containers-as-a-service, edge functions, and specialized serverless databases, creating a comprehensive ecosystem for modern application development.",
+    content: "Serverless computing combined with microservices architecture has become the gold standard for scalable cloud applications. In 2025, we're seeing advanced patterns like event-driven architectures, step functions, and distributed tracing become mainstream. Platforms like AWS Lambda, Azure Functions, and Google Cloud Run have matured significantly, offering better performance, longer timeouts, and more sophisticated tooling. The key to successful serverless microservices lies in proper service boundaries, event design, and observability. We explore patterns for handling state, managing dependencies, and implementing sagas for distributed transactions. Real-world case studies show how companies are achieving 99.99% availability while reducing infrastructure costs by 60-80%. The evolution of serverless includes new capabilities like containers-as-a-service, edge functions, and specialized serverless databases, creating a comprehensive ecosystem for modern application development.",
     author: "Cloud Architect",
-    date: "8 November, 2024",
+    date: "8 November, 2025",
     readTime: "14 min read",
     category: "Cloud Computing",
-    tags: ["Serverless", "Microservices", "AWS", "2024"],
+    tags: ["Serverless", "Microservices", "AWS", "2025"],
     likes: 102,
     comments: 41,
     featured: true,
@@ -123,9 +121,7 @@ const BlogCard = ({ post, onReadMore }) => {
     e.stopPropagation();
     setIsLiked(!isLiked);
   };
-
   // Removed unused handleBookmark function
-
   return (
     <Col xl={4} lg={4} md={6} sm={12} xs={12} className="mb-4">
       <div className="blog-card">
@@ -572,34 +568,33 @@ export default function BlogPage() {
           margin-bottom: 10px;
           flex-wrap: wrap;
         }
-.meta-item {
-  display: flex;
-  align-items: center; 
-  gap: 6px;              
-  color: #fbd9ad;
-font-size: 15px;}
+        .meta-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          color: #fbd9ad;
+          font-size: 15px;
+        }
 
-.meta-item i {
-  font-size: 14px;
-  display: inline-block;
-}
-
-
-.meta-item-modal {
- display: flex;
-  align-items: center; 
-  gap: 6px;              
-  color: rgb(176, 97, 223);
-  font-size: 14px;
-}
-
-.meta-item-modal i {
-  font-size: 1rem;       /* adjust icon size */
-  display: inline-block;
-}
+        .meta-item i {
+        font-size: 14px;
+        display: inline-block;
+        }
 
 
+      .meta-item-modal {
+      display: flex;
+      align-items: center; 
+      gap: 6px;              
+      color: rgb(176, 97, 223);
+      font-size: 14px; 
+      }
 
+      .meta-item-modal i {
+      font-size: 1rem;   
+      display: inline-block;
+      }
+      
         .meta-icon {
           font-size: 0.7rem;
           color: #fbd9ad;
