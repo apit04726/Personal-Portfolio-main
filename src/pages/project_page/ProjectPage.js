@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
 import { Fade } from "react-reveal";
 import { FaCode } from "react-icons/fa";
-import "./ProjectPage.css"; // Import a CSS file for pagination styling
 
 // Import all your project images
 import kasturi from "../../images/kasturi_jpg.jpeg";
