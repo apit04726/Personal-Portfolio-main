@@ -1,7 +1,7 @@
 import React from "react";
 import {
   AiOutlineInstagram,
-  AiFillFacebook,
+  AiOutlineMail,
   AiOutlineWhatsApp,
   AiFillLinkedin,
 } from "react-icons/ai";
@@ -19,13 +19,25 @@ export default function SocialMedia() {
         <Row className="g-5">
           <Col md={3}>
             <a
-              href="https://"
+              href="https://wa.me/917096728816"
               target="_blank"
               rel="noreferrer"
               className="icon-colour  home-social-icons"
             >
               <Zoom cascade>
-               <AiOutlineWhatsApp />
+                <AiOutlineWhatsApp />
+              </Zoom>
+            </a>
+          </Col>
+          <Col md={3}>
+            <a
+              href="mailto:vishalbaria7096@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              className="icon-colour  home-social-icons"
+            >
+              <Zoom cascade>
+                <AiOutlineMail />
               </Zoom>
             </a>
           </Col>
@@ -38,18 +50,6 @@ export default function SocialMedia() {
             >
               <Zoom cascade>
                 <AiOutlineInstagram />
-              </Zoom>
-            </a>
-          </Col>
-          <Col md={3}>
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="icon-colour  home-social-icons"
-            >
-              <Zoom cascade>
-                <AiFillFacebook />
               </Zoom>
             </a>
           </Col>
