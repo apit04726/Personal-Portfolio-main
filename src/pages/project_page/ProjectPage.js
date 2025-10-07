@@ -365,6 +365,31 @@ export default function ProjectPage() {
   });
 
   const [filteredProjects, setFilteredProjects] = useState(portfolioProjects);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Preload all images on component mount
+  useEffect(() => {
+    const preloadImages = () => {
+      const imagePromises = portfolioProjects.map(project => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.src = project.image;
+          img.onload = resolve;
+          img.onerror = resolve; // Resolve even if error to not block the app
+        });
+      });
+
+      Promise.all(imagePromises)
+        .then(() => {
+          setImagesLoaded(true);
+        })
+        .catch(() => {
+          setImagesLoaded(true); // Still set loaded even if some images fail
+        });
+    };
+
+    preloadImages();
+  }, []);
 
   // Sync filteredProjects and persist activeFilter whenever it changes
   useEffect(() => {
@@ -444,7 +469,14 @@ export default function ProjectPage() {
                                   <h6 id={"first"} style={{ color: "#fbd9ad" }}>
                                     {project.category}
                                   </h6>
-                                  <img src={project.image} alt={project.title} />
+                                  <img 
+                                    src={project.image} 
+                                    alt={project.title}
+                                    style={{
+                                      opacity: imagesLoaded ? 1 : 0,
+                                      transition: 'opacity 0.3s ease-in-out'
+                                    }}
+                                  />
                                   <div className="project--showcaseBtn">
                                     <a
                                       href={project.url}
