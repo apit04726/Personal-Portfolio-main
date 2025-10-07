@@ -83,7 +83,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    WordPress & PHP ACF, MySQL & SQL, JavaScript, HTML, CSS
+                    WordPress & PHP
                   </div>
                 </div>
               </Fade>
@@ -148,7 +148,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    Advanced Wordpress & Elementor Build Plugins
+                  Wordpress & Elementor
                   </div>
                 </div>
               </Fade>
@@ -211,7 +211,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    CSS, JavaScript, PHP, SCSS, WordPress, Elementor
+                   PHP, WordPress, Elementor
                   </div>
                 </div>
               </Fade>
@@ -273,7 +273,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                    wordpress Elementor paid Plugin
+                    wordpress & Elementor
                   </div>
                 </div>
               </Fade>
