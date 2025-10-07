@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Particle from "../../Particle";
 import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
 import { Fade } from "react-reveal";
 import { FaCode } from "react-icons/fa";
+import "./ProjectPage.css"; // Import a CSS file for pagination styling
 
 // Import all your project images
 import kasturi from "../../images/kasturi_jpg.jpeg";
@@ -352,6 +353,23 @@ const portfolioProjects = [
   }
 ];
 export default function ProjectPage() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 9; // Always show 9 projects per page on all devices
+
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = portfolioProjects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  const totalPages = Math.ceil(portfolioProjects.length / projectsPerPage);
+
+  const handlePagination = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top on page change
+  };
+
   return (
     <section className="home-section">
       <Container fluid id="home">
@@ -373,7 +391,7 @@ export default function ProjectPage() {
                   <Row>
                     <Col md={12} className="mt-5">
                       <Row className="g-5">
-                        {portfolioProjects.map((project, index) => (
+                        {currentProjects.map((project, index) => (
                           <Col md={3} className="col-sm-12 col-md-4" key={index}>
                             <Fade bottom>
                               <div
@@ -434,6 +452,17 @@ export default function ProjectPage() {
                           </Col>
                         ))}
                       </Row>
+                      <div className="pagination">
+                        {Array.from({ length: totalPages }, (_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => handlePagination(index + 1)}
+                            className={`pagination-btn ${currentPage === index + 1 ? "active" : ""}`}
+                          >
+                            {index + 1}
+                          </button>
+                        ))}
+                      </div>
                     </Col>
                   </Row>
                 </Container>
