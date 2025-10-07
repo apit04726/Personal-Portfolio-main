@@ -353,26 +353,20 @@ const portfolioProjects = [
   }
 ];
 
-// Preload all images
-const preloadImages = () => {
-  portfolioProjects.forEach(project => {
-    const img = new Image();
-    img.src = project.image;
-  });
-};
-
 export default function ProjectPage() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
   const projectsPerPage = 9; // Always show 9 projects per page on all devices
 
-  // Preload images on component mount
-  React.useEffect(() => {
-    preloadImages();
-  }, []);
-
   const handlePagination = (pageNumber) => {
+    setIsLoading(true);
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to the top of the page
+    
+    // Force immediate re-render and scroll
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setIsLoading(false);
+    }, 0);
   };
 
   const currentProjects = React.useMemo(() => {
@@ -421,7 +415,16 @@ export default function ProjectPage() {
                                   <h6 id={"first"} style={{ color: "#fbd9ad" }}>
                                     {project.category}
                                   </h6>
-                                  <img src={project.image} alt={project.title} />
+                                  <img 
+                                    src={project.image} 
+                                    alt={project.title}
+                                    style={{
+                                      width: '100%',
+                                      height: '200px',
+                                      objectFit: 'cover',
+                                      display: 'block'
+                                    }}
+                                  />
                                   <div className="project--showcaseBtn">
                                     <a
                                       href={project.url}
@@ -471,6 +474,7 @@ export default function ProjectPage() {
                             key={index}
                             onClick={() => handlePagination(index + 1)}
                             className={`pagination-btn ${currentPage === index + 1 ? "active" : ""}`}
+                            disabled={isLoading}
                           >
                             {index + 1}
                           </button>
