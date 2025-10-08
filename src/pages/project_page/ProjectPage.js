@@ -392,7 +392,7 @@ export default function ProjectPage() {
     // Show loader for 1 seconds
     setTimeout(() => {
       setLoading(false);
-    }, 10000000);
+    }, 1000);
   };
 
   return (
