@@ -392,7 +392,7 @@ export default function ProjectPage() {
     // Show loader for 1 seconds
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 10000000);
   };
 
   return (
@@ -613,6 +613,7 @@ export default function ProjectPage() {
           .spinner {
             width: 50px;
             height: 50px;
+            border-width: 6px;
           }
 
           .loader-text {
@@ -639,9 +640,9 @@ export default function ProjectPage() {
           }
 
           .spinner {
-            width: 40px;
-            height: 40px;
-            border-width: 3px;
+            width: 35px;
+            height: 35px;
+            border-width: 6px;
           }
 
           .loader-text {
