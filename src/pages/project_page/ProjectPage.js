@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Particle from "../../Particle";
 import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
@@ -102,7 +102,7 @@ const portfolioProjects = [
   },
   {
     image: nikko,
-    title: 'Bhartiya City Nikoo Garden Sadahalli Bangalore',
+    title: 'Bhartiya City Nikoo Garden Estate Sadahalli Bangalore',
     description: 'Advanced WordPress plugin for SEO and Php',
     category: 'wordpress &php',
     client: 'Real Estate and Woocommerce Client',
@@ -164,7 +164,7 @@ const portfolioProjects = [
     image: airbnb,
     title: 'Air Bnb',
     description: 'Application for e-commerce Payment Gateway',
-    category: 'React.js ',
+    category: 'react js',
     client: 'E-Shop',
     date: '10 June, 2024',
     url: 'https://www.airbnb.co.in/',
@@ -174,7 +174,7 @@ const portfolioProjects = [
     image: propty,
     title: 'Propty Co',
     description: 'Application for e-commerce Payment Gateway',
-    category: 'React.js ',
+    category: 'react js',
     client: 'E-Shop Propty Hunters',
     date: '10 Marce, 2025',
     url: 'https://www.propty.co/',
@@ -184,7 +184,7 @@ const portfolioProjects = [
     image: rvEstore,
     title: 'VShopEase',
     description: 'Application for e-commerce Payment Gateway',
-    category: 'React.js ',
+    category: 'react js',
     client: 'E-Shop Propty Hunters',
     date: '28 Marce, 2025',
     url: 'https://vshopease.vercel.app/',
@@ -194,7 +194,7 @@ const portfolioProjects = [
     image: goodee,
     title: 'Goodee World',
     description: 'Application for e-commerce Payment Gateway',
-    category: 'React.js ',
+    category: 'react js',
     client: 'E-Shop Woocommerce',
     date: '28 April, 2025',
     url: 'https://www.goodeeworld.com/',
@@ -204,7 +204,7 @@ const portfolioProjects = [
     image: kith,
     title: 'Kith',
     description: 'Custom Shopify theme for online store',
-    category: 'Shopify',
+    category: 'shopify',
     client: 'Online Retailer',
     date: '05 August, 2024',
     url: 'https://kith.com/',
@@ -214,7 +214,7 @@ const portfolioProjects = [
     image: allbirds,
     title: 'All Birds',
     description: 'Custom Shopify theme for online store',
-    category: 'Shopify',
+    category: 'shopify',
     client: 'Online Retailer',
     date: '05 Marce, 2025',
     url: 'https://www.allbirds.com/',
@@ -224,7 +224,7 @@ const portfolioProjects = [
     image: cowboy,
     title: 'Cowboy',
     description: 'Custom Shopify theme for online store',
-    category: 'Shopify',
+    category: 'shopify',
     client: 'Online Retailer',
     date: '14 Marce, 2025',
     url: 'https://cowboy.com/',
@@ -234,7 +234,7 @@ const portfolioProjects = [
     image: loveHealthy,
     title: 'Love Healthy',
     description: 'Branding website with custom CMS',
-    category: 'Core PHP',
+    category: 'core php',
     client: 'Brand Studio',
     date: '20 September, 2024',
     url: 'https://dev.digitize-info.com/php_projects/love-healthy/',
@@ -244,7 +244,7 @@ const portfolioProjects = [
     image: nikooPhase5,
     title: 'Nikoo Homes 5 Phase II',
     description: 'Branding website with custom CMS',
-    category: 'Core PHP',
+    category: 'core php',
     client: 'Real Estate - Bangalore',
     date: '20 Marce, 2025',
     url: 'https://nikoohome5.in/',
@@ -254,7 +254,7 @@ const portfolioProjects = [
     image: perfectHomz,
     title: 'Perfect Homz',
     description: 'Branding website with custom CMS',
-    category: 'Core PHP, Wordpress',
+    category: 'core php',
     client: 'Real Estate - Bangalore',
     date: '10 Marce, 2025',
     url: 'https://perfecthomz.com/',
@@ -264,7 +264,7 @@ const portfolioProjects = [
     image: miraLotha,
     title: 'Lodha Mirabelle Phase - IV',
     description: 'Branding website with custom CMS Html5',
-    category: 'Core PHP',
+    category: 'core php',
     client: 'Real Estate - Bangalore',
     date: '10 Marce, 2025',
     url: 'https://www.mirabelleproject.com/lodha-group/lodha-mirabelle-bangalore/',
@@ -274,7 +274,7 @@ const portfolioProjects = [
     image: mirebal,
     title: 'Lodha Mirabelle Phase - I',
     description: 'Branding website with custom CMS Html5',
-    category: 'Core PHP',
+    category: 'core php',
     client: 'Real Estate - Bangalore',
     date: '05 Marce, 2025',
     url: 'https://mirabelle-manyata-bangalore.com/',
@@ -284,7 +284,7 @@ const portfolioProjects = [
     image: tata1,
     title: 'TATA Carnatica Phase - I',
     description: 'Branding website with custom CMS Html5',
-    category: 'Core PHP',
+    category: 'core php',
     client: 'Real Estate - Bangalore',
     date: '05 Marce, 2025',
     url: 'https://tatacarnaticabangalore.in/',
@@ -294,7 +294,7 @@ const portfolioProjects = [
     image: tata3,
     title: 'TATA Carnatica Phase - III',
     description: 'Branding website with custom CMS Html5',
-    category: 'Core PHP',
+    category: 'core php',
     client: 'Real Estate - Bangalore',
     date: '05 Marce, 2025',
     url: 'https://www.thecarnatica.net.in/',
@@ -304,7 +304,7 @@ const portfolioProjects = [
     image: birla3,
     title: 'Birla Estates Trimaya Phase 3',
     description: 'Branding website with custom CMS Html5',
-    category: 'Core PHP',
+    category: 'core php',
     client: 'Real Estate - Bangalore',
     date: '28 Marce, 2025',
     url: 'https://birlahomes.in/trimaya/',
@@ -314,7 +314,7 @@ const portfolioProjects = [
     image: birla1,
     title: 'Birla Estates Trimaya Phase 1',
     description: 'Branding website with custom CMS Html5',
-    category: 'Core PHP',
+    category: 'core php',
     client: 'Real Estate - Bangalore',
     date: '29 Marce, 2025',
     url: 'https://birlatrimaya-devanahalli.com/',
@@ -324,7 +324,7 @@ const portfolioProjects = [
     image: dwarkesh,
     title: 'Shree Dwarkesh Enterprise',
     description: 'Book management system and Expanse Management with Laravel',
-    category: 'Laravel',
+    category: 'laravel',
     client: 'Finance Management',
     date: '12 December, 2024',
     url: 'https://dwarkeshenterprise.com/sde-admin/dashboard',
@@ -334,7 +334,7 @@ const portfolioProjects = [
     image: shivPetroleum,
     title: 'Shiv Petroleum ',
     description: 'Book management system and Expanse Management with Laravel',
-    category: 'Laravel',
+    category: 'laravel',
     client: 'Finance Management and Petrol Pump',
     date: '12 December, 2024',
     url: 'https://',
@@ -344,14 +344,57 @@ const portfolioProjects = [
     image: eventHub,
     title: ' EventHub',
     description: 'Book management system and Expanse Management with Laravel',
-    category: 'Laravel Payment Gateway',
+    category: 'laravel',
     client: 'Finance Management and Petrol Pump',
     date: '12 Marce, 2025',
     url: 'https://versapublish.com/',
     details: 'The Event Management System is a web and mobile-based application developed to simplify the process of planning, organizing, and executing events such as conferences, weddings, exhibitions'
   }
 ];
+
+const categories = ['All project', 'wordpress &php', 'react js', 'shopify', 'core php', 'laravel'];
+
 export default function ProjectPage() {
+  // Initialize active filter from localStorage (if available)
+  const [activeFilter, setActiveFilter] = useState(() => {
+    try {
+      return localStorage.getItem('activeFilter') || 'All project';
+    } catch (e) {
+      return 'All project';
+    }
+  });
+
+  const [filteredProjects, setFilteredProjects] = useState(portfolioProjects);
+  const [loading, setLoading] = useState(false);
+
+  // Sync filteredProjects and persist activeFilter whenever it changes
+  useEffect(() => {
+    if (!activeFilter || activeFilter === 'All project') {
+      setFilteredProjects(portfolioProjects);
+    } else {
+      const filtered = portfolioProjects.filter(project =>
+        project.category && project.category.toString().trim().toLowerCase() === activeFilter.toString().trim().toLowerCase()
+      );
+      setFilteredProjects(filtered);
+    }
+
+    try {
+      localStorage.setItem('activeFilter', activeFilter);
+    } catch (e) {
+      // ignore write errors (e.g., private mode)
+    }
+  }, [activeFilter]);
+
+  const handleFilterClick = (category) => {
+    setLoading(true);
+    setActiveFilter(category);
+    
+    // Show loader for 2 seconds
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  };
+
   return (
     <section className="home-section">
       <Container fluid id="home">
@@ -366,14 +409,43 @@ export default function ProjectPage() {
               <h1 style={{ color: "rgb(134 61 176" }}>PROJECTS</h1>
             </Zoom>
           </div>
-          <div>
+
+          {/* Filter Buttons - Improved Design */}
+          <div className="text-center my-4">
+            <Fade bottom>
+              <div className="filter-buttons-container">
+                {categories.map((category, index) => (
+                  <button
+                    key={index}
+                    className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
+                    onClick={() => handleFilterClick(category)}
+                    disabled={loading}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </Fade>
+          </div>
+
+          {/* Beautiful Loader */}
+          {loading && (
+            <Fade>
+              <div className="loader-container">
+                <div className="spinner"></div>
+                <p className="loader-text">Loading projects...</p>
+              </div>
+            </Fade>
+          )}
+
+          <div style={{ display: loading ? 'none' : 'block' }}>
             <div>
               <Container fluid className="certificate-section" id="about">
                 <Container>
                   <Row>
-                    <Col md={12} className="mt-5">
+                    <Col md={12} className="mt-3">
                       <Row className="g-5">
-                        {portfolioProjects.map((project, index) => (
+                        {filteredProjects.map((project, index) => (
                           <Col md={3} className="col-sm-12 col-md-4" key={index}>
                             <Fade bottom>
                               <div
@@ -442,6 +514,161 @@ export default function ProjectPage() {
           </div>
         </Container>
       </Container>
+
+      <style jsx>{`
+        .filter-buttons-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+          padding: 0 15px;
+        }
+
+        .filter-btn {
+          background-color: #fbd9ad;
+          color: rgb(134 61 176);
+          border: 2px solid rgb(134 61 176);
+          border-radius: 25px;
+          font-weight: 600;
+          padding: 10px 20px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-size: 14px;
+          min-width: 120px;
+          flex: 1;
+          max-width: 160px;
+        }
+
+        .filter-btn:hover:not(:disabled) {
+          background-color: rgb(134 61 176);
+          color: #fbd9ad;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(134, 61, 176, 0.3);
+        }
+
+        .filter-btn.active {
+          background-color: rgb(134 61 176);
+          color: #fbd9ad;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(134, 61, 176, 0.4);
+        }
+
+        .filter-btn:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+
+        /* Beautiful Loader Styles */
+        .loader-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 60px 20px;
+          min-height: 300px;
+        }
+
+        .spinner {
+          width: 60px;
+          height: 60px;
+          border: 4px solid rgba(134, 61, 176, 0.2);
+          border-left: 4px solid rgb(134, 61, 176);
+          border-radius: 50%;
+          animation: spin 1.2s linear infinite;
+          margin-bottom: 20px;
+        }
+
+        .loader-text {
+          color: rgb(134, 61, 176);
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0;
+          animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.7; }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+          .filter-buttons-container {
+            gap: 8px;
+            padding: 0 10px;
+          }
+
+          .filter-btn {
+            padding: 8px 16px;
+            font-size: 12px;
+            min-width: 100px;
+            max-width: 140px;
+            border-radius: 20px;
+          }
+
+          .spinner {
+            width: 50px;
+            height: 50px;
+          }
+
+          .loader-text {
+            font-size: 16px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .filter-buttons-container {
+            gap: 6px;
+          }
+
+          .filter-btn {
+            padding: 6px 12px;
+            font-size: 11px;
+            min-width: 90px;
+            max-width: 110px;
+            border-radius: 18px;
+          }
+
+          .loader-container {
+            padding: 40px 15px;
+            min-height: 200px;
+          }
+
+          .spinner {
+            width: 40px;
+            height: 40px;
+            border-width: 3px;
+          }
+
+          .loader-text {
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .filter-buttons-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+          }
+
+          .filter-btn {
+            min-width: auto;
+            max-width: none;
+            width: 100%;
+            padding: 8px 12px;
+            font-size: 12px;
+          }
+        }
+      `}</style>
     </section>
   );
 }
