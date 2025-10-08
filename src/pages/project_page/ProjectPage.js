@@ -389,7 +389,7 @@ export default function ProjectPage() {
     setLoading(true);
     setActiveFilter(category);
     
-    // Show loader for 2 seconds
+    // Show loader for 1 seconds
     setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -437,7 +437,6 @@ export default function ProjectPage() {
               </div>
             </Fade>
           )}
-
           <div style={{ display: loading ? 'none' : 'block' }}>
             <div>
               <Container fluid className="certificate-section" id="about">
@@ -568,21 +567,21 @@ export default function ProjectPage() {
           min-height: 300px;
         }
 
-        .spinner {
-          width: 60px;
-          height: 60px;
-          border: 4px solid rgba(134, 61, 176, 0.2);
-          border-left: 4px solid rgb(134, 61, 176);
-          border-radius: 50%;
-          animation: spin 1.2s linear infinite;
-          margin-bottom: 20px;
-        }
+      .spinner {
+        border: 6px solid #f3f3f3;
+        border-top: 6px solid #ffb347;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        animation: spin 1s linear infinite;
+        margin-top: 9%;
+      }
 
         .loader-text {
           color: rgb(134, 61, 176);
-          font-size: 18px;
+          font-size: 15px;
           font-weight: 600;
-          margin: 0;
+          margin: 9px;
           animation: pulse 2s ease-in-out infinite;
         }
 
