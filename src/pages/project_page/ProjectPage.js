@@ -537,7 +537,17 @@ export default function ProjectPage() {
           flex: 1;
           max-width: 160px;
         }
-
+          /* Responsive for screens ≤ 1024px */
+        @media (max-width: 1024px) {
+        .filter-btn {
+          padding: 2px 14px;
+          font-size: 13px;
+          min-width: 90px;
+          max-width: 120px;
+          border-radius: 18px;
+        }
+        }
+ 
         .filter-btn:hover:not(:disabled) {
           background-color: rgb(134 61 176);
           color: #fbd9ad;
@@ -603,8 +613,8 @@ export default function ProjectPage() {
           }
 
           .filter-btn {
-            padding: 8px 16px;
-            font-size: 12px;
+            padding: 0px 16px;
+            font-size: 11px;
             min-width: 100px;
             max-width: 140px;
             border-radius: 20px;
