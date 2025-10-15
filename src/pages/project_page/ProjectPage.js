@@ -337,7 +337,7 @@ const portfolioProjects = [
     category: 'laravel',
     client: 'Finance Management and Petrol Pump',
     date: '12 December, 2024',
-    url: 'https://',
+    url: 'https://petroleum.digitize-info.com/',
     details: 'Created a scalable Expanse Management and book management system and payment gateway and Api integration using Laravel and Vue.js.'
   },
   {
