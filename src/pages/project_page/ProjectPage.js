@@ -36,6 +36,7 @@ import dwarkesh from "../../images/dwarkesh-jai-jpeg.jpeg";
 import shivPetroleum from "../../images/shive-pp.jpeg";
 import eventHub from "../../images/eventppp.jpeg";
 import lendingusa from "../../images/leaninng-1.jpg";
+import newshub from "../../images/news-apk.jpeg";
 import seyt from "../../images/se-yt.png";
 
 // Portfolio projects data
@@ -88,8 +89,8 @@ const portfolioProjects = [
     client: 'SEO Agency',
     date: '15 March, 2025',
     url: 'https://amm-pro.com/',
-    details: 'AMM-PRO (AM Management & Productions) is a London-founded event production company, established in 2003 by Ali Matar. With over 20 years of expertise, AMM-PRO delivers custom-tailored show production and event management—spanning from ' 
-   },
+    details: 'AMM-PRO (AM Management & Productions) is a London-founded event production company, established in 2003 by Ali Matar. With over 20 years of expertise, AMM-PRO delivers custom-tailored show production and event management—spanning from '
+  },
   {
     image: kasturi,
     title: 'Kasturi Sphere 360 Media Partner',
@@ -169,7 +170,7 @@ const portfolioProjects = [
     date: '10 June, 2024',
     url: 'https://www.airbnb.co.in/',
     details: 'Airbnb is a global online marketplace for short- and long-term lodging, experiences, and services. It was founded in 2008 in San Francisco and is now a publicly traded company on Nasdaq. It connects millions of hosts offering unique accommodations (from cottages to city apartments) and local'
-    },
+  },
   {
     image: propty,
     title: 'Propty Co',
@@ -198,7 +199,17 @@ const portfolioProjects = [
     client: 'E-Shop Woocommerce',
     date: '28 April, 2025',
     url: 'https://www.goodeeworld.com/',
-    details: 'Goodee—also known as Goodee World—is a curated online marketplace rooted in the ethos of "good design, good people, and good purpose." It showcases thoughtfully selected home goods and decor items that are not only aesthetically appealing but also socially and environmentally conscientious' 
+    details: 'Goodee—also known as Goodee World—is a curated online marketplace rooted in the ethos of "good design, good people, and good purpose." It showcases thoughtfully selected home goods and decor items that are not only aesthetically appealing but also socially and environmentally conscientious'
+  },
+  {
+    image: newshub,
+    title: 'NewsHub',
+    description: 'Application for live news',
+    category: 'react native app',
+    client: 'Software Development',
+    date: '10 Nov, 2025',
+    url: 'https://drive.google.com/file/d/1bnw1S-PdEItQb3BXPdUnQZfynaQ1UsJQ/view?usp=sharing',
+    details: 'A modern, lightweight React Native News App with a smooth UI and real-time content for Android, iOS, and Web and live news App.'
   },
   {
     image: kith,
@@ -208,7 +219,7 @@ const portfolioProjects = [
     client: 'Online Retailer',
     date: '05 August, 2024',
     url: 'https://kith.com/',
-    details: 'Global footprint: Operates around 17 standalone boutiques worldwide and several shop-in-shops in premier department stores like Selfridges and Hirshleifers. Kith Treats: A signature in-store experience—a nostalgic cereal and ice-cream bar born out of Fieg\'s childhood love for cereal' 
+    details: 'Global footprint: Operates around 17 standalone boutiques worldwide and several shop-in-shops in premier department stores like Selfridges and Hirshleifers. Kith Treats: A signature in-store experience—a nostalgic cereal and ice-cream bar born out of Fieg\'s childhood love for cereal'
   },
   {
     image: allbirds,
@@ -352,7 +363,7 @@ const portfolioProjects = [
   }
 ];
 
-const categories = ['All project', 'wordpress &php', 'react js', 'shopify', 'core php', 'laravel'];
+const categories = ['All project', 'wordpress &php', 'react js', 'react native app', 'shopify', 'core php', 'laravel'];
 
 export default function ProjectPage() {
   // Initialize active filter from localStorage (if available)
@@ -388,7 +399,7 @@ export default function ProjectPage() {
   const handleFilterClick = (category) => {
     setLoading(true);
     setActiveFilter(category);
-    
+
     // Show loader for 1 seconds
     setTimeout(() => {
       setLoading(false);
