@@ -208,7 +208,7 @@ const portfolioProjects = [
     category: 'react native app',
     client: 'Software Development',
     date: '10 Nov, 2025',
-    url: 'https://drive.google.com/file/d/15i-i_hnZ4d8wQgqNJBtD2RyC_YyFiGu5/view?usp=sharing',
+    url: 'https://drive.google.com/file/d/1vHj3Tadj-gSqsj2a0MmFSG1agq8Qzkoy/view?usp=sharing',
     details: 'A modern, lightweight React Native News App with a smooth UI and real-time content for Android, iOS, and Web and live news App.'
   },
   {
