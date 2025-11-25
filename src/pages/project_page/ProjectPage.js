@@ -38,6 +38,7 @@ import eventHub from "../../images/eventppp.jpeg";
 import lendingusa from "../../images/leaninng-1.jpg";
 import newshub from "../../images/news-apk.jpeg";
 import seyt from "../../images/se-yt.png";
+import bustraking from "../../images/bus-traking.jpeg"
 
 // Portfolio projects data
 const portfolioProjects = [
@@ -349,7 +350,7 @@ const portfolioProjects = [
     client: 'Finance Management and Petrol Pump',
     date: '12 December, 2024',
     url: 'https://petroleum.digitize-info.com/',
-    details: 'Created a scalable Expanse Management and book management system and payment gateway and Api integration using Laravel and Vue.js.'
+    details: 'petrol pump fuel management system so Created a scalable Expanse Management and book management system and payment gateway and Api integration using Laravel and Vue.js.'
   },
   {
     image: eventHub,
@@ -360,6 +361,16 @@ const portfolioProjects = [
     date: '12 Marce, 2025',
     url: 'https://versapublish.com/',
     details: 'The Event Management System is a web and mobile-based application developed to simplify the process of planning, organizing, and executing events such as conferences, weddings, exhibitions'
+  },
+  {
+    image: bustraking,
+    title: 'Bus Tracking',
+    description: 'Book management system with real-time bus location tracking',
+    category: 'laravel',
+    client: 'Travelers and Petrol Pump',
+    date: '12 May, 2024',
+    url: 'https://metarescuex.com/',
+    details: 'MetaRescueX is a Laravel-based real-time bus tracking system using GPS APIs for accurate live locations and arrivals, fully responsive across all devices for a smooth commuter experience.'
   }
 ];
 
