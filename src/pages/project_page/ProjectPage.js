@@ -39,6 +39,7 @@ import lendingusa from "../../images/leaninng-1.jpg";
 import newshub from "../../images/news-apk.jpeg";
 import seyt from "../../images/se-yt.png";
 import bustraking from "../../images/bus-traking.jpeg"
+import myportfolio from "../../images/my-portfolio.jpeg";
 
 // Portfolio projects data
 const portfolioProjects = [
@@ -202,6 +203,16 @@ const portfolioProjects = [
     url: 'https://www.goodeeworld.com/',
     details: 'Goodee—also known as Goodee World—is a curated online marketplace rooted in the ethos of "good design, good people, and good purpose." It showcases thoughtfully selected home goods and decor items that are not only aesthetically appealing but also socially and environmentally conscientious'
   },
+  {
+    image: myportfolio,
+    title: 'My Personal Portfolio',
+    description: 'personal portfolio web application built with React.js',
+    category: 'react js',
+    client: 'Self',
+    date: '28 April, 2025',
+    url: 'https://imvishall.netlify.app/',
+    details: 'A personal portfolio built with React.js showcasing professional skills, modern UI, and diverse real-world projects across WordPress, React, React Native, Shopify, Core PHP, and Laravel — complete with detailed case studies, certificates, full-stack development expertise.'
+    },
   {
     image: newshub,
     title: 'NewsHub',
