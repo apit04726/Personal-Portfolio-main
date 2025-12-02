@@ -3,13 +3,12 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import Particle from '../../Particle';
 import projects from '../../data/portfolioProjects';
-import { FaExternalLinkAlt, FaArrowLeft, FaTh, FaUser, FaCalendarAlt, FaTag, FaGlobe, FaListAlt, FaChevronDown } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaArrowLeft, FaTh, FaUser, FaCalendarAlt, FaTag, FaGlobe, FaListAlt } from 'react-icons/fa';
 
 export default function ProjectDetails() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const featuresListRef = useRef(null);
-  const [showScrollHint, setShowScrollHint] = useState(false);
   const [hasScrollableContent, setHasScrollableContent] = useState(false);
 
   const project = projects.find(p => p.slug === slug);
@@ -26,28 +25,10 @@ export default function ProjectDetails() {
       const element = featuresListRef.current;
       const isScrollable = element.scrollHeight > element.clientHeight;
       setHasScrollableContent(isScrollable);
-      
-      // Show hint initially if scrollable
-      if (isScrollable) {
-        setShowScrollHint(true);
-        const timer = setTimeout(() => {
-          setShowScrollHint(false);
-        }, 3000); // Hide after 3 seconds
-        return () => clearTimeout(timer);
-      }
     }
   }, [project?.features]);
 
-  // Show hint on hover
-  const handleMouseEnter = () => {
-    if (hasScrollableContent) {
-      setShowScrollHint(true);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setShowScrollHint(false);
-  };
+  // (Removed hover hint state/handlers — not used in markup)
 
   if (!project) {
     return (
@@ -107,19 +88,11 @@ export default function ProjectDetails() {
                 <hr/>
                 <div className="project-features">
                   <div className="pf-grid">
-                    <div 
-                      className="pf-col pf-features"
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                    >
+                    <div className="pf-col pf-features">
                       <div className="features-header">
                         <h5>Features</h5>
                       </div>
-                      <div 
-                        ref={featuresListRef}
-                        className="pf-list-scroll"
-                        onScroll={() => setShowScrollHint(false)}
-                      >
+                      <div ref={featuresListRef} className="pf-list-scroll">
                         <ul>
                           {((project.features || []).length > 0) ? (project.features || []).map((f, i) => <li key={i}>{f}</li>) : <li>—</li>}
                         </ul>
