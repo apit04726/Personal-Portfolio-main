@@ -9,6 +9,7 @@ import { AiFillInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 import { FaLinkedinIn,FaEnvelope } from "react-icons/fa";
 import Contactus from "../../components/contactus/Contactus";
 import Projects from "../../components/projects/Projects";
+import profileFallback from "../../images/Vs.png";
 export default function Home() {
   return (
     <section className="home-section">
@@ -95,7 +96,11 @@ export default function Home() {
                 <Tilt>
                   <Fade cascade>
                     <img
-                      src="./profile.png"
+                      src={process.env.PUBLIC_URL + "/profile.png"}
+                      onError={(e) => {
+                        e.currentTarget.onerror = null;
+                        e.currentTarget.src = profileFallback;
+                      }}
                       alt="home pic"
                       className="img-fluid"
                     />

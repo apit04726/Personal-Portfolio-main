@@ -9,6 +9,7 @@ import {
 } from "react-icons/ai";
 import { FaBlog } from "react-icons/fa";
 import "../../style.css";
+import profileFallback from "../../images/Vs.png";
 import { CgFileDocument } from "react-icons/cg";
 export default function MyNav() {
   const [expand, updateExpanded] = useState(false);
@@ -34,7 +35,16 @@ export default function MyNav() {
       <Container>
         <Navbar.Brand href="/">
           <div className="d-flex flex-row justify-content-between">
-            <img src="./profile.png" className="img-fluid logo" alt="brand" style={{ mixBlendMode: "lighten " }} />
+            <img
+              src={process.env.PUBLIC_URL + "/profile.png"}
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = profileFallback;
+              }}
+              className="img-fluid logo"
+              alt="brand"
+              style={{ mixBlendMode: "lighten " }}
+            />
             <h5
               id="navhead"
               style={{

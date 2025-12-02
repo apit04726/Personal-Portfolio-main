@@ -6,6 +6,7 @@ import React, { Suspense, lazy, useState, useEffect } from "react";
 import Preloader from "./Preloader";
 import MyNav from "./components/navbar/MyNav";
 import Loader from "./Loader";
+import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Footer";
 import About from "./components/aboutme/about/About";
@@ -26,6 +27,7 @@ import Toolkit from "./components/aboutme/skills/Toolkit";
 const Home = lazy(() => import("./pages/home_page/HomePage"));
 const Resume = lazy(() => import("./pages/resume_page/ResumePage"));
 const ProjectPage = lazy(() => import("./pages/project_page/ProjectPage"));
+const ProjectDetails = lazy(() => import("./pages/project_page/ProjectDetails"));
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -40,6 +42,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <MyNav />
@@ -64,6 +67,7 @@ function App() {
               <Route path="toolkit" element={<Toolkit />}></Route>
             </Route>
             <Route path="/projectspage" element={<ProjectPage />} />
+            <Route path="/project/:slug" element={<ProjectDetails />} />
             {/* <Route path="/certificatepage" element={<CertificatePage />} /> */}
             <Route path="/resume" element={<Resume />} />
             <Route path="/blogs" element={<BlogPage />} />

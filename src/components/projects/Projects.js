@@ -44,20 +44,9 @@ export default function Projects() {
                     </h6>
                     <img src={leaninng} alt={leaninng} />
                     <div className="project--showcaseBtn">
-                      <a
-                        href={
-                          "https://lendingusa.com/"}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={"iconBtn"}
-                        aria-labelledby={`code`}
-                      >
-                        <FaCode
-                          id={`code`}
-                          className={"icon"}
-                          aria-label="Code"
-                        />
-                      </a>
+                      <Link to={`/project/lendingusa`} className={"iconBtn detailsBtn"} aria-label={`Details LendingUSA`}>
+                        <FaCode aria-hidden="true" />
+                      </Link>
                     </div>
                   </div>
                   <h6>
@@ -95,7 +84,7 @@ export default function Projects() {
                   className="singleProject"
                   style={{
                     backgroundColor: "rgb(142 70 186 / 31%)",
-                    border: "1px solid",marginBottom: "35px",
+                    border: "1px solid", marginBottom: "35px",
                   }}
                 >
                   <div className="projectContent">
@@ -107,21 +96,9 @@ export default function Projects() {
                     </h6>
                     <img src={jk} alt={jk} />
                     <div className="project--showcaseBtn">
-                      <a
-                        href={
-                          "https://jkcapinvest.com/"
-                        }
-                        target="_blank"
-                        rel="noreferrer"
-                        className={"iconBtn"}
-                        aria-labelledby={`code`}
-                      >
-                        <FaCode
-                          id={`code`}
-                          className={"icon"}
-                          aria-label="Code"
-                        />
-                      </a>
+                      <Link to={`/project/jk-capinvest`} className={"iconBtn detailsBtn"} aria-label={`Details Jk Capinvest`}>
+                        <FaCode aria-hidden="true" />
+                      </Link>
                     </div>
                   </div>
                   <h6>
@@ -148,7 +125,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                  Wordpress & Elementor
+                    Wordpress & Elementor
                   </div>
                 </div>
               </Fade>
@@ -160,7 +137,7 @@ export default function Projects() {
                   className="singleProject"
                   style={{
                     backgroundColor: "rgb(142 70 186 / 31%)",
-                    border: "1px solid",marginBottom: "35px",
+                    border: "1px solid", marginBottom: "35px",
                   }}
                 >
                   <div className="projectContent">
@@ -172,21 +149,9 @@ export default function Projects() {
                     </h6>
                     <img src={mrfish} alt={mrfish} />
                     <div className="project--showcaseBtn">
-                      <a
-                        href={
-                          "https://www.mrfish.uk.com/"
-                        }
-                        target="_blank"
-                        rel="noreferrer"
-                        className={"iconBtn"}
-                        aria-labelledby={`code`}
-                      >
-                        <FaCode
-                          id={`code`}
-                          className={"icon"}
-                          aria-label="Code"
-                        />
-                      </a>
+                      <Link to={`/project/mr-fish-uk`} className={"iconBtn detailsBtn"} aria-label={`Details Mr Fish Uk`}>
+                        <FaCode aria-hidden="true" />
+                      </Link>
                     </div>
                   </div>
                   <h6>
@@ -211,7 +176,7 @@ export default function Projects() {
                       fontWeight: 600,
                     }}
                   >
-                   PHP, WordPress, Elementor
+                    PHP, WordPress, Elementor
                   </div>
                 </div>
               </Fade>
@@ -223,7 +188,7 @@ export default function Projects() {
                   className="singleProject"
                   style={{
                     backgroundColor: "rgb(142 70 186 / 31%)",
-                    border: "1px solid",marginBottom: "35px",
+                    border: "1px solid", marginBottom: "35px",
                   }}
                 >
                   <div className="projectContent">
@@ -235,20 +200,9 @@ export default function Projects() {
                     </h6>
                     <img src={amm} alt={amm} />
                     <div className="project--showcaseBtn">
-                      <a
-                        href={
-                          "https://amm-pro.com/"}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={"iconBtn"}
-                        aria-labelledby={`code`}
-                      >
-                        <FaCode
-                          id={`code`}
-                          className={"icon"}
-                          aria-label="Code"
-                        />
-                      </a>
+                      <Link to={`/project/amm-pro`} className={"iconBtn detailsBtn"} aria-label={`Details Amm Pro`}>
+                        <FaCode aria-hidden="true" />
+                      </Link>
                     </div>
                   </div>
                   <h6>

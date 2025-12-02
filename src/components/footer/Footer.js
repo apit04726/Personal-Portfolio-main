@@ -3,8 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { AiOutlineWhatsApp, AiFillInstagram } from "react-icons/ai";
 import { FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+  const currentYear = new Date().getFullYear();
+  const startYear = 2025; // change this to your project's first year, or set to null
+  const displayYear = startYear && startYear < currentYear ? `${startYear} - ${currentYear}` : `${currentYear}`;
   return (
     <Container fluid className="footer">
       <Row>
@@ -12,7 +13,7 @@ function Footer() {
           <h3>Designed and Developed by vishal</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} vishal</h3>
+          <h3>Copyright © {displayYear} vishal</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
