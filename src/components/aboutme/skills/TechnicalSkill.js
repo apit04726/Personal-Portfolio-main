@@ -7,7 +7,7 @@ export default function TechnicalSkill() {
   return (
     <div>
       <div className="mt-5 d-flex flex-row justify-content-center">
-        <Link className="btn btn-primary me-3" to="/technicalSkill">
+        <Link className="btn btn-primary me-3" to="/technicalskill">
           Technical Skill
         </Link>
         <Link className="btn btn-primary me-3" to="/personalskill">

@@ -59,7 +59,7 @@ function EducationJourney() {
           icon={<SchoolIcon />}
         >
           <h4 className="vertical-timeline-element-title">
-            Bachelor of Engineering in Tnformation Technology
+            Bachelor of Engineering in Information Technology
           </h4>
           <h4 className="vertical-timeline-element-subtitle mt-2">
             Government Engineering College - Bhavnagar

@@ -1041,6 +1041,70 @@ html {
   box-shadow: 0 0 15px #801f95;
 }
 
+/* Timeline - Mobile spacing & font fixes */
+@media (max-width: 767px) {
+  /* tighten overall timeline container */
+  .vertical-timeline {
+    width: 100% !important;
+    padding: 1em 0 !important;
+  }
+
+  /* move the center line a bit left for small screens */
+  .vertical-timeline::before {
+    left: 14px !important;
+    width: 3px !important;
+  }
+
+  /* reduce vertical gap between items */
+  .vertical-timeline-element {
+    margin: 0.9em 0 !important;
+  }
+
+  /* slightly smaller icon and nudge down to align with content */
+  .vertical-timeline-element-icon {
+    width: 44px !important;
+    height: 44px !important;
+    top: 6px !important;
+  }
+
+  /* reduce card padding and left margin so content sits closer to icon */
+  .vertical-timeline-element-content {
+    margin-left: 56px !important;
+    padding: 0.8em 0.9em !important;
+  }
+
+  /* headings and paragraphs should be tighter on mobile */
+  .vertical-timeline-element-content h4,
+  .vertical-timeline-element-title,
+  .vertical-timeline-element-subtitle {
+    font-size: 1.05rem !important;
+    line-height: 1.15 !important;
+    margin: 0 0 6px 0 !important;
+  }
+
+  .vertical-timeline-element-content p {
+    margin: 0.4em 0 0 0 !important;
+    font-size: 0.95rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* prevent justification gaps on narrow screens */
+  .vertical-timeline-element-content p,
+  .vertical-timeline-element-content ul,
+  .vertical-timeline-element-content li {
+    text-align: left !important;
+    text-justify: none !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    font-size: 0.8rem !important;
+    padding: 0.2em 0 !important;
+    float: left !important;
+  }
+}
+
 .homesocialicons:hover {
   color: #87209e;
   box-shadow: 0 0 25px #87209e;

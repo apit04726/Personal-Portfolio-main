@@ -8,7 +8,7 @@ export default function Skills() {
         <Link className="btn btn-primary me-3" to="/personalskill">
           Personal Skill
         </Link>
-        <Link className="btn btn-primary" to="/technicalSkill">
+        <Link className="btn btn-primary" to="/technicalskill">
           Technical Skill
         </Link>
       </div>
