@@ -1,22 +1,22 @@
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
+// list of child routes that belong to the About section (don't trigger scroll between them)
+const aboutChildRoutes = new Set([
+  "",
+  "personalskill",
+  "technicalskill",
+  "technicaljourney",
+  "projectjourney",
+  "educationjourney",
+  "experiencejourney",
+  "socialmedia",
+  "toolkit",
+]);
+
 export default function ScrollToTop() {
   const { pathname } = useLocation();
   const prevPathRef = useRef(pathname);
-
-  // list of child routes that belong to the About section (don't trigger scroll between them)
-  const aboutChildRoutes = new Set([
-    "",
-    "personalskill",
-    "technicalskill",
-    "technicaljourney",
-    "projectjourney",
-    "educationjourney",
-    "experiencejourney",
-    "socialmedia",
-    "toolkit",
-  ]);
 
   function topLevelSegment(p) {
     if (!p) return "";
