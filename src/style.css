@@ -993,9 +993,6 @@ html {
     left: auto !important;
 }
 }
-
-
-
 .homeaboutsocial {
   /* text-align: center !important; */
   padding-top: 25px;
@@ -1166,7 +1163,6 @@ html {
     padding: 0.15em 0 !important;
     float: none !important;
     position: absolute !important;
-    right: -8% !important;
     top: 22px !important;
   }
 
