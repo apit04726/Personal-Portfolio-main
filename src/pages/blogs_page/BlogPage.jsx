@@ -14,6 +14,22 @@ import blog4 from "../../images/blog-4.png";
 import blog5 from "../../images/blog-5.jpg";
 import blog6 from "../../images/blog-6.jpg";
 
+// Date helpers: produces formatted date strings that update with current month/year
+const formatDate = (input) => {
+  const d = new Date(input);
+  const day = d.getDate();
+  const months = [
+    'January','February','March','April','May','June',
+    'July','August','September','October','November','December'
+  ];
+  return `${day} ${months[d.getMonth()]}, ${d.getFullYear()}`;
+};
+
+const relativeDate = (daysAgo = 0) => {
+  const ms = Date.now() - (daysAgo * 24 * 60 * 60 * 1000);
+  return formatDate(ms);
+};
+
 const blogPosts = [
   {
     id: 1,
@@ -22,7 +38,7 @@ const blogPosts = [
     excerpt: "Explore how AI tools like GitHub Copilot and ChatGPT are transforming the way developers write code and solve complex problems.",
     content: "AI-powered code generation has become a game-changer in software development. Tools like GitHub Copilot, Amazon CodeWhisperer, and ChatGPT are revolutionizing how developers write code. These AI assistants can generate entire functions, suggest optimizations, and even debug code in real-time. In 2024, we're seeing AI move beyond simple code completion to understanding complex business logic and architectural patterns. The integration of large language models with development environments has significantly boosted productivity, reducing development time by up to 55%. However, this technology also brings challenges around code quality, security, and the need for human oversight. Developers must learn to effectively collaborate with AI tools while maintaining code standards and best practices. The future promises even more sophisticated AI coding assistants that can understand project context, suggest architectural improvements, and automate testing workflows.    AI-powered code generation has become a game-changer in software development. Tools like GitHub Copilot, Amazon CodeWhisperer, and ChatGPT are revolutionizing how developers write code. These AI assistants can generate entire functions, suggest optimizations, and even debug code in real-time. In 2024, we're seeing AI move beyond simple code completion to understanding complex business logic and architectural patterns. The integration of large language models with development environments has significantly boosted productivity, reducing development time by up to 55%. However, this technology also brings challenges around code quality, security, and the need for human oversight. Developers must learn to effectively collaborate with AI tools while maintaining code standards and best practices. The future promises even more sophisticated AI coding assistants that can understand project context, suggest architectural improvements, and automate testing workflows.",
     author: "Sarah TechLead",
-    date: "20 November, 2025",
+    date: relativeDate(3),
     readTime: "8 min read",
     category: "AI Development",
     tags: ["AI", "Code Generation", "GitHub Copilot", "2025"],
@@ -38,7 +54,7 @@ const blogPosts = [
     excerpt: "Discover how WebAssembly 2.0 enables near-native performance in browsers and expands programming language support.",
     content: "WebAssembly 2.0 represents a significant leap forward in web application performance. With new features like thread support, SIMD operations, and exception handling, WASM 2.0 enables applications to run at near-native speeds directly in browsers. This technology is particularly transformative for applications requiring heavy computation, such as video editing, 3D rendering, and scientific simulations. Major frameworks like React and Angular are now exploring WASM integration for performance-critical components. The expanded language support means developers can write web applications in languages like Rust, C++, and Go while maintaining excellent performance. Real-world implementations show performance improvements of 3-5x compared to traditional JavaScript for compute-intensive tasks. As browser support solidifies, we're seeing adoption in areas like gaming, CAD software, and machine learning inference in the browser.",
     author: "Mike WebArchitect",
-    date: "18 November, 2025",
+    date: relativeDate(6),
     readTime: "10 min read",
     category: "Web Development",
     tags: ["WebAssembly", "Performance", "Rust", "2025"],
@@ -54,7 +70,7 @@ const blogPosts = [
     excerpt: "Introduction quantum programming with Microsoft's Q# language and practical applications for modern developers.",
     content: "Developers can now start building quantum applications using Microsoft's Q# language. This guide introduces the fundamentals of quantum programming, including qubits, superposition, and quantum gates. With the Azure Quantum Development Kit, developers can simulate quantum algorithms and run them on actual quantum hardware. Practical applications include optimization problems, drug discovery simulations, and cryptography. The learning curve is steep, but the potential rewards are enormous. Major tech companies are investing heavily in quantum computing infrastructure, making this an essential skill for forward-thinking developers. We explore real quantum algorithms like Grover's search and Shor's factorization, and demonstrate how to implement them in Q#. The quantum ecosystem is rapidly evolving, with new libraries, simulators, and cloud services making quantum development more accessible than ever. Quantum computing is not just physics—it’s about programming complex problems differently (optimization, cryptography, AI). Q# provides high-level abstractions for quantum gates, operations, and algorithms without needing deep quantum physics knowledge.",
     author: "Dr. Quantum Dev",
-    date: "15 November, 2025",
+    date: relativeDate(9),
     readTime: "12 min read",
     category: "Quantum Computing",
     tags: ["Quantum", "Q#", "Microsoft", "2025"],
@@ -70,7 +86,7 @@ const blogPosts = [
     excerpt: "How web containers and edge computing are enabling new possibilities for distributed applications and real-time processing.",
     content: "Edge computing combined with web containers is creating new possibilities for distributed applications. Technologies like WebContainer API allow developers to run full development environments directly in the browser, while edge platforms like Cloudflare Workers and Deno Deploy enable code execution at the network edge. This combination reduces latency, improves scalability, and enhances user privacy. Real-world use cases include real-time collaboration tools, IoT data processing, and global content delivery networks. The architecture patterns for edge computing are evolving, with new considerations for state management, data synchronization, and security. We explore how to design applications that leverage both client-side and edge computing capabilities, creating hybrid architectures that optimize performance and cost. The future points toward even more sophisticated edge computing capabilities, with AI inference, database operations, and complex business logic moving closer to end users.",
     author: "Alex EdgeExpert",
-    date: "12 November, 2025",
+    date: relativeDate(12),
     readTime: "9 min read",
     category: "Edge Computing",
     tags: ["Edge Computing", "Web Containers", "Cloudflare", "2025"],
@@ -86,7 +102,7 @@ const blogPosts = [
     excerpt: "Exploring practical blockchain applications in supply chain, digital identity, and decentralized applications and decentralized and decentralized . ",
     content: "Blockchain technology has evolved far beyond cryptocurrency, with practical applications emerging across various industries. In 2024, we're seeing significant adoption in supply chain management, digital identity verification, and decentralized finance (DeFi). Smart contracts on platforms like Ethereum, Solana, and Polkadot are becoming more sophisticated, enabling complex business logic and automated workflows. The development ecosystem has matured with better tools, frameworks, and testing environments. We explore real-world implementations in healthcare records, voting systems, and intellectual property management. The integration of zero-knowledge proofs and layer-2 solutions has addressed scalability concerns, making blockchain practical for high-throughput applications. Developers entering this space need to understand not just smart contract development, but also the broader ecosystem including oracles, decentralized storage, and cross-chain interoperability.",
     author: "Blockchain Builder",
-    date: "10 November, 2025",
+    date: relativeDate(15),
     readTime: "11 min read",
     category: "Blockchain",
     tags: ["Blockchain", "Smart Contracts", "Web3", "2025"],
@@ -102,7 +118,7 @@ const blogPosts = [
     excerpt: "Modern serverless architectures and microservices patterns for building highly scalable and cost-effective applications.",
     content: "Serverless computing combined with microservices architecture has become the gold standard for scalable cloud applications. In 2025, we're seeing advanced patterns like event-driven architectures, step functions, and distributed tracing become mainstream. Platforms like AWS Lambda, Azure Functions, and Google Cloud Run have matured significantly, offering better performance, longer timeouts, and more sophisticated tooling. The key to successful serverless microservices lies in proper service boundaries, event design, and observability. We explore patterns for handling state, managing dependencies, and implementing sagas for distributed transactions. Real-world case studies show how companies are achieving 99.99% availability while reducing infrastructure costs by 60-80%. The evolution of serverless includes new capabilities like containers-as-a-service, edge functions, and specialized serverless databases, creating a comprehensive ecosystem for modern application development.",
     author: "Cloud Architect",
-    date: "8 November, 2025",
+    date: relativeDate(18),
     readTime: "14 min read",
     category: "Cloud Computing",
     tags: ["Serverless", "Microservices", "AWS", "2025"],

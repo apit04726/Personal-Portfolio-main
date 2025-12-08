@@ -383,6 +383,7 @@ html {
 
 .home-about-section {
   position: relative;
+  overflow: hidden;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
   color:#fbd9ad;
