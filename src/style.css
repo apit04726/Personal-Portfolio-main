@@ -1905,3 +1905,35 @@ html {
 #resume{
   height:800px;
 }
+
+/* Fix: Prevent large justification gaps on small/mobile screens for blog/timeline text */
+@media (max-width: 767px) {
+  .blog-content p,
+  .blog-excerpt,
+  .blog-post-content p,
+  .vertical-timeline-element-content p,
+  .project-desc,
+  .project-sub {
+    text-align: left !important;
+    text-justify: none !important;
+    hyphens: auto !important;
+    word-break: break-word !important;
+    -webkit-hyphens: auto !important;
+    -ms-hyphens: auto !important;
+    max-width: 100% !important;
+  }
+}
+
+/* Additional mobile fix: normalize spacing for all paragraph text to remove large gaps */
+@media (max-width: 767px) {
+  p {
+    text-align: left !important;
+    text-justify: none !important;
+    hyphens: auto !important;
+    word-break: break-word !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    -webkit-hyphens: auto !important;
+    max-width: 100% !important;
+  }
+}
