@@ -1106,6 +1106,102 @@ html {
   }
 }
 
+/* Timeline - Desktop spacing & font fixes */
+@media (min-width: 992px) {
+  /* keep timeline centered and readable */
+  .vertical-timeline {
+    width: 100% !important;
+    padding: 2em 0 !important;
+  }
+
+  /* slightly thicker center line for desktop */
+  .vertical-timeline::before {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 4px !important;
+  }
+
+  /* reduce vertical gap between timeline items so entries sit closer */
+  .vertical-timeline-element {
+    margin: 1.1em 0 !important;
+  }
+
+  /* slightly larger icon but better aligned */
+  .vertical-timeline-element-icon {
+    width: 56px !important;
+    height: 56px !important;
+    top: 14px !important;
+  }
+
+  /* limit content width so justified text doesn't create large gaps */
+  .vertical-timeline-element-content {
+    max-width: 44% !important;
+    padding: 1.05em 1.2em !important;
+    margin-left: 0 !important;
+  }
+
+  /* headings — tighter spacing and consistent sizes on desktop */
+  .vertical-timeline-element-content h4,
+  .vertical-timeline-element-title,
+  .vertical-timeline-element-subtitle {
+    font-size: 1.15rem !important;
+    line-height: 1.25 !important;
+    margin: 0 0 6px 0 !important;
+  }
+
+  /* paragraphs — avoid full justification on wide screens to prevent gaps */
+  .vertical-timeline-element-content p {
+    margin: 0.25em 0 0 0 !important;
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+    text-align: left !important;
+    text-justify: none !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+
+  /* date style on desktop */
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    font-size: 0.95rem !important;
+    padding: 0.15em 0 !important;
+    float: none !important;
+    position: absolute !important;
+    right: -8% !important;
+    top: 22px !important;
+  }
+
+  /* when timeline uses two columns ensure content boxes are constrained */
+  .vertical-timeline--two-columns .vertical-timeline-element-content {
+    max-width: 44% !important;
+  }
+
+  /* Desktop: avoid wide-justification gaps for project/blog/resume text */
+  .project-sub,
+  .project-desc,
+  .project-details .project-sub,
+  .project-details .project-desc,
+  .blog-content p,
+  .blog-excerpt,
+  .blog-post-content p,
+  .resume .resume-item ul,
+  .vertical-timeline-element-content p,
+  .home-about-body,
+  .home-about-description {
+    text-align: left !important;
+    text-justify: auto !important;
+    hyphens: auto !important;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+  }
+
+  /* limit line-length for long paragraphs so spacing stays natural */
+  .project-desc,
+  .blog-content p,
+  .blog-post-content p {
+    max-width: 70ch !important;
+  }
+}
+
 .homesocialicons:hover {
   color: #87209e;
   box-shadow: 0 0 25px #87209e;
