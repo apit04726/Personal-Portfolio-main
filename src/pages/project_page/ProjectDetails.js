@@ -48,7 +48,20 @@ export default function ProjectDetails() {
           <Row className="align-items-start g-4 project-details-row">
             <Col md={6} className="order-1 order-md-1">
               <div className="project-image-wrap">
-                <img src={project.image} alt={project.title} className="project-hero-img" />
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    controls
+                    muted
+                    playsInline
+                    poster={project.image}
+                    className="project-hero-video"
+                    aria-label={`${project.title} video`
+                    }
+                  />
+                ) : (
+                  <img src={project.image} alt={project.title} className="project-hero-img" />
+                )}
               </div>
             </Col>
             <Col md={6} className="order-2 order-md-2">
@@ -158,6 +171,15 @@ export default function ProjectDetails() {
           display: block;
           margin: 0 auto;
           border-radius: 8px;
+        }
+
+        .project-video-wrap { margin-top: 12px; }
+        .project-hero-video {
+          width: 100%;
+          height: auto;
+          display: block;
+          border-radius: 8px;
+          outline: none;
         }
 
         .project-details { color: #222; background: #ffffff; padding: 24px; border-radius: 14px; 

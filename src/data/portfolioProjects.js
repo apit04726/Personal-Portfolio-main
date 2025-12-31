@@ -33,6 +33,8 @@ import dwarkesh from "../images/dwarkesh-jai-jpeg.jpeg";
 import shivPetroleum from "../images/shive-pp.jpeg";
 import eventHub from "../images/eventppp.jpeg";
 import bustraking from "../images/bus-traking.jpeg";
+import aiBlogAutomation from "../images/aiBlogAutomation.jpeg";
+import wordpressFbMov from "../images/n8n-videos/wordprees+fb.mov"; // local video for Automated Blog Posting System
 
 const projects = [
   {
@@ -569,7 +571,43 @@ const projects = [
       'Laravel Excel for report exports',
       'Chart.js for analytics and graphs'
     ]
-  }
+  },
+  {
+  slug: 'automated-blog-posting-system',
+  image: aiBlogAutomation,
+  video: wordpressFbMov,
+  title: 'Automated Blog Posting System',
+  description: 'A fully automated blog posting system that publishes AI-generated content to WordPress and Facebook without manual effort.',
+  category: 'n8n',
+  client: 'Content Marketing',
+  date: '31 Dec, 2025',
+  url: '',
+  details: 'Built an end-to-end automation using n8n and AI where blogs are created and published automatically. The system fetches news from RSS feeds, generates SEO-friendly blog content using AI, creates featured images, formats content into clean HTML, and publishes the same post to WordPress and Facebook. The workflow is scalable, duplicate-safe, and runs on a schedule without human intervention.',
+  features: [
+    'Automatic blog generation using AI',
+    'RSS-based latest news fetching',
+    'SEO-friendly long-form content',
+    'Auto-generated featured images',
+    'Markdown to clean HTML conversion',
+    'Direct publishing to WordPress',
+    'Auto-sharing posts on Facebook Pages',
+    'Duplicate post prevention',
+    'Scheduled and fully automated workflow'
+  ],
+  technologies: [
+    'n8n',
+    'Google Gemini AI',
+    'WordPress REST API',
+    'Facebook Graph API'
+  ],
+  packages: [
+    'RSS Feed Reader',
+    'AI Content Generation',
+    'WordPress REST Integration',
+    'Facebook Page Automation'
+  ]
+}
+
 ];
 
 export default projects;

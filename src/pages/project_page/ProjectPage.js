@@ -21,7 +21,7 @@ export default function ProjectPage() {
   const [loading, setLoading] = useState(false);
 
   // Available categories for filtering (ensure this is always defined)
-  const categories = ['All project', 'wordpress &php', 'react js', 'react native app', 'shopify', 'core php', 'laravel'];
+  const categories = ['All project', 'wordpress &php', 'react js', 'react native app', 'shopify', 'core php', 'laravel','n8n'];
 
   // Sync filteredProjects and persist activeFilter whenever it changes
   useEffect(() => {
@@ -69,13 +69,14 @@ export default function ProjectPage() {
           {/* Filter Buttons - Improved Design */}
           <div className="text-center my-4">
             <Fade bottom>
-              <div className="filter-buttons-container">
+                  <div className="filter-buttons-container">
                 {categories.map((category, index) => (
                   <button
                     key={index}
                     className={`filter-btn ${activeFilter === category ? 'active' : ''}`}
                     onClick={() => handleFilterClick(category)}
                     disabled={loading}
+                    aria-pressed={activeFilter === category}
                   >
                     {category}
                   </button>
@@ -117,7 +118,7 @@ export default function ProjectPage() {
                                   <h6 id={"first"} style={{ color: "#fbd9ad" }}>
                                     {project.category}
                                   </h6>
-                                  <img src={project.image} alt={project.title} />
+                                  <img src={project.image} alt={project.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
                                   <div className="project--showcaseBtn">
                                     <Link to={`/project/${project.slug}`} className={"iconBtn detailsBtn"} aria-label={`Details ${project.title}`}>
                                       <FaCode aria-hidden="true" />
@@ -163,54 +164,148 @@ export default function ProjectPage() {
       <style jsx>{`
         .filter-buttons-container {
           display: flex;
-          flex-wrap: wrap;
+          flex-wrap: nowrap;
+          align-items: center;
           justify-content: center;
-          gap: 10px;
-          padding: 0 15px;
+          gap: 12px;
+          padding: 8px 16px;
+          max-width: 1200px;
+          margin: 0 auto;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        /* Thin scrollbar for touch/desktop */
+        .filter-buttons-container::-webkit-scrollbar {
+          height: 8px;
+        }
+        .filter-buttons-container::-webkit-scrollbar-thumb {
+          background: rgba(134,61,176,0.18);
+          border-radius: 6px;
         }
 
         .filter-btn {
           background-color: #fbd9ad;
           color: rgb(134 61 176);
           border: 2px solid rgb(134 61 176);
-          border-radius: 25px;
+          border-radius: 30px;
           font-weight: 600;
-          padding: 10px 20px;
+          padding: 10px 22px;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s, color 0.18s;
           font-size: 14px;
           min-width: 120px;
-          flex: 1;
-          max-width: 160px;
+          white-space: nowrap;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex: 0 0 auto;
+          box-sizing: border-box;
         }
-          /* Responsive for screens ≤ 1024px */
+
+        /* Responsive for screens ≤ 1024px */
         @media (max-width: 1024px) {
-        .filter-btn {
-          padding: 2px 14px;
-          font-size: 13px;
-          min-width: 90px;
-          max-width: 120px;
-          border-radius: 18px;
+          .filter-btn {
+            padding: 8px 18px;
+            font-size: 13px;
+            min-width: 100px;
+            border-radius: 24px;
+          }
         }
-        }
- 
+
         .filter-btn:hover:not(:disabled) {
           background-color: rgb(134 61 176);
           color: #fbd9ad;
           transform: translateY(-2px);
-          box-shadow: 0 4px 8px rgba(134, 61, 176, 0.3);
+          box-shadow: 0 6px 12px rgba(134, 61, 176, 0.18);
         }
 
         .filter-btn.active {
           background-color: rgb(134 61 176);
           color: #fbd9ad;
           transform: translateY(-2px);
-          box-shadow: 0 4px 12px rgba(134, 61, 176, 0.4);
+          box-shadow: 0 6px 14px rgba(134, 61, 176, 0.28);
         }
 
         .filter-btn:disabled {
           opacity: 0.6;
           cursor: not-allowed;
+        }
+
+        /* keyboard focus styles */
+        .filter-btn:focus {
+          outline: 3px solid rgba(134,61,176,0.16);
+          outline-offset: 3px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+          .filter-buttons-container {
+            gap: 10px;
+            padding: 8px 12px;
+          }
+
+          .filter-btn {
+            padding: 8px 16px;
+            font-size: 12px;
+            min-width: 100px;
+            border-radius: 22px;
+          }
+
+          .spinner {
+            width: 50px;
+            height: 50px;
+            border-width: 6px;
+          }
+
+          .loader-text {
+            font-size: 16px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .filter-buttons-container {
+            gap: 8px;
+            padding: 6px 10px;
+          }
+
+          .filter-btn {
+            padding: 6px 12px;
+            font-size: 12px;
+            min-width: 90px;
+            border-radius: 20px;
+          }
+
+          .loader-container {
+            padding: 40px 15px;
+            min-height: 200px;
+          }
+
+          .spinner {
+            width: 35px;
+            height: 35px;
+            border-width: 6px;
+          }
+
+          .loader-text {
+            font-size: 14px;
+          }
+        }
+
+        /* For very small screens prefer horizontal scroll (single row) */
+        @media (max-width: 480px) {
+          .filter-buttons-container {
+            gap: 8px;
+            padding: 6px 10px;
+            width: 100%;
+            justify-content: flex-start;
+          }
+
+          .filter-btn {
+            min-width: 90px;
+            padding: 8px 12px;
+            font-size: 12px;
+          }
         }
 
         /* Beautiful Loader Styles */
