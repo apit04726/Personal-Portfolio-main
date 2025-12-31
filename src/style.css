@@ -1524,7 +1524,6 @@ html {
     height: auto !important;
     max-height: 260px !important;
     object-fit: cover !important;
-    border-radius: 8px !important;
   }
 
   /* Reduce vertical gap between title and subtitle */
