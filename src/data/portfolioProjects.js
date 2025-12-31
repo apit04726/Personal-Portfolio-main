@@ -582,7 +582,7 @@ const projects = [
   client: 'Content Marketing',
   date: '31 Dec, 2025',
   url: '',
-  details: 'Built an end-to-end automation using n8n and AI where blogs are created and published automatically. The system fetches news from RSS feeds, generates SEO-friendly blog content using AI, creates featured images, formats content into clean HTML, and publishes the same post to WordPress and Facebook. The workflow is scalable, duplicate-safe, and runs on a schedule without human intervention.',
+  details: 'Built a fully automated blogging system using n8n and AI that fetches RSS news, generates SEO-optimized content and featured images, formats clean HTML, and publishes posts automatically to WordPress and Facebook—scalable, duplicate-safe, and fully scheduled.',
   features: [
     'Automatic blog generation using AI',
     'RSS-based latest news fetching',

@@ -118,7 +118,7 @@ export default function ProjectPage() {
                                   <h6 id={"first"} style={{ color: "#fbd9ad" }}>
                                     {project.category}
                                   </h6>
-                                  <img src={project.image} alt={project.title} style={{ width: '100%', height: 'auto', display: 'block' }} />
+                                  <img src={project.image} alt={project.title} style={{ width: '118%', height: 'auto', display: 'block' }} />
                                   <div className="project--showcaseBtn">
                                     <Link to={`/project/${project.slug}`} className={"iconBtn detailsBtn"} aria-label={`Details ${project.title}`}>
                                       <FaCode aria-hidden="true" />
