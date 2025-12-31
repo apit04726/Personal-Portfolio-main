@@ -1510,6 +1510,46 @@ html {
   line-height: 100%;
 }
 
+/* Mobile tweaks for project page: enlarge images and tighten heading spacing */
+@media (max-width: 768px) {
+  /* Allow project cards to expand vertically on mobile so images can be larger */
+  .singleProject {
+    height: 394px !important;
+    padding: 1rem !important;
+  }
+
+  /* Make images a bit larger and keep aspect ratio */
+  .projectContent > img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 260px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+  }
+
+  /* Reduce vertical gap between title and subtitle */
+  .projectContent h5 {
+    margin: 6px 0 2px !important;
+    font-size: 1.05rem !important;
+    line-height: 110% !important;
+  }
+
+  .projectContent h6 {
+    margin: 0 0 8px !important;
+    font-size: 0.95rem !important;
+    line-height: 110% !important;
+  }
+}
+
+/* Extra adjustment for very small screens */
+@media (max-width: 576px) {
+  .projectContent > img {
+    max-height: 300px !important;
+  }
+  .projectContent h5 { font-size: 1.0rem !important; }
+  .projectContent h6 { font-size: 0.95rem !important; }
+}
+
 .iconBtn {
   display: flex;
   align-items: center;
