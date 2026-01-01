@@ -224,7 +224,7 @@ export default function ProjectPage() {
           background-color: rgb(134 61 176);
           color: #fbd9ad;
           transform: translateY(-2px);
-          box-shadow: 0 6px 14px rgba(134, 61, 176, 0.28);
+          // box-shadow: 0 6px 14px rgba(134, 61, 176, 0.28);
         }
 
         .filter-btn:disabled {
