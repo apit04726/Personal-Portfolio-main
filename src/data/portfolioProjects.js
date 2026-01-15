@@ -34,7 +34,8 @@ import shivPetroleum from "../images/shive-pp.jpeg";
 import eventHub from "../images/eventppp.jpeg";
 import bustraking from "../images/bus-traking.jpeg";
 import aiBlogAutomation from "../images/aiBlogAutomation.jpeg";
-import wordpressFbMov from "../images/n8n-videos/wordprees+fb.mov"; // local video for Automated Blog Posting System
+import helloKisanAppImage from "../images/helo-kisan.jpg"; 
+import wordpressFbMov from "../images/n8n-videos/wordprees+fb.mov";
 
 const projects = [
   {
@@ -288,6 +289,20 @@ const projects = [
     details: 'A modern, lightweight React Native News App with a smooth UI and real-time content for Android, iOS, and Web and live news App.',
     features: ['Live news updates', 'Category filters', 'Bookmarking', 'Multi-platform support', 'Expo.Dev Deployment'],
     technologies: ['React Native', 'Redux', 'Bootstrap', 'News API', 'Expo.Dev'],
+    packages: ['react-navigation', 'axios', 'redux-thunk', 'react-native-elements', 'Expo Build']
+  },
+  {
+    slug: 'hello-kisanapp',
+    image: helloKisanAppImage,
+    title: 'Hello Kisan App',
+    description: 'Hello Kisan centralizes farm, plot, labor, expense, and sales data in an intuitive dashboard with charts, reports, and essential tools, with optional cloud sync for backups and multi-device access.',
+    category: 'react native app',
+    client: 'Software Development',
+    date: '10 Jan, 2026',
+    url: '',
+    details: 'A cross-platform, offline-first farm management app for small and medium farmers. Hello Kisan centralizes farm, plot, labor, expense, and sales data in an intuitive dashboard with charts, reports, and essential tools, with optional cloud sync for backups and multi-device access.',
+    features: ['Farm & plot management', 'Expense & sales tracking', 'Labor management', 'Interactive dashboard & reports', 'Offline-first with sync', 'Localization & themes'],
+    technologies: ['React Native', 'Redux', 'Bootstrap', 'API', 'Expo.Dev'],
     packages: ['react-navigation', 'axios', 'redux-thunk', 'react-native-elements', 'Expo Build']
   },
   {
