@@ -295,14 +295,14 @@ const projects = [
     slug: 'hello-kisanapp',
     image: helloKisanAppImage,
     title: 'Hello Kisan App',
-    description: 'Hello Kisan centralizes farm, plot, labor, expense, and sales data in an intuitive dashboard with charts, reports, and essential tools, with optional cloud sync for backups and multi-device access.',
+    description:'Hello Kisan brings all your farm, labor, expense, and sales data into one smart dashboard with reports, charts, and Gujarat APMC live price updates.',
     category: 'react native app',
     client: 'Software Development',
     date: '10 Jan, 2026',
-    url: '',
+    url: 'https://drive.google.com/file/d/1hA_i_yJXQ_UaD04oZgHvJkpgSqOUddFZ/view?usp=sharing',
     details: 'A cross-platform, offline-first farm management app for small and medium farmers. Hello Kisan centralizes farm, plot, labor, expense, and sales data in an intuitive dashboard with charts, reports, and essential tools, with optional cloud sync for backups and multi-device access.',
-    features: ['Farm & plot management', 'Expense & sales tracking', 'Labor management', 'Interactive dashboard & reports', 'Offline-first with sync', 'Localization & themes'],
-    technologies: ['React Native', 'Redux', 'Bootstrap', 'API', 'Expo.Dev'],
+    features: ['Farm & plot management', 'Expense & sales tracking', 'Labor management', 'Interactive dashboard & reports', 'Offline-first with sync', 'Localization & themes','Gujarat APMC Market Live prices'],
+    technologies: ['React Native', 'Redux', 'Bootstrap', 'Market Prices API', 'Expo.Dev'],
     packages: ['react-navigation', 'axios', 'redux-thunk', 'react-native-elements', 'Expo Build']
   },
   {
