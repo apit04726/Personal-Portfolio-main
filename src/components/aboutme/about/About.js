@@ -28,38 +28,48 @@ const About = () => {
           <Col md={7}>
             <Fade duration={3000}>
               <p className="home-about-body">
-                My name is <b className="purple">vishal </b> 
-                  and I am a <b className="purple">Bachelor of Engineering in Information Technology </b> 
-                    student at <b className="purple">Gujarat Technological University </b>
-                      in Bhavnagar, Gujarat.
+                Hi, I’m <b className="purple">Vishal</b>, a <b className="purple">Bachelor of Engineering in Information Technology </b>
+                student at <b className="purple">Gujarat Technological University</b>, Bhavnagar, Gujarat.
                 <br />
                 <br />
-                        I am proficient in various programming languages such as &nbsp;
-                  <b className="purple">
-                    {" "}
-                    C, C++, Java, Python, HTML, CSS, PHP, and JavaScript.{" "}
-                  </b>
+                I have strong proficiency in programming languages including&nbsp;
+                <b className="purple">
+                  C, C++, Java, Python, HTML, CSS, PHP, and JavaScript.
+                </b>
                 <br />
                 <br />
-                I also have experience working with frameworks and libraries such as &nbsp;
-
-                  <b className="purple">
-                    {" "}
-                    NodeJS, ReactJS, OpenCV, Pandas, and NumPy.{" "}
-                  </b>
+                I have hands-on experience with modern frameworks and libraries such as&nbsp;
+                <b className="purple">
+                  Node.js, React.js, React Native, and Express.js.
+                </b>
                 <br />
                 <br />
-                Whenever possible, I also apply my passion for developing
-                products with &nbsp;
-                  <b className="purple">
-                    {" "}
-                    Modern Javascript Library and Frameworks.
-                  </b>
+                I am passionate about building scalable, high-performance applications using&nbsp;
+                <b className="purple">
+                  modern JavaScript frameworks and technologies.
+                </b>
                 <br />
-                <br />In my free time, I enjoy learning new technologies and &nbsp;
-                  <b className="purple">building new web technologies and products. </b>
+                <br />
+                In my free time, I enjoy exploring new technologies and building innovative web and mobile solutions.
+                <br />
+                <br />
+                <b>
+                  <span className="purple">Full Stack Engineer</span>
+                  <span className="pipe"> | </span>
+                  <span className="purple">PHP & Laravel Developer</span>
+                  <span className="pipe"> | </span>
+                  <span className="purple">React & Node.js Specialist</span>
+                  <span className="pipe"> | </span>
+                  <span className="purple">WordPress & Shopify Expert</span>
+                  <span className="pipe"> | </span>
+                  <span className="purple">Scalable Web Solutions Architect</span>
+                  <span className="pipe"> | </span>
+                  <span className="purple">Android App Developer</span>
+                  <span className="pipe"> | </span>
+                </b>
               </p>
             </Fade>
+
           </Col>
         </Row>
         {/* </Slide> */}
