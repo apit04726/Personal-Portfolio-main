@@ -299,7 +299,7 @@ const projects = [
     category: 'react native app',
     client: 'Software Development',
     date: '10 Jan, 2026',
-    url: 'https://drive.google.com/file/d/1Tplh65AyvTfOrAqpqr1hdfi1x0z3GtbB/view?usp=sharing',
+    url: 'https://drive.google.com/file/d/1byqgr2Ovt-Bl7DLJEL62rkJTv7WjVHl1/view?usp=sharing',
     details: 'A cross-platform, offline-first farm management app for small and medium farmers. Hello Kisan centralizes farm, plot, labor, expense, and sales data in an intuitive dashboard with charts, reports, and essential tools, with optional cloud sync for backups and multi-device access.',
     features: ['Farm & plot management', 'Expense & sales tracking', 'Labor management', 'Interactive dashboard & reports', 'Offline-first with sync', 'Localization & themes','Gujarat APMC Market Live prices'],
     technologies: ['React Native', 'Redux', 'Bootstrap', 'Market Prices API', 'Expo.Dev'],
