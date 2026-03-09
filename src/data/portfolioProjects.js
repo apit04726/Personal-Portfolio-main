@@ -311,7 +311,7 @@ const projects = [
     slug: "socialgo",
     image: socialGo,
     title: "SocialGo",
-    description: "SocialGo is a mobile-first app built with React Native and Expo that helps creators and businesses manage, schedule, and analyze social media from one dashboard, with AI tools to improve content quality.",
+    description: "SocialGo is a mobile-first app built with React Native and Expo that helps creators and businesses manage, schedule, and analyze social media from one dashboard, with AI tools to improve content quality [Facebook, Instagram, Twitter, and LinkedIn].",
     category: "React Native App",
     client: "Software Development",
     date: "10 March, 2026",
