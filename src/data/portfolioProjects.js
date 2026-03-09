@@ -34,7 +34,8 @@ import shivPetroleum from "../images/shive-pp.jpeg";
 import eventHub from "../images/eventppp.jpeg";
 import bustraking from "../images/bus-traking.jpeg";
 import aiBlogAutomation from "../images/aiBlogAutomation.jpeg";
-import helloKisanAppImage from "../images/helo-kisan.jpg"; 
+import helloKisanAppImage from "../images/helo-kisan.jpg";
+import socialGo from "../images/socialGo.jpeg";
 import wordpressFbMov from "../images/n8n-videos/wordprees+fb.mov";
 
 const projects = [
@@ -295,15 +296,57 @@ const projects = [
     slug: 'hello-kisanapp',
     image: helloKisanAppImage,
     title: 'Hello Kisan App',
-    description:'Hello Kisan brings all your farm, labor, expense, and sales data into one smart dashboard with reports, charts, and Gujarat APMC live price updates.',
+    description: 'Hello Kisan brings all your farm, labor, expense, and sales data into one smart dashboard with reports, charts, and Gujarat APMC live price updates.',
     category: 'react native app',
     client: 'Software Development',
     date: '10 Jan, 2026',
     url: 'https://drive.google.com/file/d/1byqgr2Ovt-Bl7DLJEL62rkJTv7WjVHl1/view?usp=sharing',
     details: 'A cross-platform, offline-first farm management app for small and medium farmers. Hello Kisan centralizes farm, plot, labor, expense, and sales data in an intuitive dashboard with charts, reports, and essential tools, with optional cloud sync for backups and multi-device access.',
-    features: ['Farm & plot management', 'Expense & sales tracking', 'Labor management', 'Interactive dashboard & reports', 'Offline-first with sync', 'Localization & themes','Gujarat APMC Market Live prices'],
+    features: ['Farm & plot management', 'Expense & sales tracking', 'Labor management', 'Interactive dashboard & reports', 'Offline-first with sync', 'Localization & themes', 'Gujarat APMC Market Live prices'],
     technologies: ['React Native', 'Redux', 'Bootstrap', 'Market Prices API', 'Expo.Dev'],
     packages: ['react-navigation', 'axios', 'redux-thunk', 'react-native-elements', 'Expo Build']
+  },
+
+  {
+    slug: "socialgo",
+    image: socialGo,
+    title: "SocialGo",
+    description: "SocialGo is a mobile-first app built with React Native and Expo that helps creators and businesses manage, schedule, and analyze social media from one dashboard, with AI tools to improve content quality.",
+    category: "React Native App",
+    client: "Software Development",
+    date: "10 Jan, 2026",
+    url: "https://drive.google.com/file/d/1byqgr2Ovt-Bl7DLJEL62rkJTv7WjVHl1/view?usp=sharing",
+    details: 'Built with a mobile-first approach using React Native and Expo, SocialGo provides a unified dashboard for creators and businesses to manage, schedule, and analyze social media performance. It integrates with major platforms and uses AI to improve content quality.',
+    features: [
+      "Create once and publish across Facebook, Instagram, Twitter, and LinkedIn",
+      "AI-powered content rewriting with tone control and hashtag generation",
+      "Schedule posts with built-in calendar planning",
+      "Track engagement and follower growth with analytics",
+      "Real-time sync of social media statistics",
+      "Support for images and videos",
+      "Manage location-tagged posts with interactive maps",
+      "Secure authentication and privacy protection"
+    ],
+    technologies: [
+      "React Native",
+      "Expo",
+      "Kotlin (Android)",
+      "TypeScript",
+      "Firebase",
+      "Google Gemini API",
+      "OpenAI",
+      "React Native Maps",
+      "Lottie"
+    ],
+    packages: [
+      "@react-native-async-storage/async-storage",
+      "firebase",
+      "react-native-paper",
+      "expo-image-picker",
+      "react-native-fbsdk-next",
+      "lottie-react-native",
+      "date-fns"
+    ]
   },
   {
     slug: 'kith',
@@ -588,40 +631,40 @@ const projects = [
     ]
   },
   {
-  slug: 'automated-blog-posting-system',
-  image: aiBlogAutomation,
-  video: wordpressFbMov,
-  title: 'Automated Blog Posting System',
-  description: 'A fully automated blog posting system that publishes AI-generated content to WordPress and Facebook without manual effort.',
-  category: 'n8n',
-  client: 'Content Marketing',
-  date: '31 Dec, 2025',
-  url: '',
-  details: 'Built a fully automated blogging system using n8n and AI that fetches RSS news, generates SEO-optimized content and featured images, formats clean HTML, and publishes posts automatically to WordPress and Facebook—scalable, duplicate-safe, and fully scheduled.',
-  features: [
-    'Automatic blog generation using AI',
-    'RSS-based latest news fetching',
-    'SEO-friendly long-form content',
-    'Auto-generated featured images',
-    'Markdown to clean HTML conversion',
-    'Direct publishing to WordPress',
-    'Auto-sharing posts on Facebook Pages',
-    'Duplicate post prevention',
-    'Scheduled and fully automated workflow'
-  ],
-  technologies: [
-    'n8n',
-    'Google Gemini AI',
-    'WordPress REST API',
-    'Facebook Graph API'
-  ],
-  packages: [
-    'RSS Feed Reader',
-    'AI Content Generation',
-    'WordPress REST Integration',
-    'Facebook Page Automation'
-  ]
-}
+    slug: 'automated-blog-posting-system',
+    image: aiBlogAutomation,
+    video: wordpressFbMov,
+    title: 'Automated Blog Posting System',
+    description: 'A fully automated blog posting system that publishes AI-generated content to WordPress and Facebook without manual effort.',
+    category: 'n8n',
+    client: 'Content Marketing',
+    date: '31 Dec, 2025',
+    url: '',
+    details: 'Built a fully automated blogging system using n8n and AI that fetches RSS news, generates SEO-optimized content and featured images, formats clean HTML, and publishes posts automatically to WordPress and Facebook—scalable, duplicate-safe, and fully scheduled.',
+    features: [
+      'Automatic blog generation using AI',
+      'RSS-based latest news fetching',
+      'SEO-friendly long-form content',
+      'Auto-generated featured images',
+      'Markdown to clean HTML conversion',
+      'Direct publishing to WordPress',
+      'Auto-sharing posts on Facebook Pages',
+      'Duplicate post prevention',
+      'Scheduled and fully automated workflow'
+    ],
+    technologies: [
+      'n8n',
+      'Google Gemini AI',
+      'WordPress REST API',
+      'Facebook Graph API'
+    ],
+    packages: [
+      'RSS Feed Reader',
+      'AI Content Generation',
+      'WordPress REST Integration',
+      'Facebook Page Automation'
+    ]
+  }
 
 ];
 

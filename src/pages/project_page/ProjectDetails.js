@@ -9,7 +9,11 @@ export default function ProjectDetails() {
   const { slug } = useParams();
   const navigate = useNavigate();
   const featuresListRef = useRef(null);
-  const [hasScrollableContent, setHasScrollableContent] = useState(false);
+  const techListRef = useRef(null);
+  const packagesListRef = useRef(null);
+  const [hasFeaturesScroll, setHasFeaturesScroll] = useState(false);
+  const [hasTechScroll, setHasTechScroll] = useState(false);
+  const [hasPkgsScroll, setHasPkgsScroll] = useState(false);
 
   const project = projects.find(p => p.slug === slug);
   const formatUrl = (u) => {
@@ -19,14 +23,20 @@ export default function ProjectDetails() {
   };
   const projectUrl = formatUrl(project?.url);
 
-  // Check if features list is scrollable
+  // Check if lists are scrollable
   useEffect(() => {
-    if (featuresListRef.current) {
-      const element = featuresListRef.current;
-      const isScrollable = element.scrollHeight > element.clientHeight;
-      setHasScrollableContent(isScrollable);
-    }
-  }, [project?.features]);
+    const checkScroll = (ref, setter) => {
+      if (ref.current) {
+        const element = ref.current;
+        const isScrollable = element.scrollHeight > element.clientHeight;
+        setter(isScrollable);
+      }
+    };
+    
+    checkScroll(featuresListRef, setHasFeaturesScroll);
+    checkScroll(techListRef, setHasTechScroll);
+    checkScroll(packagesListRef, setHasPkgsScroll);
+  }, [project?.features, project?.technologies, project?.packages]);
 
   // (Removed hover hint state/handlers — not used in markup)
 
@@ -110,22 +120,28 @@ export default function ProjectDetails() {
                           {((project.features || []).length > 0) ? (project.features || []).map((f, i) => <li key={i}>{f}</li>) : <li>—</li>}
                         </ul>
                         {/* Gradient overlay at bottom when scrollable */}
-                        {hasScrollableContent && <div className="scroll-gradient-overlay"></div>}
+                        {hasFeaturesScroll && <div className="scroll-gradient-overlay"></div>}
                       </div>
                     </div>
 
-                    <div className="pf-col">
+                    <div className="pf-col pf-technologies">
                       <h5>Technologies</h5>
-                      <ul>
-                        {((project.technologies || []).length > 0) ? (project.technologies || []).map((t, i) => <li key={i}>{t}</li>) : <li>—</li>}
-                      </ul>
+                      <div ref={techListRef} className="pf-list-scroll">
+                        <ul>
+                          {((project.technologies || []).length > 0) ? (project.technologies || []).map((t, i) => <li key={i}>{t}</li>) : <li>—</li>}
+                        </ul>
+                        {hasTechScroll && <div className="scroll-gradient-overlay"></div>}
+                      </div>
                     </div>
 
-                    <div className="pf-col">
+                    <div className="pf-col pf-packages">
                       <h5>Libraries / Packages</h5>
-                      <ul>
-                        {((project.packages || []).length > 0) ? (project.packages || []).map((p, i) => <li key={i}>{p}</li>) : <li>—</li>}
-                      </ul>
+                      <div ref={packagesListRef} className="pf-list-scroll">
+                        <ul>
+                          {((project.packages || []).length > 0) ? (project.packages || []).map((p, i) => <li key={i}>{p}</li>) : <li>—</li>}
+                        </ul>
+                        {hasPkgsScroll && <div className="scroll-gradient-overlay"></div>}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -294,7 +310,7 @@ export default function ProjectDetails() {
         }
         
         @media (min-width: 769px) {
-          .project-features .pf-col.pf-features .pf-list-scroll {
+          .project-features .pf-col .pf-list-scroll {
             max-height: calc(var(--fs-list) * 11.8 + 12px);
             overflow-y: auto;
             padding-right: 6px;
@@ -313,24 +329,24 @@ export default function ProjectDetails() {
             transition: opacity 0.3s ease;
           }
           
-          .project-features .pf-col.pf-features .pf-list-scroll:not(:hover) .scroll-gradient-overlay {
+          .project-features .pf-col .pf-list-scroll:not(:hover) .scroll-gradient-overlay {
             opacity: 1;
           }
           
-          .project-features .pf-col.pf-features .pf-list-scroll:hover .scroll-gradient-overlay {
+          .project-features .pf-col .pf-list-scroll:hover .scroll-gradient-overlay {
             opacity: 0;
           }
           
-          .project-features .pf-col.pf-features .pf-list-scroll ul { margin: 0; }
-          .project-features .pf-col.pf-features .pf-list-scroll::-webkit-scrollbar { width: 8px; }
-          .project-features .pf-col.pf-features .pf-list-scroll::-webkit-scrollbar-thumb { 
+          .project-features .pf-col .pf-list-scroll ul { margin: 0; }
+          .project-features .pf-col .pf-list-scroll::-webkit-scrollbar { width: 8px; }
+          .project-features .pf-col .pf-list-scroll::-webkit-scrollbar-thumb { 
             background: rgba(107,59,215,0.2); 
             border-radius: 6px; 
           }
-          .project-features .pf-col.pf-features .pf-list-scroll::-webkit-scrollbar-thumb:hover { 
+          .project-features .pf-col .pf-list-scroll::-webkit-scrollbar-thumb:hover { 
             background: rgba(107,59,215,0.3); 
           }
-          .project-features .pf-col.pf-features .pf-list-scroll { 
+          .project-features .pf-col .pf-list-scroll { 
             scrollbar-width: thin; 
             scrollbar-color: rgba(107,59,215,0.2) transparent; 
           }
