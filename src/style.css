@@ -1601,7 +1601,7 @@ html {
     height: 240px !important;
     /* Fixed height for consistency */
     max-height: 260px !important;
-    object-fit: cover !important;
+    /* object-fit: cover !important; */
     border-radius: 5px !important;
     margin-bottom: 18px !important;
     /* Remove bottom margin */
