@@ -314,7 +314,7 @@ const projects = [
     description: "SocialGo is a mobile-first app built with React Native and Expo that helps creators and businesses manage, schedule, and analyze social media from one dashboard, with AI tools to improve content quality.",
     category: "React Native App",
     client: "Software Development",
-    date: "10 Jan, 2026",
+    date: "10 March, 2026",
     url: "",
     details: 'Built with a mobile-first approach using React Native and Expo, SocialGo provides a unified dashboard for creators and businesses to manage, schedule, and analyze social media performance. It integrates with major platforms and uses AI to improve content quality.',
     features: [
