@@ -315,7 +315,7 @@ const projects = [
     category: "React Native App",
     client: "Software Development",
     date: "10 Jan, 2026",
-    url: "https://drive.google.com/file/d/1byqgr2Ovt-Bl7DLJEL62rkJTv7WjVHl1/view?usp=sharing",
+    url: "",
     details: 'Built with a mobile-first approach using React Native and Expo, SocialGo provides a unified dashboard for creators and businesses to manage, schedule, and analyze social media performance. It integrates with major platforms and uses AI to improve content quality.',
     features: [
       "Create once and publish across Facebook, Instagram, Twitter, and LinkedIn",
