@@ -36,6 +36,7 @@ import bustraking from "../images/bus-traking.jpeg";
 import aiBlogAutomation from "../images/aiBlogAutomation.jpeg";
 import helloKisanAppImage from "../images/helo-kisan.jpg";
 import socialGo from "../images/socialGo.jpeg";
+import goderjj from "../images/godrejj.jpeg";
 import wordpressFbMov from "../images/n8n-videos/wordprees+fb.mov";
 
 const projects = [
@@ -517,13 +518,28 @@ const projects = [
     packages: ['Phpmailer', 'Composer', 'Lazy Load', 'Yoast SEO', 'SMTP Mail']
   },
   {
+    slug: 'godrejaveline-yelahanka',
+    image: goderjj,
+    title: 'Godrej Aveline Yelahanka',
+    description: 'Branding website with custom CMS Html5',
+    category: 'core php',
+    client: 'Real Estate - Bangalore',
+    date: '10 Marce, 2026',
+    url: 'https://godrejaveline-yelahanka.com/',
+
+    details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic.',
+    features: ['Property listings', 'Gallery', 'SEO optimised content', 'Digital Marketing','Lead Management','Dynamic Content Sliders'],
+    technologies: ['PHP', 'MySQL', 'HTML5', 'JavaScript','Fancybox','Locomotive Scroll 3.5.4'],
+    packages: ['Phpmailer', 'Composer', 'Lazy Load', 'Yoast SEO', 'SMTP Mail']
+  },
+  {
     slug: 'shree-dwarkesh-enterprise',
     image: dwarkesh,
     title: 'Dwarkesh Enterprise',
     description: 'Book management system, Expanse Management and Loan Management with Laravel',
     category: 'laravel',
     client: 'Finance Management',
-    date: '12 December, 2024',
+    date: '12 December, 2025',
     url: 'https://dwarkeshenterprise.com/sde-admin/dashboard',
     details: 'Developed a scalable Expense and Book Management system using Laravel and Vue.js, featuring real-time data handling, intuitive dashboards, secure CRUD operations, and optimized workflows for fast, efficient management.',
     features: [
