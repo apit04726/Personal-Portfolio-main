@@ -38,6 +38,11 @@ import helloKisanAppImage from "../images/helo-kisan.jpg";
 import socialGo from "../images/socialGo.jpeg";
 import goderjj from "../images/godrejj.jpeg";
 import wordpressFbMov from "../images/n8n-videos/wordprees+fb.mov";
+import rolixyHero from "../images/new-hero.jpeg";
+import rolixyListing from "../images/rolixy-listing.png";
+import rolixyDetail from "../images/rolixy-detail.jpg";
+import rolixyAdmin from "../images/rolixy-admin.png";
+
 
 const projects = [
   {
@@ -53,6 +58,33 @@ const projects = [
     features: ['Responsive marketing site', 'Custom ACF-driven content', 'SEO-friendly templates', 'Fast deployment'],
     technologies: ['WordPress', 'PHP', 'ACF', 'MySQL'],
     packages: ['elementor (optional)', 'WP-CLI (dev)', 'Yoast/SEO plugins']
+  },
+  {
+    slug: 'rolixy',
+    image: rolixyHero,
+    images: [rolixyHero, rolixyListing, rolixyDetail, rolixyAdmin],
+    title: 'Rolixy',
+    description: 'Premium Real Estate & Property Management WordPress Theme',
+    category: 'wordpress &php',
+    client: 'Real Estate Developer',
+    date: '06 May, 2026',
+    url: 'https://digitizeinfo.in/landing_pages_2024/rolixy/',
+    details: 'Rolixy is a high-performance real estate platform built as a custom WordPress theme. Originally designed in Webflow and converted for dynamic CMS use, it allows agencies to manage complex property listings, agent profiles, and interactive amenities through a user-friendly admin interface.',
+    features: [
+      'Dynamic Property & Agent Management',
+      'Custom ACF Real Estate Listings',
+      'Webflow to WordPress Conversion',
+      'Interactive Media Lightboxes',
+      'Fully Responsive Design'
+    ],
+    technologies: ['WordPress', 'PHP', 'JavaScript (ES6)', 'MySQL', 'Bootstrap'],
+    packages: [
+      'Advanced Custom Fields (ACF)',
+      'Swiper JS (v11)',
+      'Owl Carousel',
+      'Fancybox',
+      'Font Awesome'
+    ]
   },
 
   {
@@ -528,8 +560,8 @@ const projects = [
     url: 'https://godrejaveline-yelahanka.com/',
 
     details: 'This branding website is engineered on a lean and purpose-built technology stack, utilizing core PHP for its server-side logic.',
-    features: ['Property listings', 'Gallery', 'SEO optimised content', 'Digital Marketing','Lead Management','Dynamic Content Sliders'],
-    technologies: ['PHP', 'MySQL', 'HTML5', 'JavaScript','Fancybox','Locomotive Scroll 3.5.4'],
+    features: ['Property listings', 'Gallery', 'SEO optimised content', 'Digital Marketing', 'Lead Management', 'Dynamic Content Sliders'],
+    technologies: ['PHP', 'MySQL', 'HTML5', 'JavaScript', 'Fancybox', 'Locomotive Scroll 3.5.4'],
     packages: ['Phpmailer', 'Composer', 'Lazy Load', 'Yoast SEO', 'SMTP Mail']
   },
   {
@@ -680,7 +712,7 @@ const projects = [
       'WordPress REST Integration',
       'Facebook Page Automation'
     ]
-  }
+  },
 
 ];
 

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import Particle from '../../Particle';
 import projects from '../../data/portfolioProjects';
 import { FaExternalLinkAlt, FaArrowLeft, FaTh, FaUser, FaCalendarAlt, FaTag, FaGlobe, FaListAlt } from 'react-icons/fa';
@@ -66,9 +66,16 @@ export default function ProjectDetails() {
                     playsInline
                     poster={project.image}
                     className="project-hero-video"
-                    aria-label={`${project.title} video`
-                    }
+                    aria-label={`${project.title} video`}
                   />
+                ) : project.images && project.images.length > 0 ? (
+                  <Carousel className="project-hero-carousel" interval={4000} pause="hover">
+                    {project.images.map((img, idx) => (
+                      <Carousel.Item key={idx}>
+                        <img src={img} alt={`${project.title} slide ${idx + 1}`} className="project-hero-img" />
+                      </Carousel.Item>
+                    ))}
+                  </Carousel>
                 ) : (
                   <img src={project.image} alt={project.title} className="project-hero-img" />
                 )}
@@ -196,6 +203,22 @@ export default function ProjectDetails() {
           display: block;
           border-radius: 8px;
           outline: none;
+        }
+
+        .project-hero-carousel .carousel-indicators [data-bs-target] {
+          background-color: #7b3bd9;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin: 0 5px;
+        }
+
+        .project-hero-carousel .carousel-control-prev-icon,
+        .project-hero-carousel .carousel-control-next-icon {
+          background-color: rgba(123, 59, 217, 0.5);
+          border-radius: 50%;
+          padding: 10px;
+          background-size: 50%;
         }
 
         .project-details { color: #222; background: #ffffff; padding: 24px; border-radius: 14px; 
