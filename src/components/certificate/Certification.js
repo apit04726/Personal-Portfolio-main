@@ -29,7 +29,7 @@ export default function Certification() {
                     <div className="cert-card">
                       <div className="content">
                         <a
-                          href="https://www.hackerrank.com/certificates/3573ea1a35bb"
+                          href=""
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -97,15 +97,13 @@ export default function Certification() {
                         <h2
                           className="cert-body-title"
                           style={{ fontWeight: 700, color: "#fbd9ad" }}
-                        >
-                          Basic Computer Application for Everyone: IT Support
-                          Technician level-1
+                        > IT Essentials : Computer Hardware and Software
                         </h2>
                         <h3
                           className="cert-body-subtitle"
                           style={{ color: "#eb90ff", marginBottom: "0px" }}
                         >
-                          - Bangladesh Technical Education Board
+                            - Gujarat Technological University
                         </h3>
                       </div>
                     </div>
@@ -116,7 +114,7 @@ export default function Certification() {
                     <div className="cert-card">
                       <div className="content">
                         <a
-                          href="https://www.hackerrank.com/certificates/af66a6615aad"
+                          href=""
                           target="_blank"
                           rel="noopener noreferrer"
                         >
