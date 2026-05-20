@@ -6,7 +6,6 @@ import { Fade } from "react-reveal";
 import { FaCode } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import projects from "../../data/portfolioProjects";
-
 export default function ProjectPage() {
   // Initialize active filter from localStorage (if available)
   const [activeFilter, setActiveFilter] = useState(() => {
@@ -166,22 +165,26 @@ export default function ProjectPage() {
           display: flex;
           flex-wrap: nowrap;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-start;
           gap: 12px;
-          padding: 8px 16px;
-          max-width: 1200px;
+          padding: 12px 16px;
+          max-width: 100%;
           margin: 0 auto;
           overflow-x: auto;
           -webkit-overflow-scrolling: touch;
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
         }
 
-        /* Thin scrollbar for touch/desktop */
-        .filter-buttons-container::-webkit-scrollbar {
-          height: 8px;
+        @media (min-width: 992px) {
+          .filter-buttons-container {
+            justify-content: center;
+          }
         }
-        .filter-buttons-container::-webkit-scrollbar-thumb {
-          background: rgba(134,61,176,0.18);
-          border-radius: 6px;
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .filter-buttons-container::-webkit-scrollbar {
+          display: none;
         }
 
         .filter-btn {
@@ -417,6 +420,22 @@ export default function ProjectPage() {
             width: 100%;
             padding: 8px 12px;
             font-size: 12px;
+          }
+        }
+      `}</style>
+      <style>{`
+        @media (min-width: 700px) and (max-width: 995px) {
+          .certificate-section .col-md-3,
+          .certificate-section .col-md-4,
+          .certificate-section .col-sm-12,
+          .certificate-section .row .col-md-3,
+          .certificate-section .row .col-md-4,
+          .certificate-section .row .col-sm-12,
+          .g-5 > div,
+          .g-5 > [class*="col-"] {
+            flex: 0 0 50% !important;
+            max-width: 50% !important;
+            width: 50% !important;
           }
         }
       `}</style>

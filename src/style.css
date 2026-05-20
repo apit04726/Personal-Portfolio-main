@@ -2117,3 +2117,125 @@ html {
     max-width: 100% !important;
   }
 }
+
+/* Responsive adjustments specifically for screens between 700px and 995px */
+@media (min-width: 700px) and (max-width: 995px) {
+  .certificate-section .col-md-3,
+  .certificate-section .col-md-4,
+  .certificate-section .col-sm-12,
+  .certificate-section .row .col-md-3,
+  .certificate-section .row .col-md-4,
+  .certificate-section .row .col-sm-12,
+  .g-5 > div,
+  .g-5 > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Dynamic card heights and responsive images for projects */
+  .singleProject {
+    height: auto !important;
+    min-height: 400px !important;
+    padding: 1.2rem !important;
+  }
+  .projectContent > img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 240px !important;
+  }
+
+  /* Contact Me section: stack form and details vertically */
+  #contact .row .col-md-4,
+  #contact .row .col-md-7 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+  }
+
+  /* Project Details page: stack hero media and details vertically */
+  .project-details-row .col-md-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* About Me page section: stack illustration and about text vertically */
+  .home-about-section .row .col-md-5,
+  .home-about-section .row .col-md-7 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Home welcome section: stack intro text and profile image vertically */
+  .home-content .row .home-header,
+  .home-content .row .col-md-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Center home section header content on 700-995px screens */
+  .home-content {
+    text-align: center !important;
+  }
+  .home-header {
+    text-align: center !important;
+    padding-left: 0 !important;
+  }
+  .heading {
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+  .heading-name {
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+  .typing-homeclass {
+    padding-left: 0 !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+  }
+  .sociallink-home {
+    padding-left: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .homeaboutsociallinks {
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+  }
+  /* Center avatar image row */
+  .home-content .row .col-md-4 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .img-home-main {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* Align contact page details and map to the left side on 700px-995px screens */
+  .contacts-details {
+    padding-left: 1rem !important;
+    padding-top: 20px !important;
+  }
+  .personal-details p {
+    width: 95% !important;
+  }
+  .contact-map {
+    padding-left: 1rem !important;
+    padding-right: 20px !important;
+  }
+}
