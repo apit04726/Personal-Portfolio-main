@@ -2246,3 +2246,15 @@ html {
     height: auto !important;
   }
 }
+
+/* Set exact same top margin/spacing for resume tab as project tab (globally for all screens) */
+.resume-section {
+  margin-top: 0 !important;
+  padding-top: calc(9rem + 30px) !important;
+}
+@media (max-width: 767px) {
+  .resume-section {
+    margin-top: 0 !important;
+    padding-top: calc(6rem + 30px) !important;
+  }
+}

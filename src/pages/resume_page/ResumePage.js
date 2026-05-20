@@ -57,7 +57,7 @@ function Resume() {
 
   return (
     <div>
-      <section style={{ marginTop: isMobile ? "34%" : "10%" }}>
+      <section className="resume-section" style={{ marginTop: isMobile ? "34%" : "10%" }}>
         <Container>
           <div>
             {/* Heading */}
