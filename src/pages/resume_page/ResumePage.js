@@ -23,7 +23,12 @@ function Resume() {
   }, []);
 
   // ✅ Fix: Make PDF responsive on all screens
-  const pdfWidth = Math.min(width - 32, 800);
+  let pdfWidth = Math.min(width - 32, 800);
+  if (width >= 700 && width <= 995) {
+    pdfWidth = 650;
+  } else if (width < 700) {
+    pdfWidth = width - 40;
+  }
 
   useEffect(() => {
     // Add custom scrollbar styling for the PDF viewer only
@@ -99,8 +104,8 @@ function Resume() {
                   borderRadius: 18,
                   padding: isMobile ? 4 : 8,
                   boxSizing: "border-box",
-                  width: isMobile ? "100vw" : 840,
-                  maxWidth: "100vw",
+                  width: "100%",
+                  maxWidth: 840,
                   overflow: "auto",
                   display: "flex",
                   justifyContent: "center",

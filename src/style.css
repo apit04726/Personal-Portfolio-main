@@ -2238,4 +2238,11 @@ html {
     padding-left: 1rem !important;
     padding-right: 20px !important;
   }
+
+  /* Scale PDF canvas inside resume viewer to avoid right side cutting off */
+  .resume-pdf-viewer .react-pdf__Page__canvas {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }
