@@ -350,11 +350,11 @@ export default function ProjectPage() {
         @media (max-width: 768px) {
           .filter-buttons-container {
             gap: 8px;
-            padding: 0 10px;
+            padding: 8px 10px;
           }
 
           .filter-btn {
-            padding: 0px 16px;
+            padding: 8px 16px;
             font-size: 11px;
             min-width: 100px;
             max-width: 140px;
