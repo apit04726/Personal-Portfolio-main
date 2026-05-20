@@ -30,7 +30,7 @@ export default function TechnicalSkill() {
                 90%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"com"}
@@ -59,7 +59,7 @@ export default function TechnicalSkill() {
                 80%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"pm"}
@@ -88,7 +88,7 @@ export default function TechnicalSkill() {
                 50%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"cr"}
@@ -117,7 +117,7 @@ export default function TechnicalSkill() {
                 71%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"aa"}
@@ -146,7 +146,7 @@ export default function TechnicalSkill() {
                 68%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"org"}
@@ -175,7 +175,7 @@ export default function TechnicalSkill() {
                 66%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"ps"}
@@ -204,7 +204,7 @@ export default function TechnicalSkill() {
                 78%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"react"}
@@ -233,7 +233,7 @@ export default function TechnicalSkill() {
                 75%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"com"}
@@ -262,7 +262,7 @@ export default function TechnicalSkill() {
                 90%
               </h1>
               <div style={{ paddingLeft: "50px", paddingRight: "50px" }}>
-                <div class="progress">
+                <div className="progress">
                   <div
                     role={"progressbar"}
                     id={"pm"}
