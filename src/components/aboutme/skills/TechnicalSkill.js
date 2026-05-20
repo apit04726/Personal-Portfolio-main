@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Tada from "react-reveal/Tada";
 
@@ -7,15 +7,15 @@ export default function TechnicalSkill() {
   return (
     <div>
       <div className="mt-5 d-flex flex-row justify-content-center">
-        <Link className="btn btn-primary me-3" to="/technicalskill">
+        <NavLink className="btn btn-primary me-3" to="/technicalskill">
           Technical Skill
-        </Link>
-        <Link className="btn btn-primary me-3" to="/personalskill">
+        </NavLink>
+        <NavLink className="btn btn-primary me-3" to="/personalskill">
           Personal Skill
-        </Link>
-        <Link className="btn btn-primary " to="/toolkit">
+        </NavLink>
+        <NavLink className="btn btn-primary " to="/toolkit">
           Toolkit
-        </Link>
+        </NavLink>
       </div>
       <Tada>
         <h1 className="mt-4">Technical Skills</h1>

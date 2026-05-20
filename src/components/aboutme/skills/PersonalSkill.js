@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Container,Row,Col } from 'react-bootstrap';
 import LightSpeed from 'react-reveal/LightSpeed';
 
@@ -7,9 +7,9 @@ export default function PersonalSkill() {
   return (
     <div>
         <div className="mt-5 d-flex flex-row justify-content-center">
-            <Link className="btn btn-primary me-3" to="/technicalskill">Technical Skill</Link>
-            <Link className="btn btn-primary me-3" to="/personalskill">Personal Skill</Link>
-            <Link className="btn btn-primary " to="/toolkit">Toolkit</Link>
+            <NavLink className="btn btn-primary me-3" to="/technicalskill">Technical Skill</NavLink>
+            <NavLink className="btn btn-primary me-3" to="/personalskill">Personal Skill</NavLink>
+            <NavLink className="btn btn-primary " to="/toolkit">Toolkit</NavLink>
         </div>
         <LightSpeed left cascade>
             <h1 className="mt-4">Personal Skills</h1>

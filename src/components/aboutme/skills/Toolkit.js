@@ -8,22 +8,22 @@ import cb from "../../../images/cb.png";
 import pg from "../../../images/pg.png";
 import pm from "../../../images/pm.png";
 import chrome from "../../../images/chorme.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Zoom from "react-reveal/Zoom";
 
 export default function Toolkit() {
   return (
     <div>
       <div className="mt-5 d-flex flex-row justify-content-center">
-        <Link className="btn btn-primary me-3" to="/technicalskill">
+        <NavLink className="btn btn-primary me-3" to="/technicalskill">
           Technical Skill
-        </Link>
-        <Link className="btn btn-primary me-3" to="/personalskill">
+        </NavLink>
+        <NavLink className="btn btn-primary me-3" to="/personalskill">
           Personal Skill
-        </Link>
-        <Link className="btn btn-primary " to="/toolkit">
+        </NavLink>
+        <NavLink className="btn btn-primary " to="/toolkit">
           Toolkit
-        </Link>
+        </NavLink>
       </div>
       <Zoom left cascade>
         <h1 className="mt-4">Tools I Use</h1>

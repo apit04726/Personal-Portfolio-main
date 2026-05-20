@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import {
   AiFillStar,
@@ -14,6 +14,23 @@ import { CgFileDocument } from "react-icons/cg";
 export default function MyNav() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const isHomeActive = pathname === "/" || [
+    "/personalskill",
+    "/technicalskill",
+    "/technicaljourney",
+    "/projectjourney",
+    "/educationjourney",
+    "/experiencejourney",
+    "/socialmedia",
+    "/toolkit"
+  ].includes(pathname);
+
+  const isProjectsActive = pathname === "/projectspage" || pathname.startsWith("/project/");
+  const isResumeActive = pathname === "/resume";
+  const isBlogsActive = pathname === "/blogs";
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -32,8 +49,8 @@ export default function MyNav() {
       expand="md"
       className={navColour ? "sticky" : "navbar"}
     >
-      <Container>
-        <Navbar.Brand href="/">
+      <Container className="navcontainer">
+        <Navbar.Brand as={Link} to="/" className="d-flex">
           <div className="d-flex flex-row justify-content-between">
             <img
               src={process.env.PUBLIC_URL + "/profile.png"}
@@ -70,7 +87,7 @@ export default function MyNav() {
         <Navbar.Collapse id="responsive-navbar-nav" className="navbarmain">
           <Nav className="ml-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link as={Link} to="/" active={isHomeActive} onClick={() => updateExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
@@ -79,6 +96,7 @@ export default function MyNav() {
               <Nav.Link
                 as={Link}
                 to="/projectspage"
+                active={isProjectsActive}
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
@@ -92,6 +110,7 @@ export default function MyNav() {
               <Nav.Link
                 as={Link}
                 to="/resume"
+                active={isResumeActive}
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
@@ -112,6 +131,7 @@ export default function MyNav() {
               <Nav.Link
                 as={Link}
                 to="/blogs"
+                active={isBlogsActive}
                 onClick={() => updateExpanded(false)}
               >
                 <FaBlog style={{ marginBottom: "2px" }} /> Blogs

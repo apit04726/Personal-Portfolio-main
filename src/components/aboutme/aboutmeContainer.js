@@ -1,10 +1,18 @@
 import React from 'react'
 import { Container, Row, Col,Nav } from "react-bootstrap";
-import { Link,Outlet } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import Zoom from 'react-reveal/Zoom';
 
 
 export default function AboutmeContainer() {
+    const location = useLocation();
+    const pathname = location.pathname;
+
+    const isAboutActive = pathname === "/";
+    const isSkillsActive = pathname === "/technicalskill" || pathname === "/personalskill" || pathname === "/toolkit";
+    const isJourneyActive = pathname === "/educationjourney" || pathname === "/experiencejourney" || pathname === "/technicaljourney" || pathname === "/projectjourney";
+    const isSocialActive = pathname === "/socialmedia";
+
     return (
         <Container fluid className="home-about-section" id="about">
             <Container>
@@ -20,23 +28,18 @@ export default function AboutmeContainer() {
                         <div>
                             <Nav justify variant="tabs" defaultActiveKey="/">
                             <Nav.Item className="Navitem">
-                                <Nav.Link as={Link} to="/" eventKey="link-1" style={{ fontSize: "17px",fontWeight:700 }}>About</Nav.Link>
+                                <Nav.Link as={Link} to="/" active={isAboutActive} eventKey="link-1" style={{ fontSize: "17px",fontWeight:700 }}>About</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link as={Link} to="technicalskill" eventKey="link-2" style={{ fontSize: "17px",fontWeight:700 }}>Skills</Nav.Link>
+                                <Nav.Link as={Link} to="technicalskill" active={isSkillsActive} eventKey="link-2" style={{ fontSize: "17px",fontWeight:700 }}>Skills</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link as={Link} to="educationjourney" eventKey="link-3" style={{ fontSize: "17px",fontWeight:700 }}>Journey</Nav.Link>
+                                <Nav.Link as={Link} to="educationjourney" active={isJourneyActive} eventKey="link-3" style={{ fontSize: "17px",fontWeight:700 }}>Journey</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Item>
-                                <Nav.Link as={Link} to="socialmedia" eventKey="link-5" style={{ fontSize: "17px",fontWeight:700 }}>
+                                <Nav.Link as={Link} to="socialmedia" active={isSocialActive} eventKey="link-5" style={{ fontSize: "17px",fontWeight:700 }}>
                                 Social Media
                                 </Nav.Link>
-                            </Nav.Item>
-                                {/* <Nav.Link as={Link} to="ranking" eventKey="link-4" style={{ fontSize: "17px",fontWeight:700 }}>
-                                Ranking
-                                </Nav.Link> */}
                             </Nav.Item>
                             </Nav>
                             <div>

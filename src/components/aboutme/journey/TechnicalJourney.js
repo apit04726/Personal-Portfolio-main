@@ -3,7 +3,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import StarIcon from "@mui/icons-material/Star";
 import ComputerIcon from "@mui/icons-material/Computer";
 import {
@@ -23,18 +23,18 @@ function TechnicalJourney() {
   return (
     <div className="mt-5">
       <div>
-        <Link className="btn btn-primary m-1" to="/educationjourney">
+        <NavLink className="btn btn-primary m-1" to="/educationjourney">
           Educational Journey
-        </Link>
-        <Link className="btn btn-primary m-1" to="/experiencejourney">
+        </NavLink>
+        <NavLink className="btn btn-primary m-1" to="/experiencejourney">
           Experience Journey
-        </Link>
-        <Link className="btn btn-primary m-1" to="/technicaljourney">
+        </NavLink>
+        <NavLink className="btn btn-primary m-1" to="/technicaljourney">
           Technical Journey
-        </Link>
-        <Link className="btn btn-primary m-1" to="/projectjourney">
+        </NavLink>
+        <NavLink className="btn btn-primary m-1" to="/projectjourney">
           Project Journey
-        </Link>
+        </NavLink>
       </div>
       <div className="mt-5">
         <Flip top cascade>
