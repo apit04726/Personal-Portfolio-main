@@ -167,6 +167,15 @@ export default function AiChat({ isWidgetMode = false, onClose = null }) {
       }
     }
     
+    // General projects query fallback
+    if (q.includes("project")) {
+      const matched = projects.slice(0, 3);
+      return {
+        text: "Vishal has built several amazing projects. Here are some of them. Click any project to view details!",
+        projectsList: matched
+      };
+    }
+    
     // Skills queries
     if (q.includes("skill") || q.includes("technology") || q.includes("stack") || q.includes("language")) {
       return {
