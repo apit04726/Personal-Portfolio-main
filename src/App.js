@@ -23,11 +23,13 @@ import ProjectJourney from "./components/aboutme/journey/ProjectJourney";
 import SocialMedia from "./components/aboutme/social_media/SocialMedia";
 // import Zoom from 'react-reveal/Zoom';
 import Toolkit from "./components/aboutme/skills/Toolkit";
+import AiChatWidget from "./components/aichat/AiChatWidget";
 
 const Home = lazy(() => import("./pages/home_page/HomePage"));
 const Resume = lazy(() => import("./pages/resume_page/ResumePage"));
 const ProjectPage = lazy(() => import("./pages/project_page/ProjectPage"));
 const ProjectDetails = lazy(() => import("./pages/project_page/ProjectDetails"));
+const AiChatPage = lazy(() => import("./pages/aichat_page/AiChatPage"));
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -71,10 +73,12 @@ function App() {
             {/* <Route path="/certificatepage" element={<CertificatePage />} /> */}
             <Route path="/resume" element={<Resume />} />
             <Route path="/blogs" element={<BlogPage />} />
+            <Route path="/aichat" element={<AiChatPage />} />
             <Route path="*" element={<Notfound />} />
           </Routes>
         </Suspense>
         <Footer />
+        <AiChatWidget />
       </div>
     </Router>
   );
