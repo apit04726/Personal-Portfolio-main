@@ -2941,9 +2941,10 @@ html {
 
 .chat-project-header-row {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 5px;
+  gap: 2px;
+  width: 100%;
 }
 
 .chat-project-title {
@@ -3037,15 +3038,20 @@ html {
   box-shadow: 0 2px 8px rgba(176, 97, 223, 0.3);
 }
 
-/* Adjustments for extra small mobile layouts */
-@media (max-width: 380px) {
+.chat-msg-bubble.text-only {
+  width: fit-content !important;
+  max-width: 85% !important;
+}
+
+/* Adjustments for mobile layouts */
+@media (max-width: 480px) {
   .chat-highlighted-project-card {
     flex-direction: column;
     gap: 8px;
   }
   .chat-project-thumb-container {
     width: 100%;
-    height: 110px;
+    height: 130px;
   }
   .chat-project-thumb {
     width: 100%;

@@ -403,122 +403,125 @@ Instructions:
       <div className="chat-messages-container">
         {messages.map((msg, index) => {
           return (
-            <div key={index} className={`chat-msg-row ${msg.sender}`}>
-              <div className="chat-msg-bubble-container">
-                <div className="chat-msg-bubble">
-                  {msg.sender === "bot" && (
-                    <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "5px" }}>
-                      <button
-                        className="chat-bubble-speak-btn-inline"
-                        onClick={() => speakText(msg.text)}
-                        title="Read Aloud"
-                        style={{
-                          background: "transparent",
-                          border: "none",
-                          color: "#fbd9ad",
-                          cursor: "pointer",
-                          fontSize: "16px",
-                          display: "flex",
-                          alignItems: "center",
-                          padding: "2px",
-                          transition: "color 0.2s ease"
-                        }}
-                      >
-                        <AiOutlineSound />
-                      </button>
+            <div key={index} className={`chat-msg-row ${msg.sender} ${msg.projectsList ? "has-projects" : ""}`}>
+              <div className="chat-msg-bubble-container" style={msg.projectsList ? { maxWidth: "100%", width: "100%" } : {}}>
+                {/* Text Bubble */}
+                {msg.text && (
+                  <div className={`chat-msg-bubble ${msg.projectsList ? "text-only" : ""}`}>
+                    {msg.sender === "bot" && (
+                      <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "5px" }}>
+                        <button
+                          className="chat-bubble-speak-btn-inline"
+                          onClick={() => speakText(msg.text)}
+                          title="Read Aloud"
+                          style={{
+                            background: "transparent",
+                            border: "none",
+                            color: "#fbd9ad",
+                            cursor: "pointer",
+                            fontSize: "16px",
+                            display: "flex",
+                            alignItems: "center",
+                            padding: "2px",
+                            transition: "color 0.2s ease"
+                          }}
+                        >
+                          <AiOutlineSound />
+                        </button>
+                      </div>
+                    )}
+                    <div style={{ whiteSpace: "pre-wrap" }}>
+                      {msg.text}
                     </div>
-                  )}
-                  <div style={{ whiteSpace: "pre-wrap" }}>
-                    {msg.text}
+                    {!msg.projectsList && <span className="chat-msg-time">{msg.time}</span>}
                   </div>
-                  
-                  {/* Inline project card render */}
-                  {msg.project && (
-                    <div className="chat-project-card">
-                      <div className="chat-project-card-header" style={{ backgroundImage: `url(${msg.project.image})` }}>
-                        <div className="chat-project-card-header-overlay" />
+                )}
+                
+                {/* Inline project card render */}
+                {msg.project && (
+                  <div className="chat-project-card">
+                    <div className="chat-project-card-header" style={{ backgroundImage: `url(${msg.project.image})` }}>
+                      <div className="chat-project-card-header-overlay" />
+                    </div>
+                    <div className="chat-project-card-body">
+                      <h5 className="chat-project-card-title">{msg.project.title}</h5>
+                      <p className="chat-project-card-desc">{msg.project.description}</p>
+                      <div className="chat-project-tags">
+                        {msg.project.technologies.slice(0, 3).map((tech, i) => (
+                          <span key={i} className="chat-project-tag">{tech}</span>
+                        ))}
                       </div>
-                      <div className="chat-project-card-body">
-                        <h5 className="chat-project-card-title">{msg.project.title}</h5>
-                        <p className="chat-project-card-desc">{msg.project.description}</p>
-                        <div className="chat-project-tags">
-                          {msg.project.technologies.slice(0, 3).map((tech, i) => (
-                            <span key={i} className="chat-project-tag">{tech}</span>
-                          ))}
-                        </div>
-                        <div className="chat-project-links">
-                          <Link to={`/project/${msg.project.slug}`} className="chat-project-link details" onClick={() => onClose && onClose()}>
-                            Details
-                          </Link>
-                          {msg.project.url && (
-                            <a href={msg.project.url} target="_blank" rel="noopener noreferrer" className="chat-project-link live">
-                              Live Demo
-                            </a>
-                          )}
-                        </div>
+                      <div className="chat-project-links">
+                        <Link to={`/project/${msg.project.slug}`} className="chat-project-link details" onClick={() => onClose && onClose()}>
+                          Details
+                        </Link>
+                        {msg.project.url && (
+                          <a href={msg.project.url} target="_blank" rel="noopener noreferrer" className="chat-project-link live">
+                            Live Demo
+                          </a>
+                        )}
                       </div>
                     </div>
-                  )}
+                  </div>
+                )}
 
-                  {/* Inline list of project recommendations - Highlighted Special Design */}
-                  {msg.projectsList && (
-                    <div className="chat-projects-list-container">
-                      <div className="chat-projects-list-header">
-                        Projects ({msg.projectsList.length})
-                      </div>
-                      {msg.projectsList.map((p, i) => (
-                        <div key={i} className="chat-highlighted-project-card">
-                          <div className="chat-project-thumb-container">
-                            <img
-                              src={p.image}
-                              alt={p.title}
-                              className="chat-project-thumb"
-                            />
+                {/* Inline list of project recommendations - Highlighted Special Design */}
+                {msg.projectsList && (
+                  <div className="chat-projects-list-container">
+                    <div className="chat-projects-list-header">
+                      Projects ({msg.projectsList.length})
+                    </div>
+                    {msg.projectsList.map((p, i) => (
+                      <div key={i} className="chat-highlighted-project-card">
+                        <div className="chat-project-thumb-container">
+                          <img
+                            src={p.image}
+                            alt={p.title}
+                            className="chat-project-thumb"
+                          />
+                        </div>
+                        <div className="chat-project-details">
+                          <div className="chat-project-header-row">
+                            <span className="chat-project-category-tag">
+                              {p.category.toUpperCase().replace(" JS", "JS").replace(" APP", " App")}
+                            </span>
+                            <h5 className="chat-project-title">{p.title}</h5>
                           </div>
-                          <div className="chat-project-details">
-                            <div className="chat-project-header-row">
-                              <h5 className="chat-project-title">{p.title}</h5>
-                              <span className="chat-project-category-tag">
-                                {p.category.replace(" js", "JS").replace(" app", " App")}
+                          <p className="chat-project-short-desc">
+                            {p.description}
+                          </p>
+                          <div className="chat-project-tech-tags">
+                            {p.technologies.slice(0, 3).map((tech, j) => (
+                              <span key={j} className="chat-project-tech-tag">
+                                {tech}
                               </span>
-                            </div>
-                            <p className="chat-project-short-desc">
-                              {p.description}
-                            </p>
-                            <div className="chat-project-tech-tags">
-                              {p.technologies.slice(0, 3).map((tech, j) => (
-                                <span key={j} className="chat-project-tech-tag">
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-                            <div className="chat-project-action-buttons">
-                              <Link
-                                to={`/project/${p.slug}`}
-                                className="chat-project-action-btn details"
-                                onClick={() => onClose && onClose()}
+                            ))}
+                          </div>
+                          <div className="chat-project-action-buttons">
+                            <Link
+                              to={`/project/${p.slug}`}
+                              className="chat-project-action-btn details"
+                              onClick={() => onClose && onClose()}
+                            >
+                              Details ➔
+                            </Link>
+                            {p.url && (
+                              <a
+                                href={p.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="chat-project-action-btn live"
                               >
-                                Details ➔
-                              </Link>
-                              {p.url && (
-                                <a
-                                  href={p.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="chat-project-action-btn live"
-                                >
-                                  Live Demo ➔
-                                </a>
-                              )}
-                            </div>
+                                Live Demo ➔
+                              </a>
+                            )}
                           </div>
                         </div>
-                      ))}
-                    </div>
-                  )}
-
-                  <span className="chat-msg-time">{msg.time}</span>
-                </div>
+                      </div>
+                    ))}
+                    <span className="chat-msg-time" style={{ textAlign: "left", paddingLeft: "5px" }}>{msg.time}</span>
+                  </div>
+                )}
               </div>
             </div>
           );
