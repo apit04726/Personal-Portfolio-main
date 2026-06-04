@@ -50,7 +50,6 @@ export default function AiChat({ isWidgetMode = false, onClose = null }) {
   }, [messages, isLoading]);
 
   // Initialize Speech Recognition (English only)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (SpeechRecognition) {
@@ -82,6 +81,7 @@ export default function AiChat({ isWidgetMode = false, onClose = null }) {
 
       recognitionRef.current = rec;
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [apiKey]);
 
   // Voice Output (Text-to-Speech) Function (English only)
