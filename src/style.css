@@ -2853,3 +2853,202 @@ html {
     font-size: 0.88rem;
   }
 }
+
+/* Special Highlighted Project Cards inside Chat */
+.chat-projects-list-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.chat-projects-list-header {
+  font-size: 0.8rem;
+  color: #cb70ff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+  border-left: 3px solid #b061df;
+  padding-left: 8px;
+}
+
+.chat-highlighted-project-card {
+  display: flex;
+  background: linear-gradient(135deg, rgba(33, 18, 56, 0.85), rgba(15, 8, 30, 0.95));
+  border: 1.5px solid rgba(176, 97, 223, 0.35);
+  border-radius: 14px;
+  padding: 10px;
+  gap: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.chat-highlighted-project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(251, 217, 173, 0.6);
+  box-shadow: 0 8px 25px rgba(176, 97, 223, 0.3), 0 0 10px rgba(251, 217, 173, 0.1);
+}
+
+.chat-highlighted-project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transition: none;
+}
+
+.chat-highlighted-project-card:hover::before {
+  left: 150%;
+  transition: left 0.8s ease-in-out;
+}
+
+.chat-project-thumb-container {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(176, 97, 223, 0.2);
+  align-self: center;
+}
+
+.chat-project-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chat-project-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.chat-project-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.chat-project-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fbd9ad !important;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.chat-project-category-tag {
+  font-size: 0.62rem;
+  background: rgba(176, 97, 223, 0.2);
+  border: 0.5px solid rgba(176, 97, 223, 0.4);
+  color: #cb70ff;
+  padding: 1px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chat-project-short-desc {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 4px 0 6px 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.chat-project-tech-tag {
+  font-size: 0.6rem;
+  background: rgba(251, 217, 173, 0.08);
+  border: 0.5px solid rgba(251, 217, 173, 0.2);
+  color: #fbd9ad;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.chat-project-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.chat-project-action-btn {
+  flex: 1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 8px;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.chat-project-action-btn.details {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff !important;
+}
+
+.chat-project-action-btn.details:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.chat-project-action-btn.live {
+  background: linear-gradient(135deg, #623686, #4b236b);
+  border: 1px solid rgba(176, 97, 223, 0.3);
+  color: #fff !important;
+}
+
+.chat-project-action-btn.live:hover {
+  background: linear-gradient(135deg, #b061df, #623686);
+  border-color: rgba(176, 97, 223, 0.6);
+  box-shadow: 0 2px 8px rgba(176, 97, 223, 0.3);
+}
+
+/* Adjustments for extra small mobile layouts */
+@media (max-width: 380px) {
+  .chat-highlighted-project-card {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .chat-project-thumb-container {
+    width: 100%;
+    height: 110px;
+  }
+  .chat-project-thumb {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -141,38 +141,62 @@ export default function AiChat({ isWidgetMode = false, onClose = null }) {
       };
     }
     
-    // Match tech categories
-    const techWords = ["wordpress", "laravel", "react", "node", "php", "shopify", "n8n", "native"];
-    let matchedTech = "";
-    for (const tw of techWords) {
-      if (q.includes(tw)) {
-        matchedTech = tw;
-        break;
-      }
-    }
-
-    if (matchedTech) {
-      const matched = projects.filter(p => 
-        p.technologies.some(t => t.toLowerCase().includes(matchedTech)) || 
-        p.category.toLowerCase().includes(matchedTech)
-      );
-
-      if (matched.length > 0) {
-        const titles = matched.slice(0, 3).map(p => p.title).join(", ");
-        const textEn = `Vishal has built several projects using ${matchedTech.toUpperCase()}, including: **${titles}**. Click any project below to view details!`;
-        return {
-          text: textEn,
-          projectsList: matched.slice(0, 3)
-        };
-      }
-    }
-    
-    // General projects query fallback
-    if (q.includes("project")) {
-      const matched = projects.slice(0, 3);
+    // Match tech categories precisely
+    if (q.includes("wordpress")) {
+      const matched = projects.filter(p => p.category.toLowerCase().includes("wordpress"));
       return {
-        text: "Vishal has built several amazing projects. Here are some of them. Click any project to view details!",
+        text: `Vishal has built ${matched.length} WordPress & PHP projects. Here is the full list:`,
         projectsList: matched
+      };
+    }
+    if (q.includes("laravel")) {
+      const matched = projects.filter(p => p.category.toLowerCase() === "laravel");
+      return {
+        text: `Vishal has built ${matched.length} Laravel projects. Here is the full list:`,
+        projectsList: matched
+      };
+    }
+    if (q.includes("react native") || q.includes("native") || q.includes("mobile")) {
+      const matched = projects.filter(p => p.category.toLowerCase().includes("native") || p.category.toLowerCase().includes("mobile"));
+      return {
+        text: `Vishal has built ${matched.length} React Native mobile apps. Here is the full list:`,
+        projectsList: matched
+      };
+    }
+    if (q.includes("react")) {
+      const matched = projects.filter(p => p.category.toLowerCase().includes("react") && !p.category.toLowerCase().includes("native"));
+      return {
+        text: `Vishal has built ${matched.length} React JS web applications. Here is the full list:`,
+        projectsList: matched
+      };
+    }
+    if (q.includes("shopify")) {
+      const matched = projects.filter(p => p.category.toLowerCase() === "shopify");
+      return {
+        text: `Vishal has built ${matched.length} Shopify storefronts. Here is the full list:`,
+        projectsList: matched
+      };
+    }
+    if (q.includes("core php")) {
+      const matched = projects.filter(p => p.category.toLowerCase() === "core php");
+      return {
+        text: `Vishal has built ${matched.length} Core PHP websites. Here is the full list:`,
+        projectsList: matched
+      };
+    }
+    if (q.includes("n8n") || q.includes("automation")) {
+      const matched = projects.filter(p => p.category.toLowerCase() === "n8n");
+      return {
+        text: `Vishal has built ${matched.length} n8n automation workflow. Here are the details:`,
+        projectsList: matched
+      };
+    }
+
+    // General projects query fallback
+    if (q.includes("project") || q.includes("work") || q.includes("portfolio") || q.includes("all")) {
+      return {
+        text: `Vishal has built ${projects.length} amazing projects across WordPress, Laravel, React JS, React Native, Shopify, Core PHP and n8n. Here is the full list of projects:`,
+        projectsList: projects
       };
     }
     
@@ -211,6 +235,7 @@ export default function AiChat({ isWidgetMode = false, onClose = null }) {
   };
 
   // Main message sending handler
+  // Main message sending handler
   const handleSendMessage = async (textToSend = inputText) => {
     if (!textToSend.trim()) return;
 
@@ -223,6 +248,9 @@ export default function AiChat({ isWidgetMode = false, onClose = null }) {
     setMessages((prev) => [...prev, userMessage]);
     setInputText("");
     setIsLoading(true);
+
+    // Search locally for projects to attach if the query is project-related
+    const localProjResult = getLocalResponse(textToSend);
 
     // Call Gemini API if Key is present
     if (apiKey) {
@@ -300,6 +328,8 @@ Instructions:
           sender: "bot",
           text: replyText,
           time: getChatTime(),
+          project: localProjResult.project || null,
+          projectsList: localProjResult.projectsList || null,
         };
 
         setMessages((prev) => [...prev, botMessage]);
@@ -308,30 +338,28 @@ Instructions:
       } catch (err) {
         console.error("Gemini API error, falling back to local search", err);
         // Fallback to local
-        const localReply = getLocalResponse(textToSend);
         const botMessage = {
           sender: "bot",
-          text: `⚠️ **API Error:** ${err.message}\n\n*Using Local Fallback:*\n${localReply.text}`,
-          project: localReply.project,
-          projectsList: localReply.projectsList,
+          text: `⚠️ **API Error:** ${err.message}\n\n*Using Local Fallback:*\n${localProjResult.text}`,
+          project: localProjResult.project,
+          projectsList: localProjResult.projectsList,
           time: getChatTime(),
         };
         setMessages((prev) => [...prev, botMessage]);
-        speakText(localReply.text);
+        speakText(localProjResult.text);
       }
     } else {
       // Local Database search fallback (immediately)
       setTimeout(() => {
-        const localReply = getLocalResponse(textToSend);
         const botMessage = {
           sender: "bot",
-          text: localReply.text,
-          project: localReply.project,
-          projectsList: localReply.projectsList,
+          text: localProjResult.text,
+          project: localProjResult.project,
+          projectsList: localProjResult.projectsList,
           time: getChatTime(),
         };
         setMessages((prev) => [...prev, botMessage]);
-        speakText(localReply.text);
+        speakText(localProjResult.text);
       }, 500);
     }
     
@@ -432,19 +460,56 @@ Instructions:
                     </div>
                   )}
 
-                  {/* Inline list of project recommendations */}
+                  {/* Inline list of project recommendations - Highlighted Special Design */}
                   {msg.projectsList && (
-                    <div style={{ marginTop: "12px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                    <div className="chat-projects-list-container">
+                      <div className="chat-projects-list-header">
+                        Projects ({msg.projectsList.length})
+                      </div>
                       {msg.projectsList.map((p, i) => (
-                        <div key={i} className="chat-project-card" style={{ margin: 0 }}>
-                          <div className="chat-project-card-body" style={{ padding: "10px" }}>
-                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                              <span style={{ fontWeight: 600, color: "#fbd9ad", fontSize: "0.85rem" }}>{p.title}</span>
-                              <div style={{ display: "flex", gap: "5px" }}>
-                                <Link to={`/project/${p.slug}`} className="chat-project-link details" style={{ padding: "2px 6px", fontSize: "0.7rem" }} onClick={() => onClose && onClose()}>
-                                  View
-                                </Link>
-                              </div>
+                        <div key={i} className="chat-highlighted-project-card">
+                          <div className="chat-project-thumb-container">
+                            <img
+                              src={p.image}
+                              alt={p.title}
+                              className="chat-project-thumb"
+                            />
+                          </div>
+                          <div className="chat-project-details">
+                            <div className="chat-project-header-row">
+                              <h5 className="chat-project-title">{p.title}</h5>
+                              <span className="chat-project-category-tag">
+                                {p.category.replace(" js", "JS").replace(" app", " App")}
+                              </span>
+                            </div>
+                            <p className="chat-project-short-desc">
+                              {p.description}
+                            </p>
+                            <div className="chat-project-tech-tags">
+                              {p.technologies.slice(0, 3).map((tech, j) => (
+                                <span key={j} className="chat-project-tech-tag">
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                            <div className="chat-project-action-buttons">
+                              <Link
+                                to={`/project/${p.slug}`}
+                                className="chat-project-action-btn details"
+                                onClick={() => onClose && onClose()}
+                              >
+                                Details ➔
+                              </Link>
+                              {p.url && (
+                                <a
+                                  href={p.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="chat-project-action-btn live"
+                                >
+                                  Live Demo ➔
+                                </a>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -476,10 +541,28 @@ Instructions:
       {/* Quick Queries Tags */}
       <div className="chat-quick-queries">
         <div className="chat-quick-tag" onClick={() => handleSendMessage("Show all projects")}>
-          💼 View Projects
+          💼 View All Projects
+        </div>
+        <div className="chat-quick-tag" onClick={() => handleSendMessage("Show WordPress projects")}>
+          🌐 WordPress & PHP
         </div>
         <div className="chat-quick-tag" onClick={() => handleSendMessage("Show Laravel projects")}>
-          ⚡ Laravel Projects
+          ⚡ Laravel Apps
+        </div>
+        <div className="chat-quick-tag" onClick={() => handleSendMessage("Show React JS projects")}>
+          ⚛️ React JS Projects
+        </div>
+        <div className="chat-quick-tag" onClick={() => handleSendMessage("Show React Native apps")}>
+          📱 React Native Apps
+        </div>
+        <div className="chat-quick-tag" onClick={() => handleSendMessage("Show Shopify projects")}>
+          🛍️ Shopify Stores
+        </div>
+        <div className="chat-quick-tag" onClick={() => handleSendMessage("Show Core PHP projects")}>
+          🐘 Core PHP Sites
+        </div>
+        <div className="chat-quick-tag" onClick={() => handleSendMessage("Show n8n projects")}>
+          🤖 n8n Automations
         </div>
         <div className="chat-quick-tag" onClick={() => handleSendMessage("What are your skills?")}>
           🛠️ Skills & Stack
