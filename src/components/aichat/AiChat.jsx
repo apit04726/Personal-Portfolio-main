@@ -39,14 +39,28 @@ export default function AiChat({ isWidgetMode = false, onClose = null }) {
   const [speechSupported, setSpeechSupported] = useState(false);
   const recognitionRef = useRef(null);
   const messagesEndRef = useRef(null);
+  const lastMessageRef = useRef(null);
 
-  // Scroll to bottom helper
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  // Custom scroll helper
+  const scrollToView = () => {
+    if (messages.length === 0) return;
+    const lastMsg = messages[messages.length - 1];
+    
+    // If bot message has a list of projects, scroll to the start of this message
+    if (lastMsg.sender === "bot" && lastMessageRef.current) {
+      lastMessageRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // Otherwise scroll to bottom
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
-    scrollToBottom();
+    // Small timeout ensures the DOM has updated and layout is settled
+    const timer = setTimeout(() => {
+      scrollToView();
+    }, 150);
+    return () => clearTimeout(timer);
   }, [messages, isLoading]);
 
   // Initialize Speech Recognition (English only)
@@ -402,8 +416,9 @@ Instructions:
       {/* Messages */}
       <div className="chat-messages-container">
         {messages.map((msg, index) => {
+          const isLastMessage = index === messages.length - 1;
           return (
-            <div key={index} className={`chat-msg-row ${msg.sender} ${msg.projectsList ? "has-projects" : ""}`}>
+            <div key={index} ref={isLastMessage ? lastMessageRef : null} className={`chat-msg-row ${msg.sender} ${msg.projectsList ? "has-projects" : ""}`}>
               <div className="chat-msg-bubble-container" style={msg.projectsList ? { maxWidth: "100%", width: "100%" } : {}}>
                 {/* Text Bubble */}
                 {msg.text && (
