@@ -61,6 +61,7 @@ export default function AiChat({ isWidgetMode = false, onClose = null }) {
       scrollToView();
     }, 150);
     return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [messages, isLoading]);
 
   // Initialize Speech Recognition (English only)
