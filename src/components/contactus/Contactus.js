@@ -25,7 +25,7 @@ export default function Contactus() {
         "http://localhost:5000/api/submitForm",
         formData
       );
-      console.log(response.data.message); // Log the response from the backend
+      console.log(response.data.message);
 
       alert(`Thanks ${formData.name}, I will shortly connect with you!`);
     } catch (error) {
