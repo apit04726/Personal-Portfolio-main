@@ -3,37 +3,61 @@ import { Container, Row, Col } from "react-bootstrap";
 import Zoom from "react-reveal/Zoom";
 import axios from "axios";
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { AiOutlineSend } from "react-icons/ai";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { FiPhone, FiAtSign } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 export default function Contactus() {
-  const [formData, setFormData] = useState(new FormData());
+  const [formData, setFormData] = useState({});
+  const [notification, setNotification] = useState({ show: false, message: "", type: "success" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const showNotification = (message, type = "success") => {
+    setNotification({ show: true, message, type });
+    setTimeout(() => {
+      setNotification((prev) => ({ ...prev, show: false }));
+    }, 5000);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!(formData.name && formData.email && formData.message)) {
-      alert("Something went wrong!");
+      showNotification("Please fill in all details (Name, Email, and Message)!", "error");
       return;
     }
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/submitForm",
-        formData
-      );
-      console.log(response.data.message);
+      const accessKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
+      if (!accessKey) {
+        showNotification("Email service is not configured. Please check your .env file.", "error");
+        return;
+      }
 
-      alert(`Thanks ${formData.name}, I will shortly connect with you!`);
+      const response = await axios.post(
+        "https://api.web3forms.com/submit",
+        {
+          access_key: accessKey,
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `New Portfolio Message from ${formData.name}`
+        }
+      );
+
+      if (response.status === 200 && response.data.success) {
+        showNotification(`Thanks ${formData.name}, your message has been sent successfully!`, "success");
+        setFormData({});
+      } else {
+        showNotification("Something went wrong! Please try again.", "error");
+      }
     } catch (error) {
       console.error("Error submitting the form:", error);
-
-      alert("Backend Server was not Running while submitting the form.");
+      showNotification("Failed to send your message. Please try again later.", "error");
     }
-    setFormData({});
   };
   return (
     <div>
@@ -187,6 +211,63 @@ export default function Contactus() {
           </Row>
         </Container>
       </Container>
+      
+      {/* Smart and Professional Notification Banner */}
+      {notification.show && createPortal(
+        <div 
+          className="custom-notification-toast"
+          style={{
+            background: notification.type === "success" 
+              ? "linear-gradient(135deg, rgba(142, 70, 186, 0.95), rgba(94, 44, 128, 0.95))"
+              : "linear-gradient(135deg, rgba(239, 68, 68, 0.95), rgba(185, 28, 28, 0.95))",
+            color: "#ffffff"
+          }}
+        >
+          {/* Icon */}
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: notification.type === "success" ? "#fbd9ad" : "rgba(255, 255, 255, 0.2)",
+            borderRadius: "50%",
+            width: "28px",
+            height: "28px",
+            flexShrink: 0
+          }}>
+            {notification.type === "success" ? (
+              <span style={{ color: "#6c3483", fontWeight: "bold", fontSize: "16px" }}>✓</span>
+            ) : (
+              <span style={{ color: "#ffffff", fontWeight: "bold", fontSize: "14px" }}>✕</span>
+            )}
+          </div>
+          
+          {/* Message */}
+          <span style={{ flexGrow: 1, marginRight: "10px", lineHeight: "1.4" }}>
+            {notification.message}
+          </span>
+          
+          {/* Close Button */}
+          <button 
+            onClick={() => setNotification(prev => ({ ...prev, show: false }))}
+            style={{
+              background: "none",
+              border: "none",
+              color: "rgba(255, 255, 255, 0.6)",
+              cursor: "pointer",
+              fontSize: "18px",
+              display: "flex",
+              alignItems: "center",
+              padding: "4px",
+              transition: "color 0.2s"
+            }}
+            onMouseEnter={(e) => e.target.style.color = "#ffffff"}
+            onMouseLeave={(e) => e.target.style.color = "rgba(255, 255, 255, 0.6)"}
+          >
+            ✕
+          </button>
+        </div>,
+        document.body
+      )}
     </div>
   );
 }
