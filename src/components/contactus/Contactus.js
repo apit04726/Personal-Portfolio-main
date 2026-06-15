@@ -31,20 +31,15 @@ export default function Contactus() {
       return;
     }
     try {
-      const accessKey = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
-      if (!accessKey) {
-        showNotification("Email service is not configured. Please check your .env file.", "error");
-        return;
-      }
+      // Send request to Netlify serverless function
+      const mailUrl = "/.netlify/functions/send-email";
 
       const response = await axios.post(
-        "https://api.web3forms.com/submit",
+        mailUrl,
         {
-          access_key: accessKey,
           name: formData.name,
           email: formData.email,
-          message: formData.message,
-          subject: `New Portfolio Message from ${formData.name}`
+          message: formData.message
         }
       );
 
@@ -52,11 +47,12 @@ export default function Contactus() {
         showNotification(`Thanks ${formData.name}, your message has been sent successfully!`, "success");
         setFormData({});
       } else {
-        showNotification("Something went wrong! Please try again.", "error");
+        showNotification(response.data?.message || "Something went wrong! Please try again.", "error");
       }
     } catch (error) {
       console.error("Error submitting the form:", error);
-      showNotification("Failed to send your message. Please try again later.", "error");
+      const errorMsg = error.response?.data?.message || "Failed to send your message. Please try again later.";
+      showNotification(errorMsg, "error");
     }
   };
   return (
