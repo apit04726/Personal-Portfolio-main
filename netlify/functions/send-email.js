@@ -176,16 +176,6 @@ exports.handler = async (event, context) => {
                 color: #8e44ad;
                 letter-spacing: 1.5px;
                 margin-bottom: 8px;
-                display: flex;
-                align-items: center;
-            }
-            .label-dot {
-                display: inline-block;
-                width: 6px;
-                height: 6px;
-                background-color: #fbd9ad;
-                border-radius: 50%;
-                margin-right: 8px;
             }
             .value {
                 font-size: 16px;
@@ -261,19 +251,19 @@ exports.handler = async (event, context) => {
                     
                     <div class="card">
                         <div class="detail-section">
-                            <div class="label"><span class="label-dot"></span>Sender Name</div>
+                            <div class="label"><span style="color: #fbd9ad; font-size: 16px; margin-right: 6px; vertical-align: middle; line-height: 1;">&#8226;</span>Sender Name</div>
                             <div class="value">${name}</div>
                         </div>
                         
                         <div class="detail-section">
-                            <div class="label"><span class="label-dot"></span>Email Address</div>
+                            <div class="label"><span style="color: #fbd9ad; font-size: 16px; margin-right: 6px; vertical-align: middle; line-height: 1;">&#8226;</span>Email Address</div>
                             <div class="value">
                                 <a href="mailto:${email}">${email}</a>
                             </div>
                         </div>
                         
                         <div class="detail-section">
-                            <div class="label"><span class="label-dot"></span>Message Detail</div>
+                            <div class="label"><span style="color: #fbd9ad; font-size: 16px; margin-right: 6px; vertical-align: middle; line-height: 1;">&#8226;</span>Message Detail</div>
                             <div class="message-box">${message.replace(/\n/g, "<br>")}</div>
                         </div>
                     </div>
