@@ -182,6 +182,8 @@ exports.handler = async (event, context) => {
                 color: #1f1b24;
                 font-weight: 500;
                 padding-left: 14px; /* Align with label text */
+                word-wrap: break-word;
+                word-break: break-word;
             }
             .value a {
                 color: #6c3483;
@@ -236,6 +238,88 @@ exports.handler = async (event, context) => {
                 font-weight: 700;
                 border-bottom: 2px solid #fbd9ad;
                 padding-bottom: 2px;
+            }
+
+            /* Mobile screens: 200px to 795px */
+            @media screen and (max-width: 795px) {
+                .wrapper {
+                    padding: 15px 10px !important;
+                }
+                .container {
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    border-radius: 12px !important;
+                    box-shadow: 0 8px 30px rgba(108, 52, 131, 0.05) !important;
+                }
+                .header {
+                    padding: 30px 20px !important;
+                }
+                .header-icon {
+                    width: 40px !important;
+                    height: 40px !important;
+                    line-height: 40px !important;
+                    font-size: 16px !important;
+                }
+                .header h1 {
+                    font-size: 22px !important;
+                }
+                .header p {
+                    font-size: 12px !important;
+                }
+                .content {
+                    padding: 25px 15px !important;
+                }
+                .greeting {
+                    font-size: 14px !important;
+                    margin-bottom: 20px !important;
+                }
+                .card {
+                    padding: 15px !important;
+                    margin-bottom: 25px !important;
+                    border-radius: 12px !important;
+                }
+                .value {
+                    font-size: 14px !important;
+                    padding-left: 5px !important;
+                    word-break: break-all !important;
+                }
+                .message-box {
+                    padding: 12px !important;
+                    margin-left: 5px !important;
+                    font-size: 13.5px !important;
+                    word-break: break-word !important;
+                }
+                .cta-button {
+                    padding: 12px 25px !important;
+                    font-size: 14px !important;
+                    border-radius: 10px !important;
+                }
+                .footer {
+                    padding: 20px 15px !important;
+                }
+                .footer p {
+                    font-size: 11.5px !important;
+                }
+            }
+
+            /* Tablet/Medium screens: 795px to 995px */
+            @media screen and (min-width: 796px) and (max-width: 995px) {
+                .wrapper {
+                    padding: 30px 15px !important;
+                }
+                .container {
+                    width: 95% !important;
+                    max-width: 95% !important;
+                }
+                .header {
+                    padding: 35px 25px !important;
+                }
+                .content {
+                    padding: 30px 25px !important;
+                }
+                .card {
+                    padding: 20px !important;
+                }
             }
         </style>
     </head>
