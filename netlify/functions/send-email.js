@@ -181,6 +181,7 @@ exports.handler = async (event, context) => {
                 font-size: 16px;
                 color: #1f1b24;
                 font-weight: 500;
+                padding-left: 14px; /* Align with label text */
             }
             .value a {
                 color: #6c3483;
@@ -194,6 +195,7 @@ exports.handler = async (event, context) => {
                 border-radius: 4px 12px 12px 4px;
                 padding: 20px;
                 margin-top: 10px;
+                margin-left: 14px; /* Align with label text */
                 font-size: 15px;
                 color: #4a4552;
                 line-height: 1.7;
