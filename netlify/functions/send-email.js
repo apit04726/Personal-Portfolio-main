@@ -251,19 +251,46 @@ exports.handler = async (event, context) => {
                     
                     <div class="card">
                         <div class="detail-section">
-                            <div class="label"><span style="color: #fbd9ad; font-size: 16px; margin-right: 6px; vertical-align: middle; line-height: 1;">&#8226;</span>Sender Name</div>
+                            <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 8px;">
+                                <tr>
+                                    <td style="padding-right: 6px; vertical-align: middle; line-height: 1;">
+                                        <span style="color: #fbd9ad; font-size: 18px; font-family: Arial, sans-serif; line-height: 1;">&#8226;</span>
+                                    </td>
+                                    <td class="label" style="margin: 0; padding: 0; line-height: 1; vertical-align: middle;">
+                                        Sender Name
+                                    </td>
+                                </tr>
+                            </table>
                             <div class="value">${name}</div>
                         </div>
                         
                         <div class="detail-section">
-                            <div class="label"><span style="color: #fbd9ad; font-size: 16px; margin-right: 6px; vertical-align: middle; line-height: 1;">&#8226;</span>Email Address</div>
+                            <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 8px;">
+                                <tr>
+                                    <td style="padding-right: 6px; vertical-align: middle; line-height: 1;">
+                                        <span style="color: #fbd9ad; font-size: 18px; font-family: Arial, sans-serif; line-height: 1;">&#8226;</span>
+                                    </td>
+                                    <td class="label" style="margin: 0; padding: 0; line-height: 1; vertical-align: middle;">
+                                        Email Address
+                                    </td>
+                                </tr>
+                            </table>
                             <div class="value">
                                 <a href="mailto:${email}">${email}</a>
                             </div>
                         </div>
                         
                         <div class="detail-section">
-                            <div class="label"><span style="color: #fbd9ad; font-size: 16px; margin-right: 6px; vertical-align: middle; line-height: 1;">&#8226;</span>Message Detail</div>
+                            <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 8px;">
+                                <tr>
+                                    <td style="padding-right: 6px; vertical-align: middle; line-height: 1;">
+                                        <span style="color: #fbd9ad; font-size: 18px; font-family: Arial, sans-serif; line-height: 1;">&#8226;</span>
+                                    </td>
+                                    <td class="label" style="margin: 0; padding: 0; line-height: 1; vertical-align: middle;">
+                                        Message Detail
+                                    </td>
+                                </tr>
+                            </table>
                             <div class="message-box">${message.replace(/\n/g, "<br>")}</div>
                         </div>
                     </div>
