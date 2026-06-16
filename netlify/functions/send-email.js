@@ -417,7 +417,7 @@ exports.handler = async (event, context) => {
                 padding: 50px 0;
             }
             .container {
-                max-width: 900px;
+                max-width: 890px;
                 margin: 0 auto;
                 background-color: #ffffff;
                 border-radius: 20px;
