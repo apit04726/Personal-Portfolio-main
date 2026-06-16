@@ -386,7 +386,7 @@ exports.handler = async (event, context) => {
                     </div>
                 </div>
                 <div class="footer">
-                    <p>&copy; ${new Date().getFullYear()} <a href="${siteUrl}">Vishal Baria</a>. All rights reserved.</p>
+                    <p>&copy; ${new Date().getFullYear()} <a href="${siteUrl}">Vishal Baraiya</a>. All rights reserved.</p>
                 </div>
             </div>
         </div>
