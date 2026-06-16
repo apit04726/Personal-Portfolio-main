@@ -565,23 +565,9 @@ exports.handler = async (event, context) => {
                     <p>Message Received</p>
                 </div>
                 <div class="content">
-                    <p class="greeting">Hi ${name},</p>
-                    <p class="greeting">Thank you for reaching out! I have received your message and will get back to you as soon as possible.</p>
+                    <p class="greeting">Hi <strong>${name}</strong>,</p>
+                    <p class="greeting">Thank you for reaching out! I have successfully received your message and will get back to you as soon as possible (usually within 24 hours).</p>
                     
-                    <div class="card">
-                        <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 8px;">
-                            <tr>
-                                <td style="padding-right: 6px; vertical-align: middle; line-height: 1;">
-                                    <span style="color: #fbd9ad; font-size: 18px; font-family: Arial, sans-serif; line-height: 1;">&#8226;</span>
-                                </td>
-                                <td style="margin: 0; padding: 0; line-height: 1; vertical-align: middle; font-size: 11px; font-weight: 700; text-transform: uppercase; color: #8e44ad; letter-spacing: 1.5px;">
-                                    Your Message Preview
-                                </td>
-                            </tr>
-                        </table>
-                        <div class="message-preview">${message.replace(/\n/g, "<br>")}</div>
-                    </div>
-
                     <p class="greeting" style="margin-top: 30px; margin-bottom: 0;">
                         Best regards,<br>
                         <strong>Vishal Baraiya</strong>
