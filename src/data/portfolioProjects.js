@@ -42,6 +42,8 @@ import rolixyHero from "../images/new-hero.jpeg";
 import rolixyListing from "../images/rolixy-listing.png";
 import rolixyDetail from "../images/rolixy-detail.jpg";
 import rolixyAdmin from "../images/rolixy-admin.png";
+import organDonation from "../images/organ-donation.jpeg";
+
 
 
 const projects = [
@@ -563,6 +565,27 @@ const projects = [
     features: ['Property listings', 'Gallery', 'SEO optimised content', 'Digital Marketing', 'Lead Management', 'Dynamic Content Sliders'],
     technologies: ['PHP', 'MySQL', 'HTML5', 'JavaScript', 'Fancybox', 'Locomotive Scroll 3.5.4'],
     packages: ['Phpmailer', 'Composer', 'Lazy Load', 'Yoast SEO', 'SMTP Mail']
+  },
+  {
+    slug: 'organ-donation-foundation',
+    image: organDonation,
+    title: 'Organ Donation Foundation',
+    description: 'Non-profit healthcare & organ donor awareness portal',
+    category: 'core php',
+    client: 'Organ Donation Foundation (Rajkot)',
+    date: '15 January, 2026',
+    url: 'https://dev.digitize-info.com/php_projects/OrganDonation/',
+    details: 'Organ Donation Foundation is a dedicated healthcare and awareness platform built with Core PHP and MySQL. The portal facilitates donor registration, organ pledge management, awareness campaign programs, knowledge center resources, and multi-language support (English & Gujarati) to help save lives through organ donation.',
+    features: [
+      'Donor Registration & Pledge Management',
+      'Multi-language Support (English & Gujarati)',
+      'Awareness Programs & Knowledge Center',
+      'Contact & Inquiry Management',
+      'Responsive Modern UI Design',
+      'Custom Admin Panel for Donors & Organ Requests'
+    ],
+    technologies: ['PHP', 'MySQL', 'HTML5', 'CSS3', 'JavaScript', 'Bootstrap'],
+    packages: ['PHPMailer', 'Composer', 'SMTP Mail', 'Lazy Load']
   },
   {
     slug: 'shree-dwarkesh-enterprise',
