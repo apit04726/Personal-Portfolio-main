@@ -68,7 +68,7 @@ const projects = [
     category: 'wordpress &php',
     client: 'Real Estate Developer',
     date: '06 May, 2026',
-    url: 'https://digitizeinfo.in/landing_pages_2024/rolixy/',
+    url: 'https://rollixy.site.je/',
     details: 'Rolixy is a high-performance real estate platform built as a custom WordPress theme. Originally designed in Webflow and converted for dynamic CMS use, it allows agencies to manage complex property listings, agent profiles, and interactive amenities through a user-friendly admin interface.',
     features: [
       'Dynamic Property & Agent Management',
