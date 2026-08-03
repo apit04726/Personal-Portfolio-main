@@ -327,7 +327,7 @@ const projects = [
     packages: ['react-navigation', 'axios', 'redux-thunk', 'react-native-elements', 'Expo Build']
   },
   {
-    slug: 'hello-kisanapp',
+    slug: 'farm-management-app',
     image: helloKisanAppImage,
     title: 'Farm Management App',
     description: 'Farm Management App brings all your farm, labor, expense, and sales data into one smart dashboard with reports, charts, and Gujarat APMC live price updates.',
