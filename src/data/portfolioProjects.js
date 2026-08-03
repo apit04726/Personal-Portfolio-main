@@ -45,7 +45,6 @@ import rolixyAdmin from "../images/rolixy-admin.png";
 import organDonation from "../images/organ-donation.jpeg";
 
 
-
 const projects = [
   {
     slug: 'lendingusa',
@@ -321,7 +320,7 @@ const projects = [
     category: 'react native app',
     client: 'Software Development',
     date: '10 Nov, 2025',
-    url: 'https://drive.google.com/file/d/1qGKOlAHXIgTuMCo9auRDFRV46kgG4bwt/view?usp=sharing',
+    url: 'https://sourceforge.net/projects/newshub/files/NewsHub.apk/download',
     details: 'A modern, lightweight React Native News App with a smooth UI and real-time content for Android, iOS, and Web and live news App.',
     features: ['Live news updates', 'Category filters', 'Bookmarking', 'Multi-platform support', 'Expo.Dev Deployment'],
     technologies: ['React Native', 'Redux', 'Bootstrap', 'News API', 'Expo.Dev'],
@@ -330,12 +329,12 @@ const projects = [
   {
     slug: 'hello-kisanapp',
     image: helloKisanAppImage,
-    title: 'Hello Kisan App',
-    description: 'Hello Kisan brings all your farm, labor, expense, and sales data into one smart dashboard with reports, charts, and Gujarat APMC live price updates.',
+    title: 'Farm Management App',
+    description: 'Farm Management App brings all your farm, labor, expense, and sales data into one smart dashboard with reports, charts, and Gujarat APMC live price updates.',
     category: 'react native app',
     client: 'Software Development',
     date: '10 Jan, 2026',
-    url: 'https://drive.google.com/file/d/1byqgr2Ovt-Bl7DLJEL62rkJTv7WjVHl1/view?usp=sharing',
+    url: 'https://sourceforge.net/projects/farm-management-app-for-farmer/files/farm-management.apk/download',
     details: 'A cross-platform, offline-first farm management app for small and medium farmers. Hello Kisan centralizes farm, plot, labor, expense, and sales data in an intuitive dashboard with charts, reports, and essential tools, with optional cloud sync for backups and multi-device access.',
     features: ['Farm & plot management', 'Expense & sales tracking', 'Labor management', 'Interactive dashboard & reports', 'Offline-first with sync', 'Localization & themes', 'Gujarat APMC Market Live prices'],
     technologies: ['React Native', 'Redux', 'Bootstrap', 'Market Prices API', 'Expo.Dev'],
@@ -350,7 +349,7 @@ const projects = [
     category: "React Native App",
     client: "Software Development",
     date: "10 March, 2026",
-    url: "",
+    url: "https://sourceforge.net/projects/socialgo/files/SocialGo.apk/download",
     details: 'Built with a mobile-first approach using React Native and Expo, SocialGo provides a unified dashboard for creators and businesses to manage, schedule, and analyze social media performance. It integrates with major platforms and uses AI to improve content quality.',
     features: [
       "Create once and publish across Facebook, Instagram, Twitter, and LinkedIn",
