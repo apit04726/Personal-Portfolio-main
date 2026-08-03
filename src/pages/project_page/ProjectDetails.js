@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import Particle from '../../Particle';
 import projects from '../../data/portfolioProjects';
-import { FaExternalLinkAlt, FaArrowLeft, FaTh, FaUser, FaCalendarAlt, FaTag, FaGlobe, FaListAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaArrowLeft, FaTh, FaUser, FaCalendarAlt, FaTag, FaGlobe, FaListAlt, FaDownload, FaMobileAlt } from 'react-icons/fa';
 
 export default function ProjectDetails() {
   const { slug } = useParams();
@@ -22,6 +22,7 @@ export default function ProjectDetails() {
     return ok.test(u) ? u : `https://${u}`;
   };
   const projectUrl = formatUrl(project?.url);
+  const isReactNative = project?.category?.toString().trim().toLowerCase() === 'react native app';
 
   // Check if lists are scrollable
   useEffect(() => {
@@ -95,21 +96,37 @@ export default function ProjectDetails() {
                   <div className="meta-row"><FaCalendarAlt className="meta-icon" /><span className="meta-label">Date:</span> <span className="meta-value">{project.date}</span></div>
                   <div className="meta-row"><FaTag className="meta-icon" /><span className="meta-label">Category:</span> <span className="meta-value">{project.category}</span></div>
                   <div className="meta-row">
-                    <FaGlobe className="meta-icon" />
-                    <span className="meta-label">Website:</span>
+                    {isReactNative ? (
+                      <>
+                        <FaMobileAlt className="meta-icon" />
+                        <span className="meta-label">Download App:</span>
+                      </>
+                    ) : (
+                      <>
+                        <FaGlobe className="meta-icon" />
+                        <span className="meta-label">Website:</span>
+                      </>
+                    )}
                     <span className="meta-value">{projectUrl ? (
                         <a
-                          className="visit-link"
+                          className={isReactNative ? "download-app-link" : "visit-link"}
                           href={projectUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          aria-label={`Open ${project.title} website`}
+                          aria-label={isReactNative ? `Download ${project.title} App` : `Open ${project.title} website`}
                           onClick={(e) => {
                             try { e.preventDefault(); } catch (err) {}
                             if (projectUrl) { window.open(projectUrl, '_blank', 'noopener,noreferrer'); }
                           }}
                         >
-                          <span className="visit-text">Visit Site</span> <FaExternalLinkAlt className="link-icon" />
+                          <span className={isReactNative ? "download-app-text" : "visit-text"}>
+                            {isReactNative ? 'Download App' : 'Visit Site'}
+                          </span>{' '}
+                          {isReactNative ? (
+                            <FaDownload className="link-icon smart-download-icon" />
+                          ) : (
+                            <FaExternalLinkAlt className="link-icon" />
+                          )}
                         </a>
                     ) : '—'}</span>
                   </div>
@@ -174,12 +191,18 @@ export default function ProjectDetails() {
           box-shadow: 0 12px 40px rgba(4,6,23,0.12);
           max-width: 100%;
         }
-          .visit-link{
-          font-weight: 600;
-          color: #6b3bd0;
-          text-decoration: underline;
-
-        }
+          .visit-link {
+            font-weight: 600;
+            color: #6b3bd0;
+            text-decoration: underline;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.3s ease;
+          }
+          .visit-link:hover {
+            color: #8b46ff;
+          }
           .visit-text {
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             font-weight: 700;
@@ -187,6 +210,111 @@ export default function ProjectDetails() {
             color: inherit;
             display: inline-block;
           }
+
+        .download-app-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #6366f1 100%);
+          background-size: 200% 200%;
+          color: #ffffff !important;
+          font-weight: 700;
+          font-size: 14px;
+          padding: 8px 20px;
+          border-radius: 30px;
+          text-decoration: none !important;
+          box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+          transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, filter 0.3s ease;
+          position: relative;
+          overflow: hidden;
+          will-change: transform, box-shadow;
+          animation: gradientShift 4s ease infinite, pulseGlow 2.5s infinite;
+        }
+
+        .download-app-link::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: linear-gradient(
+            60deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.45) 50%,
+            transparent 70%
+          );
+          transform: rotate(30deg);
+          animation: smartShimmer 3.2s ease-in-out infinite;
+          pointer-events: none;
+        }
+
+        .download-app-link:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 6px 22px rgba(124, 58, 237, 0.65), 0 0 15px rgba(168, 85, 247, 0.5);
+          filter: brightness(1.06);
+          color: #ffffff !important;
+        }
+
+        .download-app-link:active {
+          transform: translateY(0);
+          filter: brightness(0.96);
+        }
+
+        .download-app-text {
+          font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+          font-weight: 700;
+          font-size: 13px;
+          letter-spacing: 0.3px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .smart-download-icon {
+          font-size: 14px;
+          position: relative;
+          z-index: 1;
+          animation: smartBounce 1.8s infinite ease-in-out;
+        }
+
+        @keyframes smartBounce {
+          0%, 100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(3px);
+          }
+        }
+
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        @keyframes smartShimmer {
+          0% {
+            transform: translateX(-100%) rotate(30deg);
+          }
+          100% {
+            transform: translateX(100%) rotate(30deg);
+          }
+        }
+
+        @keyframes pulseGlow {
+          0%, 100% {
+            box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+          }
+          50% {
+            box-shadow: 0 4px 22px rgba(168, 85, 247, 0.7);
+          }
+        }
         
         .project-hero-img {
           width: 100%;
@@ -240,7 +368,7 @@ export default function ProjectDetails() {
         .project-desc { color: rgba(34,34,34,0.92); margin-top: 8px; line-height: 1.6; font-size: var(--fs-desc); text-align: justify; text-justify: inter-word; hyphens: auto; word-break: break-word; }
 
         .project-meta { margin-top: 12px; display:flex; flex-direction:column; gap:8px; }
-        .meta-row { display:flex; gap:10px; align-items:center; color:#4b415d; }
+        .meta-row { display:flex; gap:10px; align-items:center; color:#4b415d; flex-wrap: wrap; }
         .meta-icon { color: #7b3bd9; vertical-align: middle; min-width:18px; }
         .meta-label { color:#6b3bd0; font-weight:600;}
         .meta-value { color:#3a3147; }
@@ -420,6 +548,8 @@ export default function ProjectDetails() {
         @media (max-width: 480px) {
           .title-text { font-size: 20px; }
           .project-desc { font-size: 14px; text-align: left; }
+          .download-app-link { padding: 6px 14px; font-size: 13px; }
+          .download-app-text { font-size: 13px; }
         }
       `}</style>
     </section>
