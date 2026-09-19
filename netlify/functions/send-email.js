@@ -1,3 +1,8 @@
+try {
+  require("dotenv").config();
+} catch (e) {
+  // In Netlify production, environment variables are already in process.env
+}
 const nodemailer = require("nodemailer");
 
 exports.handler = async (event, context) => {
@@ -43,8 +48,8 @@ exports.handler = async (event, context) => {
     // Load environment variables set in Netlify
     const smtpHost = process.env.SMTP_HOST || "smtp.gmail.com";
     const smtpPort = parseInt(process.env.SMTP_PORT || "465");
-    const smtpUser = process.env.SMTP_USER; // Your Gmail ID
-    const smtpPass = process.env.SMTP_PASS; // Your Gmail App Password
+    const smtpUser = process.env.SMTP_USER ? process.env.SMTP_USER.trim() : ""; // Your Gmail ID
+    const smtpPass = process.env.SMTP_PASS ? process.env.SMTP_PASS.replace(/\s+/g, "").trim() : ""; // Your Gmail App Password
 
     if (!smtpUser || !smtpPass) {
       return {
