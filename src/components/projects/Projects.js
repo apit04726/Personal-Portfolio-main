@@ -59,7 +59,6 @@ export default function Projects() {
                       }}
                     >
                      LendingUSA is a fintech platform offering fast, flexible point-of-sale financing and personal loans, serving 10,000+ businesses and 150,000+ customers.
-
                     </p>
                   </h6>
                   <div
