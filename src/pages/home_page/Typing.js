@@ -18,5 +18,4 @@ function Typing() {
         />
     );
 }
-
 export default Typing;
