@@ -58,9 +58,7 @@ export default function Projects() {
                         fontWeight: 600,
                       }}
                     >
-                      LendingUSA is a fintech platform that provides point-of-sale
-                      financing for merchants and personal loans for borrowers, helping over 10,000
-                      businesses and 150,000 customers with fast, flexible funding solutions.
+                     LendingUSA is a fintech platform offering fast, flexible point-of-sale financing and personal loans, serving 10,000+ businesses and 150,000+ customers.
 
                     </p>
                   </h6>
@@ -110,11 +108,8 @@ export default function Projects() {
                         fontWeight: 600,
                       }}
                     >
-                      Use of AI and Machine Learning: Artificial intelligence
-                      and machine learning are already being used in healthcare
-                      to help predict heart disease. In the future, these
-                      technologies could become more advanced, enabling more
-                      accurate predictions of heart disease risk.
+                      AI and machine learning can improve heart disease prediction by enabling more accurate risk assessment and early detection.
+
                     </p>
                   </h6>
                   <div
@@ -214,9 +209,8 @@ export default function Projects() {
                         fontWeight: 600,
                       }}
                     >
-                      AMM-PRO (AM Management & Productions) is a London-founded event production company,
-                      established in 2003 by Ali Matar. With over 20 years of expertise, AMM-PRO delivers custom-tailored
-                      show production and event management—spanning from intimate gatherings to large-scale international.
+                      AMM-PRO is a London-based event production company delivering professional show production and event management services worldwide.
+
                     </p>
                   </h6>
                   <div

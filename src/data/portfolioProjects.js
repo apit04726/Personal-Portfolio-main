@@ -43,6 +43,7 @@ import rolixyListing from "../images/rolixy-listing.png";
 import rolixyDetail from "../images/rolixy-detail.jpg";
 import rolixyAdmin from "../images/rolixy-admin.png";
 import organDonation from "../images/organ-donation.jpeg";
+import primeCage from "../images/prime-cage.jpg";
 
 
 const projects = [
@@ -59,6 +60,33 @@ const projects = [
     features: ['Responsive marketing site', 'Custom ACF-driven content', 'SEO-friendly templates', 'Fast deployment'],
     technologies: ['WordPress', 'PHP', 'ACF', 'MySQL'],
     packages: ['elementor (optional)', 'WP-CLI (dev)', 'Yoast/SEO plugins']
+  },
+  {
+    slug: 'prime-cage',
+    image: primeCage,
+    title: 'Prime Cage',
+    description: 'Corporate WordPress Website for Precision Bearing Cages & Sealing Solutions',
+    category: 'wordpress &php',
+    client: 'Industrial & Manufacturing Client',
+    date: '10 February, 2026',
+    url: 'https://primecage.com/',
+    details: 'Prime Cage is an IATF 16949-certified manufacturer and global OEM partner specializing in precision bearing cages, sealing solutions, O-rings, and custom sheet metal components for automotive and industrial applications.',
+    features: [
+      'Precision Bearing Cages & Sealing Catalog',
+      'Custom Sheet Metal Components Showcase',
+      'IATF 16949 Quality & Infrastructure Specs',
+      'Interactive Product Sliders & Mega Menu',
+      'Smooth Scroll & Animated UI Interactions',
+      'SEO Optimization & Fast Page Performance'
+    ],
+    technologies: ['WordPress', 'PHP', 'JavaScript (ES6)', 'Bootstrap 5', 'MySQL'],
+    packages: [
+      'Swiper JS (v11)',
+      'Fancybox',
+      'Contact Form 7',
+      'Yoast SEO',
+      'Lenis Smooth Scroll'
+    ]
   },
   {
     slug: 'rolixy',
