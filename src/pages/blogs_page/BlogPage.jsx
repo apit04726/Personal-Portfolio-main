@@ -268,7 +268,7 @@ export default function BlogPage() {
         {/* Header Section */}
         <Container className="home-content">
           <div
-            className="d-flex justify-content-center"
+            className="d-flex justify-content-center page-header-banner"
             width="100%"
             style={{ backgroundColor: "#fbd9ad" }}
           >
@@ -1192,13 +1192,28 @@ export default function BlogPage() {
           }
         }
 
-        @media (min-width: 769px) and (max-width: 992px) {
-          .blog-card {
-            min-height: 480px !important;
+        @media (min-width: 700px) and (max-width: 995px) {
+          .blog-grid > [class*="col-"],
+          .blog-grid .col-md-6,
+          .blog-grid .col-lg-4,
+          .blog-grid .col-sm-12,
+          .blog-grid .col-12 {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            display: flex !important;
+            justify-content: center !important;
           }
-          
+
+          .blog-card {
+            width: 100% !important;
+            max-width: 620px !important;
+            min-height: auto !important;
+            margin: 0 auto 25px auto !important;
+          }
+
           .blog-image {
-            height: 160px;
+            height: 220px !important;
           }
         }
 

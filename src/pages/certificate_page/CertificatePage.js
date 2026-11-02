@@ -21,7 +21,7 @@ export default function CertificatePage() {
         <Particle />
         <Container className="home-content">
           <div
-            className="d-flex justify-content-center"
+            className="d-flex justify-content-center page-header-banner"
             width="100%"
             style={{ backgroundColor: "#fbd9ad" }}
           >

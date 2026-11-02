@@ -30,6 +30,7 @@ const Resume = lazy(() => import("./pages/resume_page/ResumePage"));
 const ProjectPage = lazy(() => import("./pages/project_page/ProjectPage"));
 const ProjectDetails = lazy(() => import("./pages/project_page/ProjectDetails"));
 const AiChatPage = lazy(() => import("./pages/aichat_page/AiChatPage"));
+const DigitalMarketingPage = lazy(() => import("./pages/digital_marketing_page/DigitalMarketingPage"));
 
 function App() {
   const [load, updateLoad] = useState(true);
@@ -73,6 +74,8 @@ function App() {
             {/* <Route path="/certificatepage" element={<CertificatePage />} /> */}
             <Route path="/resume" element={<Resume />} />
             <Route path="/blogs" element={<BlogPage />} />
+            <Route path="/marketing" element={<DigitalMarketingPage />} />
+            <Route path="/digitalmarketing" element={<DigitalMarketingPage />} />
             <Route path="/aichat" element={<AiChatPage />} />
             <Route path="*" element={<Notfound />} />
           </Routes>

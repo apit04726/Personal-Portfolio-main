@@ -65,6 +65,7 @@ html {
 }
 
 /* --------- */
+/* --------- */
 /* Navbar Section  */
 /* --------- */
 .sticky {
@@ -149,11 +150,64 @@ html {
   }
 }
 
-@media (max-width: 767px) {
-  .navbar {
+@media (max-width: 1023px) {
+  .navbar,
+  .navbar.sticky,
+  .sticky {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1030 !important;
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: none !important;
+    transition: none !important;
+  }
+
+  .navbar-brand,
+  .navbar-brand * {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .navbar-brand > div {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .navbar-brand img.logo {
+    height: 32px !important;
+    width: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+    flex-shrink: 0 !important;
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+  }
+
+  #navhead {
+    font-size: 1.15rem !important;
+    margin: 0 0 0 14px !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+    display: inline-block !important;
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
   }
 
   .navbar-nav .nav-item a {
@@ -182,7 +236,11 @@ html {
   }
 
   .navbarmain {
-    margin-left: 0px;
+    margin-left: 0px !important;
+  }
+
+  .nav-link {
+    padding: 0.7rem 1rem !important;
   }
 }
 
@@ -207,16 +265,6 @@ html {
 
 .nav-link {
   padding: 0.8rem 1rem !important;
-}
-
-@media (max-width: 767px) {
-  .nav-link {
-    padding: 0.7rem 1rem !important;
-  }
-
-  #navhead {
-    font-size: 1.05rem;
-  }
 }
 
 .navbar-nav .nav-item {
@@ -2133,6 +2181,43 @@ html {
     width: 50% !important;
   }
 
+  /* Project page cards: single column for 700px to 995px */
+  .project-page-section .col-md-3,
+  .project-page-section .col-md-4,
+  .project-page-section .col-sm-12,
+  .project-page-section .row .col-md-3,
+  .project-page-section .row .col-md-4,
+  .project-page-section .row .col-sm-12,
+  .project-page-section .g-5 > div,
+  .project-page-section .g-5 > [class*="col-"],
+  .project-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Blogs page cards: single column for 700px to 995px */
+  .blog-grid > [class*="col-"],
+  .blog-grid .col-md-6,
+  .blog-grid .col-lg-4,
+  .blog-grid .col-sm-12,
+  .blog-grid .col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  .blog-grid .blog-card {
+    width: 100% !important;
+    max-width: 620px !important;
+    min-height: auto !important;
+    margin: 0 auto 25px auto !important;
+  }
+  .blog-grid .blog-image {
+    height: 220px !important;
+  }
+
   /* Dynamic card heights and responsive images for projects */
   .singleProject {
     height: auto !important;
@@ -2142,7 +2227,7 @@ html {
   .projectContent > img {
     width: 100% !important;
     height: auto !important;
-    max-height: 240px !important;
+    max-height: 360px !important;
   }
 
   /* Contact Me section: stack form and details vertically */
@@ -2244,6 +2329,28 @@ html {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
+  }
+}
+
+/* Ensure project card iconBtn size matches first image on 800px to 900px screens */
+@media (min-width: 800px) and (max-width: 980px) {
+  .singleProject .iconBtn,
+  .singleProject .detailsBtn {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border: 2px solid #fbd9ad !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-top: 25px; 
+   }
+
+  .singleProject .iconBtn svg,
+  .singleProject .detailsBtn svg {
+    font-size: 1.25rem !important;
   }
 }
 
@@ -3126,5 +3233,43 @@ html {
     padding: 12px 16px;
     font-size: 13.5px;
     animation: slideInMobile 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+/* ==========================================================
+   MOBILE HEADER LABEL BANNER (All Mobiles: <= 699px)
+   Identical look to DIGITAL MARKETING banner across all pages
+========================================================== */
+@media (max-width: 699px) {
+  .page-header-banner {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    width: auto !important;
+  }
+
+  .dm-page-container .page-header-banner {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .resume-section > .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .resume-section .page-header-banner {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+
+  .page-header-banner h1 {
+    font-size: 1.35rem !important;
+    padding: 4px 8px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+    color: rgb(134, 61, 176) !important;
   }
 }

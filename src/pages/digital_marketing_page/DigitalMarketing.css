@@ -1,0 +1,2227 @@
+/* ==========================================================
+   DIGITAL MARKETING PAGE & CIRCULAR GA4 DASHBOARD
+   Simple, Professional, Real Design with Circular Gauges
+   100% Theme matching, responsive across all screens
+========================================================== */
+
+.dm-container {
+  padding-top: 110px;
+  padding-bottom: 70px;
+  color: #fbd9ad;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Badge & Introduction */
+.dm-hero-badge-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 18px;
+}
+
+.dm-exp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(251, 217, 173, 0.12);
+  border: 1px solid rgba(251, 217, 173, 0.35);
+  padding: 8px 20px;
+  border-radius: 30px;
+  color: #fbd9ad;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.dm-exp-badge svg {
+  color: #fbd9ad;
+  font-size: 1.15rem;
+}
+
+.dm-hero-headline {
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.dm-gradient-text {
+  color: #cb70ff;
+}
+
+.dm-hero-subtext {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #fbd9ad;
+  max-width: 840px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Quick Stats Bar */
+.dm-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.dm-stat-card {
+  background: rgba(33, 32, 56, 0.75);
+  border: 1px solid rgba(176, 97, 223, 0.25);
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  transition: all 0.25s ease-out;
+}
+
+.dm-stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #b061df;
+}
+
+.dm-stat-number {
+  font-size: 1.95rem;
+  font-weight: 600;
+  color: #fbd9ad;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.dm-stat-label {
+  font-size: 0.88rem;
+  color: #fbd9ad;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Section Header Titles */
+.dm-section-title-wrap {
+  text-align: center;
+  margin: 45px 0 28px 0;
+}
+
+.dm-section-tag {
+  color: #cb70ff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.dm-section-heading {
+  font-size: 1.85rem;
+  font-weight: 500;
+  color: #fbd9ad;
+}
+
+/* ==========================================================
+   REAL GOOGLE ANALYTICS 4 DASHBOARD & CIRCULAR METRICS
+   Exact layout from GA4 reference: Top filters, 4 solid KPI cards,
+   Left Acquisition Table, Right Donut Breakdown Circle, and 6 Circular Gauges
+========================================================== */
+.ga-real-dashboard-wrap {
+  background: rgba(22, 24, 38, 0.95);
+  border: 1px solid rgba(176, 97, 223, 0.35);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5), 0 0 25px rgba(176, 97, 223, 0.12);
+  margin-bottom: 50px;
+}
+
+/* 1. Header Bar */
+.ga-real-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ga-real-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ga-real-icon-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+  flex-shrink: 0;
+}
+
+.ga-real-title {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #fbd9ad;
+  margin: 0 0 4px 0;
+}
+
+.ga-real-status-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.82rem;
+}
+
+.ga-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00e676;
+  box-shadow: 0 0 8px #00e676;
+  display: inline-block;
+}
+
+.ga-live-text {
+  color: #00e676;
+  font-weight: 600;
+}
+
+.ga-sub-badge {
+  background: rgba(176, 97, 223, 0.2);
+  border: 1px solid rgba(176, 97, 223, 0.35);
+  color: #fbd9ad;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.74rem;
+}
+
+.ga-sub-badge.meta {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #93c5fd;
+}
+
+/* Time selector tabs matching site button style */
+.ga-real-time-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ga-time-tab {
+  background-color: #fbd9ad;
+  color: rgb(134, 61, 176);
+  border: 2px solid rgb(134, 61, 176);
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.ga-time-tab:hover,
+.ga-time-tab.active {
+  background-color: rgb(134, 61, 176);
+  color: #fbd9ad;
+}
+
+/* 2. Real Filter Select Bar (Reference Match) */
+.ga-real-filter-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 22px;
+}
+
+.ga-filter-select-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.ga-filter-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  color: #fbd9ad;
+  opacity: 0.85;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.ga-filter-select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: rgba(12, 10, 24, 0.85);
+  border: 1px solid rgba(176, 97, 223, 0.3);
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 400 !important;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ga-filter-select:focus,
+.ga-filter-select:hover {
+  border-color: #fbd9ad;
+}
+
+/* Custom In-DOM Dropdown Menu (Prevents OS Popup Overflows) */
+.ga-custom-select-wrap {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ga-custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  user-select: none;
+  font-family: inherit;
+  font-weight: 400 !important;
+}
+
+.ga-custom-select-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  padding-right: 8px;
+  font-family: inherit;
+  font-weight: 400 !important;
+}
+
+.ga-custom-select-arrow {
+  font-size: 0.85rem;
+  color: #fbd9ad;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.ga-custom-select-arrow.arrow-up {
+  transform: rotate(180deg);
+}
+
+.ga-custom-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #18152c;
+  border: 1px solid rgba(176, 97, 223, 0.45);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  z-index: 1050;
+  overflow: hidden;
+  padding: 4px 0;
+}
+
+.ga-custom-dropdown-item {
+  padding: 8px 12px;
+  font-size: 0.84rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+.ga-dropdown-item-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  font-weight: 400;
+}
+
+.ga-custom-dropdown-item:hover {
+  background: rgba(176, 97, 223, 0.22);
+  color: #fbd9ad;
+}
+
+.ga-custom-dropdown-item.active {
+  background: rgba(176, 97, 223, 0.32);
+  color: #fbd9ad;
+  font-weight: 500;
+}
+
+.ga-dropdown-check {
+  color: #00e676;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-left: 6px;
+  flex-shrink: 0;
+}
+
+/* 3. Top 4 Solid KPI Cards (Exact Reference Match) */
+.ga-real-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.ga-kpi-card {
+  border-radius: 14px;
+  padding: 18px 16px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-out;
+}
+
+.ga-kpi-card:hover {
+  transform: translateY(-2px);
+}
+
+.ga-kpi-card.kpi-blue {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+}
+
+.ga-kpi-card.kpi-teal {
+  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+}
+
+.ga-kpi-card.kpi-green {
+  background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.ga-kpi-card.kpi-purple {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+}
+
+.kpi-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.kpi-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  opacity: 0.95;
+  color: #ffffff;
+}
+
+.kpi-pill {
+  background: rgba(255, 255, 255, 0.22);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+}
+
+.kpi-number {
+  font-size: 1.85rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.kpi-footer {
+  font-size: 0.74rem;
+  opacity: 0.88;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* 4. Table Card (Left Panel) */
+.ga-real-content-row {
+  margin-bottom: 25px;
+}
+
+.ga-real-table-card {
+  background: rgba(30, 28, 48, 0.65);
+  border: 1px solid rgba(176, 97, 223, 0.22);
+  border-radius: 16px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease-out;
+}
+
+.ga-real-table-card:hover {
+  transform: translateY(-2px);
+  border-color: #b061df;
+}
+
+.table-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.table-card-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fbd9ad;
+  margin: 0;
+}
+
+.table-head-badge {
+  font-size: 0.75rem;
+  color: #fbd9ad;
+  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.ga-table-responsive {
+  overflow-x: auto;
+  flex: 1;
+}
+
+.ga-data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+}
+
+.ga-data-table thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #fbd9ad;
+  opacity: 0.8;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ga-table-row {
+  background: rgba(18, 16, 30, 0.5);
+  transition: background-color 0.18s ease;
+  cursor: pointer;
+}
+
+.ga-table-row:hover,
+.ga-table-row.row-selected {
+  background: rgba(176, 97, 223, 0.22);
+}
+
+.ga-data-table tbody td {
+  padding: 12px 10px;
+  font-size: 0.86rem;
+  color: #ffffff;
+  vertical-align: middle;
+}
+
+.channel-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.channel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.mono-num {
+  font-variant-numeric: tabular-nums;
+  font-family: inherit;
+}
+
+.share-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid;
+}
+
+.table-card-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.76rem;
+  color: #fbd9ad;
+  opacity: 0.8;
+}
+
+.reset-filter-link {
+  background: none;
+  border: none;
+  color: #cb70ff;
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.reset-filter-link:hover {
+  text-decoration: underline;
+}
+
+/* 5. Donut Breakdown Circle Card (Right Panel) */
+.ga-real-donut-card {
+  background: rgba(30, 28, 48, 0.65);
+  border: 1px solid rgba(176, 97, 223, 0.22);
+  border-radius: 16px;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease-out;
+}
+
+.ga-real-donut-card:hover {
+  border-color: #b061df;
+  transform: translateY(-2px);
+}
+
+.donut-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.donut-card-title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fbd9ad;
+  margin: 0;
+}
+
+.live-pill {
+  font-size: 0.72rem;
+  background: rgba(0, 230, 118, 0.15);
+  color: #00e676;
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.donut-legend-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.legend-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(18, 16, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 4px 10px;
+  color: #ffffff;
+  font-size: 0.76rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.legend-pill-btn:hover,
+.legend-pill-btn.active {
+  background: rgba(176, 97, 223, 0.25);
+  border-color: #fbd9ad;
+}
+
+.legend-pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-pill-pct {
+  color: #fbd9ad;
+  margin-left: 2px;
+}
+
+.donut-circle-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  flex: 1;
+}
+
+.donut-circle-wrap {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+}
+
+/* Day Selection Spin Animation ("gol fare aem") */
+.donut-spin-anim .donut-svg {
+  animation: donutSpinRotate 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes donutSpinRotate {
+  0% {
+    transform: rotate(-180deg) scale(0.94);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.donut-slice-circle {
+  animation: sliceDrawAnim 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes sliceDrawAnim {
+  0% {
+    stroke-dashoffset: 490;
+  }
+}
+
+.donut-hole-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.donut-hole-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: #fbd9ad;
+  opacity: 0.85;
+  font-weight: 500;
+}
+
+.donut-hole-number {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 1px 0;
+}
+
+.donut-hole-sub {
+  font-size: 0.72rem;
+  color: #00e676;
+  font-weight: 500;
+}
+
+.donut-card-foot {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  color: #fbd9ad;
+  opacity: 0.9;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* 6. All Metrics In Circles ("cirelc ma badhu aavu joye") */
+.ga-all-circles-section {
+  background: rgba(30, 28, 48, 0.5);
+  border: 1px solid rgba(176, 97, 223, 0.22);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.circles-section-header {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.circles-section-title {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #fbd9ad;
+  margin: 0 0 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circles-section-sub {
+  font-size: 0.82rem;
+  color: #fbd9ad;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.ga-circular-gauges-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.circular-gauge-card {
+  background: rgba(18, 16, 30, 0.65);
+  border: 1px solid rgba(176, 97, 223, 0.2);
+  border-radius: 14px;
+  padding: 16px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-gauge-card:hover {
+  transform: translateY(-2px);
+  border-color: #b061df;
+}
+
+.circular-gauge-card.gauge-active {
+  border-color: #fbd9ad;
+}
+
+.radial-meter-box {
+  position: relative;
+  width: 95px;
+  height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.radial-meter-svg {
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+}
+
+/* Gauge Circular Spin Animation ("gol fare aem") */
+.gauge-spin-anim .radial-meter-svg {
+  animation: gaugeSpinRotate 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes gaugeSpinRotate {
+  0% {
+    transform: rotate(-180deg) scale(0.92);
+    opacity: 0.6;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.gauge-active-stroke {
+  animation: gaugeStrokeDraw 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes gaugeStrokeDraw {
+  0% {
+    stroke-dashoffset: 264;
+  }
+}
+
+.radial-meter-inside {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.radial-icon {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.radial-pct {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.gauge-title {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #fbd9ad;
+  margin: 0 0 3px 0;
+}
+
+.gauge-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.gauge-badge {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+/* 7. Bottom Summary Strip */
+.ga-real-bottom-summary {
+  background: rgba(12, 10, 22, 0.75);
+  border: 1px solid rgba(176, 97, 223, 0.2);
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.86rem;
+}
+
+.summary-block {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.summary-label {
+  color: #fbd9ad;
+  opacity: 0.85;
+}
+
+.summary-val {
+  color: #ffffff;
+}
+
+.summary-divider {
+  width: 1px;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================
+   SERVICES PILLARS GRID
+========================================================== */
+.dm-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+.dm-service-card {
+  background: rgba(33, 32, 56, 0.7);
+  border: 1px solid rgba(176, 97, 223, 0.25);
+  border-radius: 14px;
+  padding: 24px 20px;
+  transition: all 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.dm-service-card:hover {
+  transform: translateY(-2px);
+  border-color: #b061df;
+}
+
+.service-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.service-icon-box.seo { background: linear-gradient(135deg, #10b981, #047857); color: #fff; }
+.service-icon-box.ads { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
+.service-icon-box.smm { background: linear-gradient(135deg, #ec4899, #be185d); color: #fff; }
+.service-icon-box.analytics { background: linear-gradient(135deg, #6366f1, #4338ca); color: #fff; }
+.service-icon-box.smart { background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: #fff; }
+.service-icon-box.roas { background: linear-gradient(135deg, #00e676, #00b0ff); color: #121024; }
+
+.dm-service-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #fbd9ad;
+  margin-bottom: 10px;
+}
+
+.dm-service-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #fbd9ad;
+  opacity: 0.9;
+  margin-bottom: 16px;
+  font-weight: 400;
+}
+
+.dm-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.dm-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #fbd9ad;
+  font-weight: 400;
+}
+
+.dm-feature-list li .check-icon {
+  color: #00e676;
+  font-size: 0.95rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.dm-feature-list li span {
+  flex: 1;
+  text-align: left;
+}
+
+.dm-feature-list li strong {
+  color: #ffffff;
+  font-weight: 600;
+  display: inline;
+}
+
+/* ==========================================================
+   SMART WORK PROCESS / METHODOLOGY
+========================================================== */
+.dm-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 45px;
+}
+
+.dm-process-step {
+  background: rgba(33, 32, 56, 0.6);
+  border: 1px solid rgba(176, 97, 223, 0.2);
+  border-radius: 12px;
+  padding: 22px 16px;
+  text-align: center;
+  position: relative;
+  transition: all 0.25s ease-out;
+}
+
+.dm-process-step:hover {
+  transform: translateY(-2px);
+  border-color: #b061df;
+}
+
+.step-number {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(251, 217, 173, 0.15);
+}
+
+.step-icon {
+  font-size: 1.8rem;
+  color: #fbd9ad;
+  margin-bottom: 12px;
+}
+
+.step-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fbd9ad;
+  margin-bottom: 8px;
+}
+
+.step-text {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #fbd9ad;
+  opacity: 0.85;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ==========================================================
+   TOOLS & PLATFORMS GRID
+========================================================== */
+.dm-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-bottom: 45px;
+}
+
+.dm-tool-item {
+  background: rgba(33, 32, 56, 0.6);
+  border: 1px solid rgba(176, 97, 223, 0.2);
+  border-radius: 12px;
+  padding: 16px 10px;
+  text-align: center;
+  transition: all 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.dm-tool-item:hover {
+  border-color: #b061df;
+  transform: translateY(-2px);
+}
+
+.tool-icon {
+  font-size: 1.8rem;
+}
+
+.tool-name {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #fbd9ad;
+}
+
+/* ==========================================================
+   CALL TO ACTION CARD
+========================================================== */
+.dm-cta-card {
+  background: linear-gradient(135deg, rgba(31, 0, 96, 0.85), rgba(33, 32, 56, 0.9));
+  border: 1px solid rgba(251, 217, 173, 0.3);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  margin-top: 25px;
+}
+
+.dm-cta-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #fbd9ad;
+  margin-bottom: 10px;
+}
+
+.dm-cta-desc {
+  font-size: 0.98rem;
+  color: #fbd9ad;
+  opacity: 0.9;
+  max-width: 620px;
+  margin: 0 auto 22px auto;
+}
+
+.dm-cta-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.dm-primary-btn {
+  background-color: #fbd9ad;
+  color: rgb(134, 61, 176) !important;
+  border: 2px solid rgb(134, 61, 176);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dm-primary-btn:hover {
+  background-color: rgb(134, 61, 176);
+  color: #fbd9ad !important;
+  transform: translateY(-2px);
+}
+
+.dm-secondary-btn {
+  background: transparent;
+  color: #fbd9ad !important;
+  border: 2px solid #fbd9ad;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dm-secondary-btn:hover {
+  background: #fbd9ad;
+  color: rgb(134, 61, 176) !important;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   INTERMEDIATE DESKTOP (1024px to 1200px)
+========================================================== */
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .ga-circular-gauges-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dm-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dm-tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================
+   TABLET RESPONSIVE DESIGN (700px to 1023px)
+   Custom optimized layout for iPads, Tablets, and Foldables
+========================================================== */
+@media (min-width: 700px) and (max-width: 1023px) {
+  .dm-container {
+    padding-top: 95px;
+    padding-bottom: 55px;
+  }
+
+  .dm-hero-badge-wrap {
+    margin-top: 25px;
+    margin-bottom: 16px;
+  }
+
+  .dm-exp-badge {
+    font-size: 0.88rem;
+    padding: 7px 18px;
+  }
+
+  .dm-hero-headline {
+    font-size: 1.85rem;
+    line-height: 1.35;
+    margin-bottom: 12px;
+  }
+
+  .dm-hero-subtext {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto 26px auto;
+  }
+
+  /* Tablet Stats: 2x2 Clean Balanced Grid */
+  .dm-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 35px;
+  }
+
+  .dm-stat-card {
+    padding: 16px 12px;
+  }
+
+  .dm-stat-number {
+    font-size: 1.75rem;
+  }
+
+  .dm-stat-label {
+    font-size: 0.84rem;
+  }
+
+  .dm-section-title-wrap {
+    margin: 40px 0 24px 0;
+  }
+
+  .dm-section-heading {
+    font-size: 1.6rem;
+  }
+
+  /* GA4 Dashboard in Tablet */
+  .ga-real-dashboard-wrap {
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+  }
+
+  .ga-real-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 16px;
+  }
+
+  .ga-real-title {
+    font-size: 1.25rem;
+  }
+
+  .ga-real-time-tabs {
+    gap: 6px;
+  }
+
+  .ga-time-tab {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  /* Filter Bar: 2 columns in Tablet */
+  .ga-real-filter-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 14px 0;
+    margin-bottom: 20px;
+  }
+
+  /* 4 KPI Cards: 2x2 Grid */
+  .ga-real-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .ga-kpi-card {
+    padding: 16px 14px;
+  }
+
+  .kpi-number {
+    font-size: 1.7rem;
+  }
+
+  /* Table and Donut in Tablet */
+  .ga-real-table-card,
+  .ga-real-donut-card {
+    padding: 18px 16px;
+  }
+
+  .ga-table-responsive {
+    overflow-x: auto;
+  }
+
+  .donut-circle-wrap {
+    width: 185px;
+    height: 185px;
+  }
+
+  .donut-hole-number {
+    font-size: 1.65rem;
+  }
+
+  /* All Metrics in Circles Section */
+  .circles-section-title {
+    display: block;
+    text-align: center;
+  }
+
+  .circles-section-title svg {
+    display: inline-block;
+    vertical-align: -0.15em;
+    flex-shrink: 0;
+  }
+
+  /* 6 Circular Gauges: 3x2 Grid (2 rows of 3, perfect symmetry) */
+  .ga-circular-gauges-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .circular-gauge-card {
+    padding: 14px 6px;
+  }
+
+  .radial-meter-box {
+    width: 82px;
+    height: 82px;
+  }
+
+  .radial-pct {
+    font-size: 0.95rem;
+  }
+
+  /* Bottom Summary Strip: 2x2 in Tablet */
+  .ga-real-bottom-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 14px 18px;
+  }
+
+  .summary-divider {
+    display: none;
+  }
+
+  .summary-block {
+    justify-content: flex-start;
+  }
+
+  /* Services Grid: 2 Columns */
+  .dm-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 38px;
+  }
+
+  .dm-service-card {
+    padding: 20px 16px;
+  }
+
+  /* Process Grid: 2x2 Grid */
+  .dm-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 38px;
+  }
+
+  .dm-process-step {
+    padding: 20px 14px;
+  }
+
+  /* Tools Grid: 3x2 Grid */
+  .dm-tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 38px;
+  }
+
+  /* CTA Card */
+  .dm-cta-card {
+    padding: 28px 20px;
+  }
+
+  .dm-cta-title {
+    font-size: 1.55rem;
+  }
+}
+
+/* ==========================================================
+   TABLET RESPONSIVE FIX (700px to 995px)
+========================================================== */
+@media (min-width: 700px) and (max-width: 995px) {
+  .ga-real-time-tabs {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .circles-section-title {
+    display: block;
+    text-align: center;
+  }
+
+  .circles-section-title svg {
+    display: inline-block;
+    vertical-align: -0.15em;
+    flex-shrink: 0;
+  }
+
+  /* Services Grid: Single Column for 700px to 995px */
+  .dm-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dm-service-card,
+  .dm-service-title,
+  .dm-service-desc,
+  .dm-feature-list li,
+  .dm-feature-list li span {
+    text-align: left;
+  }
+
+  /* Executive Bottom Summary Strip Fix for 700px to 995px Tablet */
+  .ga-real-bottom-summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 24px;
+    padding: 16px 20px;
+  }
+
+  .summary-divider {
+    display: none;
+  }
+
+  .summary-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .summary-label {
+    text-align: left;
+    font-size: 0.82rem;
+    color: #fbd9ad;
+    opacity: 0.85;
+    line-height: 1.35;
+  }
+
+  .summary-val {
+    text-align: left;
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 995px) {
+  .ga-real-header-left {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ==========================================================
+   MOBILE RESPONSIVE DESIGN (300px to 699px)
+   Custom optimized layout for all Smartphones (Small to Large)
+========================================================== */
+@media (min-width: 300px) and (max-width: 699px) {
+  /* Exact same side space as Project Page and other pages */
+  .dm-page-container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .dm-container {
+    padding-top: 80px;
+    padding-bottom: 42px;
+  }
+
+  /* Header banner */
+  .home-content h1 {
+    font-size: 1.35rem !important;
+    padding: 4px 8px;
+    text-align: center;
+  }
+
+  /* Hero Intro */
+  .dm-hero-badge-wrap {
+    margin-top: 18px;
+    margin-bottom: 12px;
+    padding: 0 4px;
+  }
+
+  .dm-exp-badge {
+    display: inline-flex;
+    align-items: flex-start;
+    font-size: 0.78rem;
+    padding: 6px 14px;
+    text-align: left;
+    line-height: 1.4;
+    border-radius: 20px;
+  }
+
+  .dm-exp-badge svg {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .dm-hero-headline {
+    font-size: 1.42rem;
+    line-height: 1.35;
+    margin-bottom: 10px;
+    padding: 0 4px;
+  }
+
+  .dm-hero-subtext {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 22px;
+    padding: 0 4px;
+  }
+
+  /* Mobile Stats: 2 Columns */
+  .dm-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .dm-stat-card {
+    padding: 13px 8px;
+    border-radius: 10px;
+  }
+
+  .dm-stat-number {
+    font-size: 1.45rem;
+    gap: 3px;
+  }
+
+  .dm-stat-number span:nth-child(2) {
+    font-size: 1.05rem !important;
+  }
+
+  .dm-stat-label {
+    font-size: 0.76rem;
+    line-height: 1.3;
+  }
+
+  /* Section Titles */
+  .dm-section-title-wrap {
+    margin: 32px 0 18px 0;
+    padding: 0 4px;
+  }
+
+  .dm-section-tag {
+    font-size: 0.74rem;
+    margin-bottom: 4px;
+  }
+
+  .dm-section-heading {
+    font-size: 1.32rem;
+    line-height: 1.35;
+  }
+
+  /* GA4 Dashboard Card */
+  .ga-real-dashboard-wrap {
+    padding: 14px 10px;
+    border-radius: 14px;
+    margin-bottom: 32px;
+  }
+
+  .ga-real-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-bottom: 14px;
+  }
+
+  .ga-real-header-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .ga-real-icon-badge {
+    width: 38px;
+    height: 38px;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .ga-real-title {
+    font-size: 1.08rem;
+    line-height: 1.3;
+  }
+
+  .ga-real-status-line {
+    font-size: 0.74rem;
+    gap: 6px;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .ga-real-status-line .ga-live-text {
+    width: calc(100% - 20px);
+  }
+
+  .ga-sub-badge {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+  }
+
+  /* Mobile Range Buttons */
+  .ga-real-time-tabs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    width: 100%;
+  }
+
+  .ga-time-tab {
+    padding: 6px 2px;
+    font-size: 11px;
+    text-align: center;
+    border-width: 1.5px;
+    border-radius: 18px;
+  }
+
+  /* Filter Select Bar */
+  .ga-real-filter-bar {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 12px 0;
+    margin-bottom: 16px;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ga-filter-select-box {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .ga-filter-label {
+    font-size: 0.7rem;
+  }
+
+  .ga-filter-select {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding: 9px 12px;
+    font-size: 0.84rem;
+    border-radius: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 400 !important;
+    font-family: inherit;
+  }
+
+  .ga-filter-select option {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Top 4 KPI Cards: 2x2 Grid with touch-friendly spacing */
+  .ga-real-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .ga-kpi-card {
+    padding: 12px 8px;
+    border-radius: 10px;
+  }
+
+  .kpi-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 6px;
+  }
+
+  .kpi-title {
+    font-size: 0.72rem;
+    line-height: 1.25;
+    flex: 1;
+  }
+
+  .kpi-pill {
+    font-size: 0.62rem !important;
+    padding: 2px 5px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    line-height: 1.1 !important;
+    display: inline-block !important;
+  }
+
+  .kpi-number {
+    font-size: 1.45rem;
+    margin-bottom: 3px;
+  }
+
+  .kpi-footer {
+    font-size: 0.68rem;
+  }
+
+  /* Content Row: Table & Donut */
+  .ga-real-content-row {
+    margin-bottom: 18px;
+  }
+
+  .ga-real-table-card {
+    padding: 14px 10px;
+    border-radius: 12px;
+  }
+
+  .table-card-head {
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .table-card-title {
+    font-size: 0.95rem;
+  }
+
+  .table-head-badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  }
+
+  .ga-table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -4px;
+    padding-bottom: 4px;
+  }
+
+  .ga-data-table {
+    min-width: 440px;
+  }
+
+  .ga-data-table thead th {
+    font-size: 0.7rem;
+    padding: 6px 8px;
+  }
+
+  .ga-data-table tbody td {
+    font-size: 0.78rem;
+    padding: 9px 8px;
+  }
+
+  .table-card-foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 0.72rem;
+    margin-top: 10px;
+  }
+
+  /* Donut Card in Mobile */
+  .ga-real-donut-card {
+    padding: 14px 10px;
+    border-radius: 12px;
+    margin-top: 14px;
+  }
+
+  .donut-card-head {
+    margin-bottom: 10px;
+  }
+
+  .donut-card-title {
+    font-size: 0.95rem;
+  }
+
+  .donut-legend-top {
+    gap: 5px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .legend-pill-btn {
+    padding: 3px 8px;
+    font-size: 0.69rem;
+    border-radius: 10px;
+  }
+
+  .donut-circle-wrap {
+    width: 160px;
+    height: 160px;
+  }
+
+  .donut-hole-number {
+    font-size: 1.45rem;
+  }
+
+  .donut-hole-label,
+  .donut-hole-sub {
+    font-size: 0.65rem;
+  }
+
+  .donut-card-foot {
+    font-size: 0.74rem;
+    margin-top: 10px;
+    padding-top: 8px;
+  }
+
+  /* All Metrics in Circles Section */
+  .ga-all-circles-section {
+    padding: 14px 10px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+  }
+
+  .circles-section-header {
+    margin-bottom: 14px;
+  }
+
+  .circles-section-title {
+    display: block;
+    text-align: center;
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .circles-section-title svg {
+    display: inline-block;
+    vertical-align: -0.15em;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .circles-section-sub {
+    font-size: 0.74rem;
+  }
+
+  .ga-circular-gauges-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .circular-gauge-card {
+    padding: 12px 6px;
+    border-radius: 10px;
+  }
+
+  .radial-meter-box {
+    width: 74px;
+    height: 74px;
+    margin-bottom: 8px;
+  }
+
+  .radial-pct {
+    font-size: 0.88rem;
+  }
+
+  .radial-icon {
+    font-size: 0.85rem;
+  }
+
+  .gauge-title {
+    font-size: 0.74rem;
+    margin-bottom: 2px;
+  }
+
+  .gauge-value {
+    font-size: 0.82rem;
+    margin-bottom: 4px;
+  }
+
+  .gauge-badge {
+    font-size: 0.64rem;
+    padding: 2px 5px;
+  }
+
+  /* Bottom Summary Strip */
+  .ga-real-bottom-summary {
+    padding: 12px 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .summary-block {
+    font-size: 0.78rem;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 6px;
+  }
+
+  .summary-block:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .summary-divider {
+    display: none;
+  }
+
+  /* Services Grid: 1 Column */
+  .dm-services-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .dm-service-card {
+    padding: 18px 14px;
+    border-radius: 12px;
+  }
+
+  .service-icon-box {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    border-radius: 10px;
+  }
+
+  .dm-service-title {
+    font-size: 1.12rem;
+    margin-bottom: 8px;
+  }
+
+  .dm-service-desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .dm-feature-list {
+    gap: 8px;
+  }
+
+  .dm-feature-list li {
+    font-size: 0.82rem;
+    gap: 8px;
+    line-height: 1.45;
+  }
+
+  .dm-feature-list li .check-icon {
+    font-size: 0.85rem;
+    margin-top: 2px;
+  }
+
+  /* Process Grid: 1 Column */
+  .dm-process-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .dm-process-step {
+    padding: 18px 14px;
+    border-radius: 10px;
+  }
+
+  .step-number {
+    font-size: 1.3rem;
+    top: 8px;
+    right: 10px;
+  }
+
+  .step-icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+
+  .step-title {
+    font-size: 1.02rem;
+    margin-bottom: 6px;
+  }
+
+  .step-text {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  /* Tools Grid: 2 Columns */
+  .dm-tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .dm-tool-item {
+    padding: 12px 8px;
+    border-radius: 10px;
+    gap: 4px;
+  }
+
+  .tool-icon {
+    font-size: 1.5rem;
+  }
+
+  .tool-name {
+    font-size: 0.76rem;
+  }
+
+  /* Call To Action */
+  .dm-cta-card {
+    padding: 22px 14px;
+    border-radius: 14px;
+    margin-top: 15px;
+  }
+
+  .dm-cta-title {
+    font-size: 1.28rem;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .dm-cta-desc {
+    font-size: 0.84rem;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .dm-cta-btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .dm-primary-btn,
+  .dm-secondary-btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 11px 12px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    border-radius: 30px;
+    gap: 8px;
+    box-sizing: border-box;
+  }
+
+  .dm-primary-btn svg,
+  .dm-secondary-btn svg {
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    margin: 0;
+  }
+}
+
+/* ==========================================================
+   EXTRA SMALL MOBILE (300px to 479px)
+   Ultra-fine adjustments for narrow smartphone screens
+========================================================== */
+@media (min-width: 300px) and (max-width: 479px) {
+  .dm-hero-headline {
+    font-size: 1.28rem;
+  }
+
+  .dm-exp-badge {
+    font-size: 0.72rem;
+    padding: 5px 10px;
+  }
+
+  .ga-real-time-tabs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .ga-time-tab {
+    padding: 7px 4px;
+    font-size: 11px;
+  }
+
+  .ga-real-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .ga-kpi-card {
+    padding: 10px 6px;
+  }
+
+  .kpi-top {
+    gap: 3px;
+  }
+
+  .kpi-title {
+    font-size: 0.68rem;
+    line-height: 1.2;
+  }
+
+  .kpi-pill {
+    font-size: 0.58rem !important;
+    padding: 2px 4px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  .kpi-number {
+    font-size: 1.35rem;
+  }
+
+  .donut-circle-wrap {
+    width: 145px;
+    height: 145px;
+  }
+
+  .donut-hole-number {
+    font-size: 1.3rem;
+  }
+
+  .radial-meter-box {
+    width: 66px;
+    height: 66px;
+  }
+
+  .radial-pct {
+    font-size: 0.82rem;
+  }
+
+  .radial-icon {
+    font-size: 0.78rem;
+  }
+
+  .gauge-title {
+    font-size: 0.7rem;
+  }
+
+  .gauge-value {
+    font-size: 0.78rem;
+  }
+
+  .gauge-badge {
+    font-size: 0.6rem;
+  }
+
+  .circles-section-title {
+    font-size: 0.9rem;
+  }
+
+  .dm-primary-btn,
+  .dm-secondary-btn {
+    font-size: 0.78rem;
+    padding: 10px 8px;
+    gap: 6px;
+  }
+}

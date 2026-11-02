@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
@@ -7,7 +7,7 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
-import { FaBlog } from "react-icons/fa";
+import { FaBlog, FaBullhorn } from "react-icons/fa";
 import "../../style.css";
 import profileFallback from "../../images/Vs.png";
 import { CgFileDocument } from "react-icons/cg";
@@ -30,24 +30,28 @@ export default function MyNav() {
 
   const isProjectsActive = pathname === "/projectspage" || pathname.startsWith("/project/");
   const isResumeActive = pathname === "/resume";
+  const isDigitalMarketingActive = pathname === "/marketing" || pathname === "/digitalmarketing";
   const isBlogsActive = pathname === "/blogs";
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
+  useEffect(() => {
+    function scrollHandler() {
+      if (window.scrollY >= 20) {
+        updateNavbar(true);
+      } else {
+        updateNavbar(false);
+      }
     }
-  }
 
-  window.addEventListener("scroll", scrollHandler);
+    window.addEventListener("scroll", scrollHandler, { passive: true });
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
 
   return (
     <Navbar
       expanded={expand}
       fixed="top"
-      expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      expand="lg"
+      className={`navbar ${navColour ? "sticky" : ""}`}
     >
       <Container className="navcontainer">
         <Navbar.Brand as={Link} to="/" className="d-flex">
@@ -109,6 +113,18 @@ export default function MyNav() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/marketing"
+                active={isDigitalMarketingActive}
+                onClick={() => updateExpanded(false)}
+                style={{ whiteSpace: "nowrap" }}
+              >
+                <FaBullhorn style={{ marginBottom: "2px" }} /> Digital Marketing
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/resume"
                 active={isResumeActive}
                 onClick={() => updateExpanded(false)}
@@ -136,17 +152,6 @@ export default function MyNav() {
               >
                 <FaBlog style={{ marginBottom: "2px" }} /> Blogs
               </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/"
-                target="_blank"
-                className="fork-btn-inner"
-              >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

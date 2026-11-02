@@ -56,7 +56,7 @@ export default function ProjectPage() {
         <Particle />
         <Container className="home-content">
           <div
-            className="d-flex justify-content-center"
+            className="d-flex justify-content-center page-header-banner"
             width="100%"
             style={{ backgroundColor: "#fbd9ad" }}
           >
@@ -95,13 +95,13 @@ export default function ProjectPage() {
           )}
           <div style={{ display: loading ? 'none' : 'block' }}>
             <div>
-              <Container fluid className="certificate-section" id="about">
+              <Container fluid className="certificate-section project-page-section" id="about">
                 <Container>
                   <Row>
                     <Col md={12} className="mt-3">
                       <Row className="g-5">
                         {filteredProjects.map((project, index) => (
-                          <Col md={3} className="col-sm-12 col-md-4" key={index}>
+                          <Col md={3} className="col-sm-12 col-md-4 project-col" key={index}>
                             <Fade bottom>
                               <div
                                 className="singleProject"
@@ -433,9 +433,29 @@ export default function ProjectPage() {
           .certificate-section .row .col-sm-12,
           .g-5 > div,
           .g-5 > [class*="col-"] {
-            flex: 0 0 50% !important;
-            max-width: 50% !important;
-            width: 50% !important;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+            width: 100% !important;
+          }
+        }
+
+        @media (min-width: 800px) and (max-width: 900px) {
+          .singleProject .iconBtn,
+          .singleProject .detailsBtn {
+            width: 44px !important;
+            height: 44px !important;
+            min-width: 44px !important;
+            min-height: 44px !important;
+            border: 2px solid #fbd9ad !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+          }
+
+          .singleProject .iconBtn svg,
+          .singleProject .detailsBtn svg {
+            font-size: 1.25rem !important;
           }
         }
       `}</style>
