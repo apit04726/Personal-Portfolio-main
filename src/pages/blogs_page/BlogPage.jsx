@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import Particle from "../../Particle";
 import Zoom from "react-reveal/Zoom";
 import { Container, Row, Col } from "react-bootstrap";
@@ -296,7 +297,7 @@ export default function BlogPage() {
       </Container>
 
       {/* Blog Post Modal */}
-      {selectedPost && (
+      {selectedPost && typeof document !== "undefined" && createPortal(
         <div className="blog-post-modal-overlay" onClick={closeModal}>
           <div className="blog-post-modal-content" onClick={e => e.stopPropagation()}>
             <button className="close-modal" onClick={closeModal}>×</button>
@@ -358,7 +359,8 @@ export default function BlogPage() {
               </div>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* Styles */}
@@ -1214,6 +1216,120 @@ export default function BlogPage() {
 
           .blog-image {
             height: 220px !important;
+          }
+        }
+
+        @media (min-width: 996px) {
+          .blog-post-modal-overlay {
+            z-index: 99999 !important;
+            padding: 20px !important;
+            background: rgba(10, 5, 25, 0.85) !important;
+            backdrop-filter: blur(8px) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+          }
+
+          .blog-post-modal-content {
+            max-width: 650px !important;
+            width: 100% !important;
+            max-height: 90vh !important;
+            border-radius: 16px !important;
+            overflow: hidden !important;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(176, 97, 223, 0.2) !important;
+            border: 1px solid rgba(176, 97, 223, 0.3) !important;
+            margin: auto !important;
+            position: relative !important;
+          }
+
+          .modal-image {
+            height: 240px !important;
+            width: 100% !important;
+            position: relative !important;
+            overflow: hidden !important;
+            border-top-left-radius: 16px !important;
+            border-top-right-radius: 16px !important;
+            flex-shrink: 0 !important;
+          }
+
+          .modal-image img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+          }
+
+          .close-modal {
+            position: absolute !important;
+            top: 14px !important;
+            right: 14px !important;
+            width: 34px !important;
+            height: 34px !important;
+            border-radius: 50% !important;
+            background: rgba(0, 0, 0, 0.7) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+            font-size: 1.25rem !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            z-index: 100 !important;
+            transition: all 0.2s ease !important;
+          }
+
+          .close-modal:hover {
+            background: #ff4757 !important;
+            border-color: transparent !important;
+            transform: scale(1.08) !important;
+            color: #ffffff !important;
+          }
+
+          .modal-content {
+            padding: 16px 24px 14px 24px !important;
+            display: flex !important;
+            flex-direction: column !important;
+          }
+
+          .modal-meta {
+            gap: 12px !important;
+            margin-bottom: 8px !important;
+          }
+
+          .modal-title {
+            font-size: 1.3rem !important;
+            margin-bottom: 8px !important;
+            line-height: 1.3 !important;
+          }
+
+          .modal-tags {
+            gap: 6px !important;
+            margin-bottom: 10px !important;
+          }
+
+          .modal-body {
+            display: flex !important;
+            flex-direction: column !important;
+            flex: 1 !important;
+            overflow: hidden !important;
+          }
+
+          .modal-body-content {
+            max-height: 150px !important;
+            overflow-y: auto !important;
+            margin-bottom: 10px !important;
+            padding-right: 8px !important;
+          }
+
+          .modal-actions {
+            display: flex !important;
+            gap: 12px !important;
+            padding-top: 10px !important;
+            padding-bottom: 2px !important;
+            border-top: 1px solid #e9ecef !important;
+            flex-shrink: 0 !important;
+            width: 100% !important;
+            align-items: center !important;
           }
         }
 

@@ -4,11 +4,8 @@ import {
   FaSearch,
   FaCheckCircle,
   FaRocket,
-  FaAward,
   FaChartPie,
-  FaBullhorn,
-  FaFilter,
-  FaArrowUp
+  FaBullhorn
 } from "react-icons/fa";
 import { SiGoogleanalytics, SiGoogleads, SiMeta } from "react-icons/si";
 
