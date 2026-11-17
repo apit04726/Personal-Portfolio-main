@@ -37,7 +37,7 @@ export default function DigitalMarketingPage() {
           </div>
 
           {/* Hero Intro - First Person Real Experience */}
-          <Fade bottom>
+          <Fade bottom distance="20px">
             <div className="dm-hero-badge-wrap">
               <div className="dm-exp-badge">
                 <FaAward />
@@ -55,7 +55,7 @@ export default function DigitalMarketingPage() {
           </Fade>
 
           {/* Real Work Highlights Counter */}
-          <Fade bottom>
+          <Fade bottom distance="20px">
             <div className="dm-stats-row">
               <div className="dm-stat-card">
                 <div className="dm-stat-number">
@@ -91,25 +91,26 @@ export default function DigitalMarketingPage() {
           {/* =======================================================
               EXECUTIVE GOOGLE ANALYTICS DIAGRAM SECTION
              ======================================================= */}
-          <div className="dm-section-title-wrap">
-            <span className="dm-section-tag">Real-Time Data &amp; Verified Analytics</span>
-            <h3 className="dm-section-heading">Google Analytics 4 (GA4) Executive Dashboard</h3>
-          </div>
-
-          <Fade bottom>
-            <GoogleAnalyticsDiagram />
+          <Fade bottom distance="20px">
+            <div>
+              <div className="dm-section-title-wrap">
+                <span className="dm-section-tag">Real-Time Data &amp; Verified Analytics</span>
+                <h3 className="dm-section-heading">Google Analytics 4 (GA4) Executive Dashboard</h3>
+              </div>
+              <GoogleAnalyticsDiagram />
+            </div>
           </Fade>
 
           {/* =======================================================
               MY HANDS-ON WORK: SEO, SOCIAL MEDIA, ADS & ANALYTICS
              ======================================================= */}
-          <div className="dm-section-title-wrap">
-            <span className="dm-section-tag">Direct Hands-on Expertise</span>
-            <h3 className="dm-section-heading">How I Have Worked &amp; Delivered Real Results</h3>
-          </div>
-
-          <Fade bottom>
-            <div className="dm-services-grid">
+          <Fade bottom distance="20px">
+            <div>
+              <div className="dm-section-title-wrap">
+                <span className="dm-section-tag">Direct Hands-on Expertise</span>
+                <h3 className="dm-section-heading">How I Have Worked &amp; Delivered Real Results</h3>
+              </div>
+              <div className="dm-services-grid">
               {/* 1. Meta Ads (Facebook & Instagram) */}
               <div className="dm-service-card">
                 <div className="service-icon-box ads">
@@ -308,18 +309,21 @@ export default function DigitalMarketingPage() {
                 </ul>
               </div>
             </div>
+            </div>
           </Fade>
 
           {/* =======================================================
               MY 4-STEP PROVEN WORK PROCESS
              ======================================================= */}
-          <div className="dm-section-title-wrap">
-            <span className="dm-section-tag">Proven Methodology</span>
-            <h3 className="dm-section-heading">My 4-Step Smart Execution Process</h3>
-          </div>
+          <Fade bottom distance="20px">
+            <div className="dm-section-title-wrap">
+              <span className="dm-section-tag">Proven Methodology</span>
+              <h3 className="dm-section-heading">My 4-Step Smart Execution Process</h3>
+            </div>
+          </Fade>
 
           <div className="dm-process-grid">
-            <Fade bottom delay={100}>
+            <Fade bottom distance="20px" delay={100}>
               <div className="dm-process-step">
                 <span className="step-number">01</span>
                 <FaSearch className="step-icon" />
@@ -330,7 +334,7 @@ export default function DigitalMarketingPage() {
               </div>
             </Fade>
 
-            <Fade bottom delay={200}>
+            <Fade bottom distance="20px" delay={200}>
               <div className="dm-process-step">
                 <span className="step-number">02</span>
                 <FaBullseye className="step-icon" />
@@ -341,7 +345,7 @@ export default function DigitalMarketingPage() {
               </div>
             </Fade>
 
-            <Fade bottom delay={300}>
+            <Fade bottom distance="20px" delay={300}>
               <div className="dm-process-step">
                 <span className="step-number">03</span>
                 <FaRocket className="step-icon" />
@@ -352,7 +356,7 @@ export default function DigitalMarketingPage() {
               </div>
             </Fade>
 
-            <Fade bottom delay={400}>
+            <Fade bottom distance="20px" delay={400}>
               <div className="dm-process-step">
                 <span className="step-number">04</span>
                 <FaChartLine className="step-icon" />
@@ -367,13 +371,13 @@ export default function DigitalMarketingPage() {
           {/* =======================================================
               PLATFORMS & TOOLS I WORK WITH
              ======================================================= */}
-          <div className="dm-section-title-wrap">
-            <span className="dm-section-tag">Platforms &amp; Tools Mastered</span>
-            <h3 className="dm-section-heading">Industry Software &amp; Tech Stack I Use Daily</h3>
-          </div>
-
-          <Fade bottom>
-            <div className="dm-tools-grid">
+          <Fade bottom distance="20px">
+            <div>
+              <div className="dm-section-title-wrap">
+                <span className="dm-section-tag">Platforms &amp; Tools Mastered</span>
+                <h3 className="dm-section-heading">Industry Software &amp; Tech Stack I Use Daily</h3>
+              </div>
+              <div className="dm-tools-grid">
               <div className="dm-tool-item">
                 <SiGoogleanalytics className="tool-icon text-warning" />
                 <span className="tool-name">Google Analytics 4</span>
@@ -404,12 +408,13 @@ export default function DigitalMarketingPage() {
                 <span className="tool-name">Instagram &amp; LinkedIn</span>
               </div>
             </div>
+            </div>
           </Fade>
 
           {/* =======================================================
               CALL TO ACTION (CTA)
              ======================================================= */}
-          <Fade bottom>
+          <Fade bottom distance="20px">
             <div className="dm-cta-card">
               <h3 className="dm-cta-title">Looking for High-ROAS Growth &amp; Professional Execution?</h3>
               <p className="dm-cta-desc">
