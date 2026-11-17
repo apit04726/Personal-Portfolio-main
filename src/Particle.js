@@ -19,8 +19,11 @@ const Particle = () => {
                         opacity: 0.03,
                     },
                     move: {
-                        direction: "right",
-                        speed: 0.05,
+                        direction: "none",
+                        speed: 0.2,
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
                     },
                     size: {
                         value: 1,

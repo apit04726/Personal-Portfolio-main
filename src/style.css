@@ -421,6 +421,11 @@ html {
 }
 
 @media (max-width: 767px) {
+  .home-section {
+    background-position: center center !important;
+    background-size: cover !important;
+  }
+
   .Typewriter__wrapper {
     font-size: 1.2em !important;
     font-weight: 500 !important;
